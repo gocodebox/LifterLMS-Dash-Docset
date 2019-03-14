@@ -1,0 +1,1056 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="../../../../s29765.pcdn.co/wp-includes/css/dashicons.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Controller_Orders - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Controller_Orders - LifterLMS Developer Hub"/>
+<meta property="og:description" content="LLMS_Controller_Orders class."/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_controller_orders/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="LLMS_Controller_Orders class."/>
+<meta name="twitter:title" content="LLMS_Controller_Orders - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","logo":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Controller_Orders Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.4.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.4.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="../../../../s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.0.3"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=6226"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_controller_orders%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_controller_orders%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-6226">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="../../../../s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-6226 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-253"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Controller_Orders"></a><span class="trail-end">LLMS_Controller_Orders</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-6226" class="post-6226 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_controllers_class-llms-controller-orders-php">
+
+	
+	
+	<h1>LLMS_Controller_Orders</h1>
+
+	<section class="summary">
+		<p><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/">LLMS_Controller_Orders</a> class.</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="https://developer.lifterlms.com/reference/files/includes/controllers/class-llms-controller-orders.php/">includes/controllers/class.llms.controller.orders.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 14">class LLMS_Controller_Orders {
+
+	/**
+	 * Constructor
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function __construct() {
+
+		// form actions
+		add_action( &#39;init&#39;, array( $this, &#39;create_pending_order&#39; ) );
+		add_action( &#39;init&#39;, array( $this, &#39;confirm_pending_order&#39; ) );
+		add_action( &#39;init&#39;, array( $this, &#39;switch_payment_source&#39; ) );
+
+		// this action adds our lifterlms specific actions when order &amp; transaction statuses change
+		add_action( &#39;transition_post_status&#39;, array( $this, &#39;transition_status&#39; ), 10, 3 );
+
+		/**
+		 * Status Change Actions for Orders and Transactions
+		 */
+
+		// transaction status changes cascade up to the order to change the order status
+		add_action( &#39;lifterlms_transaction_status_failed&#39;, array( $this, &#39;transaction_failed&#39; ), 10, 1 );
+		add_action( &#39;lifterlms_transaction_status_refunded&#39;, array( $this, &#39;transaction_refunded&#39; ), 10, 1 );
+		add_action( &#39;lifterlms_transaction_status_succeeded&#39;, array( $this, &#39;transaction_succeeded&#39; ), 10, 1 );
+
+		// status changes for orders to enroll students and trigger completion actions
+		add_action( &#39;lifterlms_order_status_completed&#39;, array( $this, &#39;complete_order&#39; ), 10, 2 );
+		add_action( &#39;lifterlms_order_status_active&#39;, array( $this, &#39;complete_order&#39; ), 10, 2 );
+
+		// status changes to pending cancel
+		add_action( &#39;lifterlms_order_status_pending-cancel&#39;, array( $this, &#39;pending_cancel_order&#39; ), 10, 1 );
+
+		// status changes for orders to unenroll students upon purchase
+		add_action( &#39;lifterlms_order_status_refunded&#39;, array( $this, &#39;error_order&#39; ), 10, 1 );
+		add_action( &#39;lifterlms_order_status_cancelled&#39;, array( $this, &#39;error_order&#39; ), 10, 1 );
+		add_action( &#39;lifterlms_order_status_expired&#39;, array( $this, &#39;error_order&#39; ), 10, 1 );
+		add_action( &#39;lifterlms_order_status_failed&#39;, array( $this, &#39;error_order&#39; ), 10, 1 );
+		add_action( &#39;lifterlms_order_status_on-hold&#39;, array( $this, &#39;error_order&#39; ), 10, 1 );
+		add_action( &#39;lifterlms_order_status_trash&#39;, array( $this, &#39;error_order&#39; ), 10, 1 );
+
+		/**
+		 * Scheduler Actiions
+		 */
+
+		// charge recurring payments
+		add_action( &#39;llms_charge_recurring_payment&#39;, array( $this, &#39;recurring_charge&#39; ), 10, 1 );
+
+		// expire access plans
+		add_action( &#39;llms_access_plan_expiration&#39;, array( $this, &#39;expire_access&#39; ), 10, 1 );
+
+	}
+
+	/**
+	 * Confirm order form post
+	 * User clicks confirm order or gateway determines the order is confirmed
+	 *
+	 * Executes payment gateway confirm order method and completes order.
+	 * Redirects user to appropriate page / post
+	 *
+	 * @return void
+	 *
+	 * @since   3.0.0
+	 * @version 3.4.0
+	 */
+	public function confirm_pending_order() {
+
+		if ( &#39;POST&#39; !== strtoupper( getenv( &#39;REQUEST_METHOD&#39; ) ) || empty( $_POST[&#39;action&#39;] ) || &#39;confirm_pending_order&#39; !== $_POST[&#39;action&#39;] || empty( $_POST[&#39;_wpnonce&#39;] ) ) { return; }
+
+		// noonnce the post
+		wp_verify_nonce( $_POST[&#39;_wpnonce&#39;], &#39;confirm_pending_order&#39; );
+
+		// ensure we have an order key we can locate the order with
+		$key = isset( $_POST[&#39;llms_order_key&#39;] ) ? $_POST[&#39;llms_order_key&#39;] : false;
+		if ( ! $key ) {
+			return llms_add_notice( __( &#39;Could not locate an order to confirm.&#39;, &#39;lifterlms&#39; ), &#39;error&#39; );
+		}
+
+		// lookup the order &amp; return error if not found
+		$order = llms_get_order_by_key( $key );
+		if ( ! $order || ! $order instanceof LLMS_Order ) {
+			return llms_add_notice( __( &#39;Could not locate an order to confirm.&#39;, &#39;lifterlms&#39; ), &#39;error&#39; );
+		}
+
+		// ensure the order is pending
+		if ( &#39;llms-pending&#39; !== $order-&gt;get( &#39;status&#39; ) ) {
+			return llms_add_notice( __( &#39;Only pending orders can be confirmed.&#39;, &#39;lifterlms&#39; ), &#39;error&#39; );
+		}
+
+		// get the gateway
+		$gateway = LLMS()-&gt;payment_gateways()-&gt;get_gateway_by_id( $order-&gt;get( &#39;payment_gateway&#39; ) );
+
+		// pass the order to the gateway
+		$gateway-&gt;confirm_pending_order( $order );
+
+	}
+
+	/**
+	 * Perform actions on a succesful order completion
+	 * @param    obj    $order       Instance of an LLMS_Order
+	 * @param    string $old_status  Previous order status (eg: &#39;pending&#39;)
+	 * @return   void
+	 * @since    1.0.0
+	 * @version  3.19.0
+	 */
+	public function complete_order( $order, $old_status ) {
+
+		// clear expiration date when moving from a pending-cancel order
+		if ( &#39;pending-cancel&#39; === $old_status ) {
+			$order-&gt;set( &#39;date_access_expires&#39;, &#39;&#39; );
+		}
+
+		// record access start time &amp; maybe schedule expiration
+		$order-&gt;start_access();
+
+		$order_id = $order-&gt;get( &#39;id&#39; );
+		$product_id = $order-&gt;get( &#39;product_id&#39; );
+		$user_id = $order-&gt;get( &#39;user_id&#39; );
+
+		unset( LLMS()-&gt;session-&gt;llms_coupon );
+
+		// trigger order complete action
+		do_action( &#39;lifterlms_order_complete&#39;, $order_id ); // @todo used by AffiliateWP only, can remove after updating AffiliateWP
+
+		// enroll student
+		llms_enroll_student( $user_id, $product_id, &#39;order_&#39; . $order_id );
+
+		// trigger purchase action, used by engagements
+		do_action( &#39;lifterlms_product_purchased&#39;, $user_id, $product_id );
+		do_action( &#39;lifterlms_access_plan_purchased&#39;, $user_id, $order-&gt;get( &#39;plan_id&#39; ) );
+
+		// maybe schedule a payment
+		$order-&gt;maybe_schedule_payment();
+
+	}
+
+
+	/**
+	 * Handle form submission of the checkout / payment form
+	 *
+	 * 		1. Logs in or Registers a user
+	 *   	2. Validates all fields
+	 *    	3. Handles coupon pricing adjustments
+	 *    	4. Creates a PENDING llms_order
+	 *
+	 * 		If errors, returns error on screen to user
+	 * 		If success, passes to the selected gateways &#34;process_payment&#34; method
+	 * 			the process_payment method should complete by returning an error or
+	 * 			triggering the &#34;lifterlms_process_payment_redirect&#34; // todo check this last statement
+	 *
+	 * @return void
+	 * @since    3.0.0
+	 * @version  3.27.0
+	 */
+	public function create_pending_order() {
+
+		if ( ! llms_verify_nonce( &#39;_llms_checkout_nonce&#39;, &#39;create_pending_order&#39;, &#39;POST&#39; ) ) {
+			return;
+		}
+
+		if ( empty( $_POST[&#39;action&#39;] ) || &#39;create_pending_order&#39; !== $_POST[&#39;action&#39;] ) {
+			return;
+		}
+
+		// prevent timeout
+		@set_time_limit( 0 );
+
+		/**
+		 * Allow gateways, extensions, etc to do their own validation prior to standard validation
+		 * If this returns a truthy, we&#39;ll stop processing
+		 * The extension should add a notice in addition to returning the truthy
+		 */
+		if ( apply_filters( &#39;llms_before_checkout_validation&#39;, false ) ) {
+			return;
+		}
+
+		// setup data to pass to the pending order creation function
+		$data = array();
+		$keys = array(
+			&#39;llms_plan_id&#39;,
+			&#39;llms_agree_to_terms&#39;,
+			&#39;llms_payment_gateway&#39;,
+			&#39;llms_coupon_code&#39;,
+		);
+
+		foreach ( $keys as $key ) {
+			if ( isset( $_POST[ $key ] ) ) {
+				$data[ str_replace( &#39;llms_&#39;, &#39;&#39;, $key ) ] = $_POST[ $key ];
+			}
+		}
+
+		$data[&#39;customer&#39;] = array();
+		if ( get_current_user_id() ) {
+			$data[&#39;customer&#39;][&#39;user_id&#39;] = get_current_user_id();
+		}
+		foreach ( LLMS_Person_Handler::get_available_fields( &#39;checkout&#39; ) as $cust_field ) {
+			$cust_key = $cust_field[&#39;id&#39;];
+			if ( isset( $_POST[ $cust_key ] ) ) {
+				$data[&#39;customer&#39;][ $cust_key ] = $_POST[ $cust_key ];
+			}
+		}
+
+		$setup = llms_setup_pending_order( $data );
+
+		if ( is_wp_error( $setup ) ) {
+
+			foreach ( $setup-&gt;get_error_messages() as $msg ) {
+				llms_add_notice( $msg, &#39;error&#39; );
+			}
+
+			// existing user fails validation from the free checkout form
+			if ( get_current_user_id() &amp;&amp; isset( $_POST[&#39;form&#39;] ) &amp;&amp; &#39;free_enroll&#39; === $_POST[&#39;form&#39;] &amp;&amp; isset( $_POST[&#39;llms_plan_id&#39;] ) ) {
+				$plan = llms_get_post( $_POST[&#39;llms_plan_id&#39;] );
+				wp_redirect( $plan-&gt;get_checkout_url() );
+				exit;
+			}
+
+			return;
+
+		}
+
+		/**
+		 * Allow gateways, extensions, etc to do their own validation
+		 * after all standard validations are succesfuly
+		 * If this returns a truthy, we&#39;ll stop processing
+		 * The extension should add a notice in addition to returning the truthy
+		 */
+		if ( apply_filters( &#39;llms_after_checkout_validation&#39;, false ) ) {
+			return;
+		}
+
+		$order_id = &#39;new&#39;;
+
+		// get order ID by Key if it exists
+		if ( ! empty( $_POST[&#39;llms_order_key&#39;] ) ) {
+			$locate = llms_get_order_by_key( $_POST[&#39;llms_order_key&#39;], &#39;id&#39; );
+			if ( $locate ) {
+				$order_id = $locate;
+			}
+		}
+
+		// instantiate the order
+		$order = new LLMS_Order( $order_id );
+
+		// if there&#39;s no id we can&#39;t proceed, return an error
+		if ( ! $order-&gt;get( &#39;id&#39; ) ) {
+			return llms_add_notice( __( &#39;There was an error creating your order, please try again.&#39;, &#39;lifterlms&#39; ), &#39;error&#39; );
+		}
+
+		// add order key to globals so the order can be retried if processing errors occur
+		$_POST[&#39;llms_order_key&#39;] = $order-&gt;get( &#39;order_key&#39; );
+
+		$order-&gt;init( $setup[&#39;person&#39;], $setup[&#39;plan&#39;], $setup[&#39;gateway&#39;], $setup[&#39;coupon&#39;] );
+
+		// pass to the gateway to start processing
+		$setup[&#39;gateway&#39;]-&gt;handle_pending_order( $order, $setup[&#39;plan&#39;], $setup[&#39;person&#39;], $setup[&#39;coupon&#39;] );
+
+	}
+
+	/**
+	 * Called when an order&#39;s status changes to refunded, cancelled, expired, or failed
+	 *
+	 * @param    obj    $order  instance of an LLMS_Order
+	 * @return   void
+	 *
+	 * @since    3.0.0
+	 * @version  3.10.0
+	 */
+	public function error_order( $order ) {
+
+		switch ( current_filter() ) {
+
+			case &#39;lifterlms_order_status_trash&#39;:
+			case &#39;lifterlms_order_status_cancelled&#39;:
+			case &#39;lifterlms_order_status_on-hold&#39;:
+			case &#39;lifterlms_order_status_refunded&#39;:
+				$status = &#39;cancelled&#39;;
+			break;
+
+			case &#39;lifterlms_order_status_expired&#39;:
+			case &#39;lifterlms_order_status_failed&#39;:
+			default:
+				$status = &#39;expired&#39;;
+			break;
+
+		}
+
+		$order-&gt;unschedule_recurring_payment();
+
+		llms_unenroll_student( $order-&gt;get( &#39;user_id&#39; ), $order-&gt;get( &#39;product_id&#39; ), $status, &#39;order_&#39; . $order-&gt;get( &#39;id&#39; ) );
+
+	}
+
+	/**
+	 * Handle expiration &amp; cancellation from a course / membership
+	 * Called via scheduled action set during order completion for plans with a limited access plan
+	 * Additionally called when an order is marked as &#34;pending-cancel&#34; to revoke access at the end of a pre-paid period
+	 * @param    int  $order_id  WP Post ID of the LLMS Order
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function expire_access( $order_id ) {
+
+		$order = new LLMS_Order( $order_id );
+		$new_order_status = false;
+
+		// pending cancel moves to cancelled
+		if ( &#39;llms-pending-cancel&#39; === $order-&gt;get( &#39;status&#39; ) ) {
+
+			$status = &#39;cancelled&#39;;
+			$note = __( &#39;Student unenrolled at the end of access period due to subscription cancellation.&#39;, &#39;lifterlms&#39; );
+			$new_order_status = &#39;cancelled&#39;;
+
+			// all others move to expired
+		} else {
+
+			$status = &#39;expired&#39;;
+			$note = __( &#39;Student unenrolled due to automatic access plan expiration&#39;, &#39;lifterlms&#39; );
+
+		}
+
+		llms_unenroll_student( $order-&gt;get( &#39;user_id&#39; ), $order-&gt;get( &#39;product_id&#39; ), $status, &#39;order_&#39; . $order-&gt;get( &#39;id&#39; ) );
+		$order-&gt;add_note( $note );
+		$order-&gt;unschedule_recurring_payment();
+
+		if ( $new_order_status ) {
+			$order-&gt;set_status( $new_order_status );
+		}
+
+	}
+
+	/**
+	 * Unschedule recurring payments and schedule access expiration
+	 * @param    obj        $order  LLMS_Order object
+	 * @return   void
+	 * @since    3.19.0
+	 * @version  3.19.0
+	 */
+	public function pending_cancel_order( $order ) {
+
+		$date = $order-&gt;get_next_payment_due_date( &#39;Y-m-d H:i:s&#39; );
+		$order-&gt;set( &#39;date_access_expires&#39;, $date );
+
+		$order-&gt;unschedule_recurring_payment();
+		$order-&gt;maybe_schedule_expiration();
+
+	}
+
+	/**
+	 * Trigger a recrurring payment
+	 * Called by action scheduler
+	 * @param    int     $order_id  WP Post ID of the order
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function recurring_charge( $order_id ) {
+
+		$order = new LLMS_Order( $order_id );
+		$gateway = $order-&gt;get_gateway();
+
+		// ensure the gateway is still installed &amp; available
+		if ( ! is_wp_error( $gateway ) ) {
+
+			// ensure that recurring payments feature is enabled
+			// &amp; that the gateway still supports recurring payments
+			if ( LLMS_Site::get_feature( &#39;recurring_payments&#39; ) &amp;&amp; $gateway-&gt;supports( &#39;recurring_payments&#39; ) ) {
+
+				$gateway-&gt;handle_recurring_transaction( $order );
+
+			} // End if().
+			else {
+				llms_log( &#39;Recurring charge for order # &#39; . $order_id . &#39; could not be processed because the gateway no longer supports recurring payments&#39;, &#39;recurring-payments&#39; );
+				/**
+				 * @todo  notifications....
+				 */
+			}
+		} // End if().
+		else {
+
+			llms_log( &#39;Recurring charge for order # &#39; . $order_id . &#39; could not be processed&#39;, &#39;recurring-payments&#39; );
+			llms_log( $gateway-&gt;get_error_message(), &#39;recurring-payments&#39; );
+
+			/**
+			 * @todo  notifications....
+			 */
+
+		}
+
+	}
+
+
+	/**
+	 * Handle form submission of the &#34;Update Payment Method&#34; form on the student dashboard when viewing a single order
+	 * @return   void
+	 * @since    3.10.0
+	 * @version  3.19.0
+	 */
+	public function switch_payment_source() {
+
+		// invalid nonce or the form wasn&#39;t submitted
+		if ( ! llms_verify_nonce( &#39;_switch_source_nonce&#39;, &#39;llms_switch_order_source&#39;, &#39;POST&#39; ) ) {
+			return;
+		} elseif ( ! isset( $_POST[&#39;order_id&#39;] ) &amp;&amp; ! is_numeric( $_POST[&#39;order_id&#39;] ) &amp;&amp; 0 == $_POST[&#39;order_id&#39;] ) {
+			return llms_add_notice( __( &#39;Missing order information.&#39;, &#39;lifterlms&#39; ), &#39;error&#39; );
+		}
+
+		$order = llms_get_post( $_POST[&#39;order_id&#39;] );
+		if ( ! $order || get_current_user_id() != $order-&gt;get( &#39;user_id&#39; ) ) {
+			return llms_add_notice( __( &#39;Invalid Order.&#39;, &#39;lifterlms&#39; ), &#39;error&#39; );
+		} elseif ( empty( $_POST[&#39;llms_payment_gateway&#39;] ) ) {
+			return llms_add_notice( __( &#39;Missing gateway information.&#39;, &#39;lifterlms&#39; ), &#39;error&#39; );
+		}
+
+		$plan = llms_get_post( $order-&gt;get( &#39;plan_id&#39; ) );
+		$gateway_id = sanitize_text_field( $_POST[&#39;llms_payment_gateway&#39;] );
+		$gateway = $this-&gt;validate_selected_gateway( $gateway_id, $plan );
+
+		if ( is_wp_error( $gateway ) ) {
+			return llms_add_notice( $gateway-&gt;get_error_message(), &#39;error&#39; );
+		}
+
+		// handoff to the gateway
+		$gateway-&gt;handle_payment_source_switch( $order, $_POST );
+
+		// if the order is pending cancel and there were no errors returned activate it
+		if ( &#39;llms-pending-cancel&#39; === $order-&gt;get( &#39;status&#39; ) &amp;&amp; ! llms_notice_count( &#39;error&#39; ) ) {
+			$order-&gt;set_status( &#39;active&#39; );
+		}
+
+	}
+
+	/**
+	 * When a transaction fails, update the parent order&#39;s status
+	 * @param    obj     $txn  Instance of the LLMS_Transaction
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.10.0
+	 */
+	public function transaction_failed( $txn ) {
+
+		$order = $txn-&gt;get_order();
+
+		// halt if legacy
+		if ( $order-&gt;is_legacy() ) { return; }
+
+		if ( $order-&gt;can_be_retried() ) {
+
+			$order-&gt;maybe_schedule_retry();
+
+		} else {
+
+			$order-&gt;set( &#39;status&#39;, &#39;llms-failed&#39; );
+
+		}
+
+	}
+
+	/**
+	 * When a transaction is refunded, update the parent order&#39;s status
+	 * @param    obj     $txn  Instance of the LLMS_Transaction
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function transaction_refunded( $txn ) {
+
+		$order = $txn-&gt;get_order();
+
+		// halt if legacy
+		if ( $order-&gt;is_legacy() ) { return; }
+
+		$order-&gt;set( &#39;status&#39;, &#39;llms-refunded&#39; );
+
+	}
+
+	/**
+	 * When a transaction succeeds, update the parent order&#39;s status
+	 * @param    obj     $txn  Instance of the LLMS_Transaction
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.10.0
+	 */
+	public function transaction_succeeded( $txn ) {
+
+		// get the order
+		$order = $txn-&gt;get_order();
+
+		// halt if legacy
+		if ( $order-&gt;is_legacy() ) { return; }
+
+		// update the status based on the order type
+		$status = $order-&gt;is_recurring() ? &#39;llms-active&#39; : &#39;llms-completed&#39;;
+		$order-&gt;set( &#39;status&#39;, $status );
+		$order-&gt;set( &#39;last_retry_rule&#39;, &#39;&#39; ); // retries should always start with tne first rule for new transactions
+
+		// maybe schedule a payment
+		$order-&gt;maybe_schedule_payment();
+
+	}
+
+	/**
+	 * Trigger actions when the status of LifterLMS Orders and LifterLMS Transactions change status
+	 * @param    string     $new_status  new status
+	 * @param    string     $old_status  old status
+	 * @param    ojb        $post        WP_Post isntance
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function transition_status( $new_status, $old_status, $post ) {
+
+		// don&#39;t do anything if the status hasn&#39;t changed
+		if ( $new_status === $old_status ) {
+			return;
+		}
+
+		// we&#39;re only concerned with order post statuses here
+		if ( &#39;llms_order&#39; !== $post-&gt;post_type &amp;&amp; &#39;llms_transaction&#39; !== $post-&gt;post_type ) {
+			return;
+		}
+
+		$post_type = str_replace( &#39;llms_&#39;, &#39;&#39;, $post-&gt;post_type );
+		$obj = &#39;order&#39; === $post_type ? new LLMS_Order( $post ) : new LLMS_Transaction( $post );
+
+		// record order status changes as notes
+		if ( &#39;order&#39; === $post_type ) {
+			$obj-&gt;add_note( sprintf( __( &#39;Order status changed from %1$s to %2$s&#39;, &#39;lifterlms&#39; ), llms_get_order_status_name( $old_status ), llms_get_order_status_name( $new_status ) ) );
+		}
+
+		// remove prefixes from all the things
+		$new_status = str_replace( array( &#39;llms-&#39;, &#39;txn-&#39; ), &#39;&#39;, $new_status );
+		$old_status = str_replace( array( &#39;llms-&#39;, &#39;txn-&#39; ), &#39;&#39;, $old_status );
+
+		do_action( &#39;lifterlms_&#39; . $post_type . &#39;_status_&#39; . $old_status . &#39;_to_&#39; . $new_status, $obj, $old_status, $new_status );
+		do_action( &#39;lifterlms_&#39; . $post_type . &#39;_status_&#39; . $new_status, $obj, $old_status, $new_status );
+
+	}
+
+	/**
+	 * Validate a gateway can be used to process the current action / transaction
+	 * @param    string     $gateway_id  gateway&#39;s id
+	 * @param    obj        $plan        instance of the LLMS_Access_Plan related to the action/transaction
+	 * @return   mixed                   WP_Error or LLMS_Payment_Gateway subclass
+	 * @since    3.10.0
+	 * @version  3.10.0
+	 */
+	private function validate_selected_gateway( $gateway_id, $plan ) {
+
+		$gateway = LLMS()-&gt;payment_gateways()-&gt;get_gateway_by_id( $gateway_id );
+		$err = new WP_Error();
+
+		// valid gateway
+		if ( is_subclass_of( $gateway, &#39;LLMS_Payment_Gateway&#39; ) ) {
+
+			// gateway not enabled
+			if ( &#39;manual&#39; !== $gateway-&gt;get_id() &amp;&amp; ! $gateway-&gt;is_enabled() ) {
+
+				return $err-&gt;add( &#39;gateway-error&#39;, __( &#39;The selected payment gateway is not currently enabled.&#39;, &#39;lifterlms&#39; ) );
+
+				// it&#39;s a recurring plan and the gateway doesn&#39;t support recurring
+			} elseif ( $plan-&gt;is_recurring() &amp;&amp; ! $gateway-&gt;supports( &#39;recurring_payments&#39; ) ) {
+
+				return $err-&gt;add( &#39;gateway-error&#39;, sprintf( __( &#39;%s does not support recurring payments and cannot process this transaction.&#39;, &#39;lifterlms&#39; ), $gateway-&gt;get_title() ) );
+
+				// not recurring and the gateway doesn&#39;t support single payments
+			} elseif ( ! $plan-&gt;is_recurring() &amp;&amp; ! $gateway-&gt;supports( &#39;single_payments&#39; ) ) {
+
+				return $err-&gt;add( &#39;gateway-error&#39;, sprintf( __( &#39;%s does not support single payments and cannot process this transaction.&#39;, &#39;lifterlms&#39; ), $gateway-&gt;get_title() ) );
+
+			}
+		} else {
+
+			return $err-&gt;add( &#39;invalid-gateway&#39;, __( &#39;An invalid payment method was selected.&#39;, &#39;lifterlms&#39; ) );
+
+		}
+
+		return $gateway;
+
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.29.4/includes/controllers/class.llms.controller.orders.php#L14">View on GitHub</a></span>
+			</p>
+			</section>
+
+		<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/__construct/">
+							__construct</a>
+						&mdash; Constructor											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/complete_order/">
+							complete_order</a>
+						&mdash; Perform actions on a succesful order completion											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/confirm_pending_order/">
+							confirm_pending_order</a>
+						&mdash; Confirm order form post User clicks confirm order or gateway determines the order is confirmed											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/create_pending_order/">
+							create_pending_order</a>
+						&mdash; Handle form submission of the checkout / payment form											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/error_order/">
+							error_order</a>
+						&mdash; Called when an order&#39;s status changes to refunded, cancelled, expired, or failed											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/expire_access/">
+							expire_access</a>
+						&mdash; Handle expiration &amp; cancellation from a course / membership Called via scheduled action set during order completion for plans with a limited access plan Additionally called when an order is marked as &#34;pending-cancel&#34; to revoke access at the end of a pre-paid period											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/pending_cancel_order/">
+							pending_cancel_order</a>
+						&mdash; Unschedule recurring payments and schedule access expiration											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/recurring_charge/">
+							recurring_charge</a>
+						&mdash; Trigger a recrurring payment Called by action scheduler											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/switch_payment_source/">
+							switch_payment_source</a>
+						&mdash; Handle form submission of the &#34;Update Payment Method&#34; form on the student dashboard when viewing a single order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/transaction_failed/">
+							transaction_failed</a>
+						&mdash; When a transaction fails, update the parent order&#39;s status											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/transaction_refunded/">
+							transaction_refunded</a>
+						&mdash; When a transaction is refunded, update the parent order&#39;s status											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/transaction_succeeded/">
+							transaction_succeeded</a>
+						&mdash; When a transaction succeeds, update the parent order&#39;s status											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/transition_status/">
+							transition_status</a>
+						&mdash; Trigger actions when the status of LifterLMS Orders and LifterLMS Transactions change status											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_controller_orders/validate_selected_gateway/">
+							validate_selected_gateway</a>
+						&mdash; Validate a gateway can be used to process the current action / transaction											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_controller_orders%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_controller_orders/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="../../../../s29765.pcdn.co/wp-includes/css/buttons.min.css" type="text/css" media="all"/>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"c0e1df32b0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/quicktags.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"bf6fb03126","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/wp-embed.min.js"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
+
+</body></html>

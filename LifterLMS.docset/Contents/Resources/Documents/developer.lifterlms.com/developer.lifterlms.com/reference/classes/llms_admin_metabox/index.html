@@ -1,0 +1,1011 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="../../../../s29765.pcdn.co/wp-includes/css/dashicons.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Admin_Metabox - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Admin_Metabox - LifterLMS Developer Hub"/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_admin_metabox/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="LLMS_Admin_Metabox - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","logo":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Admin_Metabox Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_admin_metabox/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.4.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.4.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="../../../../s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.0.3"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=6908"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_admin_metabox%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_admin_metabox%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-6908">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="../../../../s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="../../index.html" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="../../../index.html">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="../../index.html">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-6908 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="../../../index.html" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="../../index.html" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="../index.html">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-122"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Admin_Metabox"></a><span class="trail-end">LLMS_Admin_Metabox</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-6908" class="post-6908 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_abstracts_abstract-llms-admin-metabox-php">
+
+	
+	
+	<h1>LLMS_Admin_Metabox</h1>
+
+	<section class="summary">
+			</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a>
+</li></ul></li>
+<li><a href="#related">Related</a>
+<ul>
+<li><a href="#used-by">Used By</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="../../files/includes/abstracts/abstract-llms-admin-metabox.php/index.html">includes/abstracts/abstract.llms.admin.metabox.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 15">abstract class LLMS_Admin_Metabox {
+
+	/**
+	 * Metabox ID
+	 * Define this in extending class&#39;s $this-&gt;configure() method
+	 * @var string
+	 * @since 3.0.0
+	 */
+	public $id;
+
+	/**
+	 * Post Types this metabox should be added to
+	 * Can be a string of a single post type or an indexed array of multiple post types
+	 * Define this in extending class&#39;s $this-&gt;configure() method
+	 * @var array
+	 * @since 3.0.0
+	 */
+	public $screens = array();
+
+	/**
+	 * Title of the metabox
+	 * This should be a translatable, use __()
+	 * Define this in extending class&#39;s $this-&gt;configure() method
+	 * @var string
+	 * @since 3.0.0
+	 */
+	public $title;
+
+	/**
+	 * Capability to check in order to display the metabox to the user
+	 * @var    string
+	 * @since  3.13.0
+	 */
+	public $capability = &#39;edit_post&#39;;
+
+	/**
+	 * Optional context to register the metabox with
+	 * Accepts anything that can be passed to WP core add_meta_box() function
+	 * Options are: &#39;normal&#39;, &#39;side&#39;, &#39;advanced&#39;
+	 * Define this in extending class&#39;s $this-&gt;configure() method
+	 * @var string
+	 * @since 3.0.0
+	 */
+	public $context = &#39;normal&#39;;
+
+	/**
+	 * Optional priority for the metabox
+	 * Accepts anything that can be passed to WP core add_meta_box() function
+	 * Options are: &#39;default&#39;, &#39;high&#39;, &#39;low&#39;
+	 * Define this in extending class&#39;s $this-&gt;configure() method
+	 * @var string
+	 * @since 3.0.0
+	 */
+	public $priority = &#39;default&#39;;
+
+	/**
+	 * Instance of WP_Post for the current post
+	 * @var obj
+	 * @since  3.0.0
+	 */
+	public $post;
+
+	/**
+	 * Meta Key Prefix for all elements in the metabox
+	 * @var string
+	 * @since 3.0.0
+	 */
+	public $prefix = &#39;_llms_&#39;;
+
+	/**
+	 * Array of error message strings to be displayed after an update attempt
+	 * @var array
+	 * @since 3.0.0
+	 */
+	private $errors = array();
+
+	/**
+	 * HTML for the Metabox Content
+	 * Content handled by $this-&gt;process_fields()
+	 * @var string
+	 * @since 3.0.0
+	 */
+	private $content = &#39;&#39;;
+	/**
+	 * HTML for the Metabox Navigation
+	 * Content handled by $this-&gt;process_fields()
+	 * @var string
+	 * @since 3.0.0
+	 */
+	private $navigation = &#39;&#39;;
+
+	/**
+	 * The number of tabs registered to the metabox
+	 * This will be calculated automatically
+	 * Navigation will not display unless there&#39;s 2 or more tabs
+	 * @var integer
+	 * @since  3.0.0
+	 */
+	private $total_tabs = 0;
+
+	/**
+	 * Metabox Version Numbers
+	 * @var  integer
+	 */
+	private $version = 1;
+
+	/**
+	 * Constructor
+	 *
+	 * Configure the metabox and automatically add required actions
+	 *
+	 * @since  3.0.0
+	 */
+	public function __construct() {
+
+		// allow child classes to configure variables
+		$this-&gt;configure();
+
+		// register the metabox
+		add_action( &#39;add_meta_boxes&#39;, array( $this, &#39;register&#39; ) );
+
+		// register save actions for applicable screens (post types)
+		foreach ( $this-&gt;get_screens() as $screen ) {
+			add_action( &#39;save_post_&#39; . $screen, array( $this, &#39;save_actions&#39; ), 10, 1 );
+		}
+
+		// display errors
+		add_action( &#39;admin_notices&#39;, array( $this, &#39;output_errors&#39; ) );
+
+		// save errors
+		add_action( &#39;shutdown&#39;, array( $this, &#39;save_errors&#39; ) );
+
+	}
+
+	/**
+	 * Add an Error Message
+	 * @param string $text
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.8.0
+	 */
+	public function add_error( $text ) {
+		$this-&gt;errors[] = $text;
+	}
+
+	/**
+	 * This function allows extending classes to configure required class properties
+	 * $this-&gt;id, $this-&gt;title, and $this-&gt;screens should be configured in this function
+	 *
+	 * @return void
+	 * @since  3.0.0
+	 */
+	abstract public function configure();
+
+	/**
+	 * This function is where extending classes can configure all the fields within the metabox
+	 * The function must return an array which can be consumed by the &#34;output&#34; function
+	 *
+	 * @return array
+	 */
+	abstract public function get_fields();
+
+	/**
+	 * Normalizes $this-&gt;screens to ensure it&#39;s an array
+	 * @return array
+	 * @since  3.0.0
+	 */
+	private function get_screens() {
+		if ( is_string( $this-&gt;screens ) ) {
+			return array( $this-&gt;screens );
+		} else {
+			return $this-&gt;screens;
+		}
+	}
+
+	/**
+	 * Determine if any errors have been added
+	 * @return boolean
+	 */
+	public function has_errors() {
+		return ( count( $this-&gt;errors ) ) ? true : false;
+	}
+
+	/**
+	 * Generate and output the HTML for the metabox
+	 * @return void
+	 * @version  3.0.0
+	 */
+	public function output() {
+
+		// setup html for nav and content
+		$this-&gt;process_fields();
+
+		// output the html
+		echo &#39;&lt;div class=&#34;llms-mb-container&#34;&gt;&#39;;
+		// only show tabbed navigation when there&#39;s more than 1 tab
+		if ( $this-&gt;total_tabs &gt; 1 ) {
+			echo &#39;&lt;nav class=&#34;llms-nav-tab-wrapper&#34;&gt;&lt;ul class=&#34;tabs llms-nav-items&#34;&gt;&#39; . $this-&gt;navigation . &#39;&lt;/ul&gt;&lt;/nav&gt;&#39;;
+		}
+		do_action( &#39;llms_metabox_before_content&#39;, $this-&gt;id );
+		echo $this-&gt;content;
+		do_action( &#39;llms_metabox_after_content&#39;, $this-&gt;id );
+		echo &#39;&lt;/div&gt;&#39;;
+		wp_nonce_field( &#39;lifterlms_save_data&#39;, &#39;lifterlms_meta_nonce&#39; );
+
+	}
+
+	/**
+	 * Display the messages as a WP Admin Notice
+	 * @return  void
+	 * @since  3.0.0
+	 */
+	public function output_errors() {
+
+		$errors = get_option( &#39;lifterlms_metabox_errors&#39; . $this-&gt;id );
+
+		if ( empty( $errors ) ) {
+			return;
+		}
+
+		foreach ( $errors as $error ) {
+			echo &#39;&lt;div id=&#34;lifterlms_errors&#34; class=&#34;error&#34;&gt;&lt;p&gt;&#39; . $error . &#39;&lt;/p&gt;&lt;/div&gt;&#39;;
+		}
+
+		delete_option( &#39;lifterlms_metabox_errors&#39; . $this-&gt;id );
+
+	}
+
+	/**
+	 * Process fields to setup navigation and content with minimal PHP loops
+	 * called by $this-&gt;output before actually outputting html
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.16.14
+	 */
+	private function process_fields() {
+
+		/**
+		 * Add a filter so extending classes don&#39;t have to
+		 * so we don&#39;t have too many filters running
+		 */
+		$fields = apply_filters( &#39;llms_metabox_fields_&#39; . str_replace( &#39;-&#39;, &#39;_&#39;, $this-&gt;id ), $this-&gt;get_fields() );
+
+		$this-&gt;total_tabs = count( $fields );
+
+		foreach ( $fields as $i =&gt; $tab ) {
+
+			$i++;
+			$current = 1 === $i ? &#39; llms-active&#39; : &#39;&#39;;
+
+			$this-&gt;navigation .= &#39;&lt;li class=&#34;llms-nav-item tab-link &#39; . $current . &#39;&#34; data-tab=&#34;&#39; . $this-&gt;id . &#39;-tab-&#39; . $i . &#39;&#34;&gt;&lt;span class=&#34;llms-nav-link&#34;&gt;&#39; . $tab[&#39;title&#39;] . &#39;&lt;/span&gt;&lt;/li&gt;&#39;;
+
+			$this-&gt;content .= &#39;&lt;div id=&#34;&#39; . $this-&gt;id . &#39;-tab-&#39; . $i . &#39;&#34; class=&#34;tab-content&#39; . $current . &#39;&#34;&gt;&lt;ul&gt;&#39;;
+
+			foreach ( $tab[&#39;fields&#39;] as $field ) {
+
+				$name = ucfirst( strtr( preg_replace_callback( &#39;/(\w+)/&#39;, function( $m ) {
+					return ucfirst( $m[1] );
+				}, $field[&#39;type&#39;] ),&#39;-&#39;,&#39;_&#39; ) );
+
+				$field_class_name = str_replace( &#39;{TOKEN}&#39;, $name, &#39;LLMS_Metabox_{TOKEN}_Field&#39; );
+				$field_class = new $field_class_name($field);
+				ob_start();
+				$field_class-&gt;Output();
+				$this-&gt;content .= ob_get_clean();
+				unset( $field_class );
+			}
+
+			$this-&gt;content .= &#39;&lt;/ul&gt;&lt;/div&gt;&#39;;
+
+		}
+
+	}
+
+	/**
+	 * Register the Metabox using WP Functions
+	 * This is called automatically by constructor
+	 * Utilizes class properties for registration
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.13.0
+	 */
+	public function register() {
+
+		global $post;
+		$this-&gt;post = $post;
+
+		if ( current_user_can( $this-&gt;capability, $this-&gt;post-&gt;ID ) ) {
+
+			add_meta_box( $this-&gt;id, $this-&gt;title, array( $this, &#39;output&#39; ), $this-&gt;get_screens(), $this-&gt;context, $this-&gt;priority );
+
+		}
+
+	}
+
+	/**
+	 * Save field data
+	 * Loops through fields and saves the data to postmeta
+	 * Called by $this-&gt;save_actions()
+	 *
+	 * This function is dumb. If the fields need to output error messages or do validation
+	 * Override this method and create a custom save method to accommodate the validations or conditions
+	 *
+	 * @param    int   $post_id   WP Post ID of the post being saved
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.14.1
+	 */
+	protected function save( $post_id ) {
+
+		// dont save metabox during a quick save action
+		if ( isset( $_POST[&#39;action&#39;] ) &amp;&amp; &#39;inline-save&#39; === $_POST[&#39;action&#39;] ) {
+			return;
+			// don&#39;t save during ajax calls
+		} elseif ( llms_is_ajax() ) {
+			return;
+		}
+
+		// get all defined fields
+		$fields = $this-&gt;get_fields();
+
+		if ( ! is_array( $fields ) ) {
+			return;
+		}
+
+		// loop thorugh the fields
+		foreach ( $fields as $group =&gt; $data ) {
+
+			// find the fields in each tab
+			if ( isset( $data[&#39;fields&#39;] ) &amp;&amp; is_array( $data[&#39;fields&#39;] ) ) {
+
+				// loop through the fields
+				foreach ( $data[&#39;fields&#39;] as $field ) {
+
+					// don&#39;t save things that don&#39;t have an ID
+					if ( isset( $field[&#39;id&#39;] ) ) {
+
+						// get the posted value
+						if ( isset( $_POST[ $field[&#39;id&#39;] ] ) ) {
+
+							$val = $_POST[ $field[&#39;id&#39;] ];
+
+						} // End if().
+						elseif ( ! isset( $_POST[ $field[&#39;id&#39;] ] ) ) {
+
+							$val = &#39;&#39;;
+
+						}
+
+						// update the value if we have one
+						if ( isset( $val ) ) {
+
+							update_post_meta( $post_id, $field[&#39;id&#39;], $val );
+
+						}
+
+						unset( $val );
+
+					}
+				}
+			}
+		}// End foreach().
+
+	}
+
+
+	/**
+	 * Allows extending classes to perform additional save methods before the default save
+	 * when the default save is not being overridden
+	 * Called before $this-&gt;save() during $this-&gt;save_actions()
+	 *
+	 * @param  int   $post_id   WP Post ID of the post being saved
+	 * @return void
+	 * @since  3.0.0
+	 */
+	protected function save_before( $post_id ) {}
+
+	/**
+	 * Allows extending classes to perform additional save methods after the default save
+	 * when the default save is not being overridden
+	 * Called before $this-&gt;save() during $this-&gt;save_actions()
+	 *
+	 * @param  int   $post_id   WP Post ID of the post being saved
+	 * @return void
+	 * @since  3.0.0
+	 */
+	protected function save_after( $post_id ) {}
+
+	/**
+	 * Perform Save Actions
+	 * Triggers actions for before and after save
+	 * And calls the save method which actually saves metadata
+	 *
+	 * This is called automatically on save_post_{$post_type} for screens the metabox is registered to
+	 * @param  int   $post_id   WP Post ID of the post being saved
+	 * @return void
+	 * @since  3.0.0
+	 */
+	public function save_actions( $post_id ) {
+		// prevent save action from running multiple times on a single load
+		if ( isset( $this-&gt;_saved ) ) {
+			return;
+		}
+
+		$this-&gt;post = get_post( $post_id );
+
+		$this-&gt;_saved = true;
+		do_action( &#39;llms_metabox_before_save_&#39; . $this-&gt;id, $post_id, $this );
+		$this-&gt;save_before( $post_id );
+		$this-&gt;save( $post_id );
+		$this-&gt;save_after( $post_id );
+		do_action( &#39;llms_metabox_after_save_&#39; . $this-&gt;id, $post_id, $this );
+	}
+
+	/**
+	 * Save messages to the database
+	 * @return  void
+	 * @since  3.0.0
+	 */
+	public function save_errors() {
+		update_option( &#39;lifterlms_metabox_errors&#39; . $this-&gt;id, $this-&gt;errors );
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.29.4/includes/abstracts/abstract.llms.admin.metabox.php#L15">View on GitHub</a></span>
+			</p>
+			</section>
+
+	<hr/>
+	<section class="related">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="related" tabindex="-1">Related <a href="#related" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Related</span></a></h2>
+
+		
+					
+			<article class="used-by">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="used-by" tabindex="-1">Used By <a href="#used-by" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Used By</span></a></h3>
+				<table id="used-by-table">
+					<caption class="screen-reader-text">Used By</caption>
+					<thead>
+						<tr>
+							<th>Used By</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.engagement.php:</span>
+								<a href="../llms_meta_box_engagement/index.html">LLMS_Meta_Box_Engagement</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.students.php:</span>
+								<a href="../llms_meta_box_students/index.html">LLMS_Meta_Box_Students</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.lesson.php:</span>
+								<a href="../llms_meta_box_lesson/index.html">LLMS_Meta_Box_Lesson</a>
+							</td>
+							<td class="related-desc">
+								<p>Lesson Settings Metabox</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.product.php:</span>
+								<a href="../llms_meta_box_product/index.html">LLMS_Meta_Box_Product</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="../llms_meta_box_product/index.html">LLMS_Meta_Box_Product</a> class.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.order.notes.php:</span>
+								<a href="../llms_meta_box_order_notes/index.html">LLMS_Meta_Box_Order_Notes</a>
+							</td>
+							<td class="related-desc">
+								<p>Metaboxes for Orders</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.membership.php:</span>
+								<a href="../llms_meta_box_membership/index.html">LLMS_Meta_Box_Membership</a>
+							</td>
+							<td class="related-desc">
+								<p>Membership Settings Metabox</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.email.settings.php:</span>
+								<a href="../llms_meta_box_email_settings/index.html">LLMS_Meta_Box_Email_Settings</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.order.enrollment.php:</span>
+								<a href="../llms_meta_box_order_enrollment/index.html">LLMS_Meta_Box_Order_Enrollment</a>
+							</td>
+							<td class="related-desc">
+								<p>Metaboxes for Student Enrollment Information Associated with a specific order</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.instructors.php:</span>
+								<a href="../llms_metabox_instructors/index.html">LLMS_Metabox_Instructors</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="../llms_metabox_instructors/index.html">LLMS_Metabox_Instructors</a> class</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.voucher.php:</span>
+								<a href="../llms_meta_box_voucher/index.html">LLMS_Meta_Box_Voucher</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+								<a href="#" class="show-more">Show 5 more used by</a>
+				<a href="#" class="hide-more">Hide more used by</a>
+							</article>
+			</section>
+			<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="__construct/index.html">
+							__construct</a>
+						&mdash; Constructor											</li>
+									<li><a href="add_error/index.html">
+							add_error</a>
+						&mdash; Add an Error Message											</li>
+									<li><a href="configure/index.html">
+							configure</a>
+						&mdash; This function allows extending classes to configure required class properties $this-&gt;id, $this-&gt;title, and $this-&gt;screens should be configured in this function											</li>
+									<li><a href="get_fields/index.html">
+							get_fields</a>
+						&mdash; This function is where extending classes can configure all the fields within the metabox The function must return an array which can be consumed by the &#34;output&#34; function											</li>
+									<li><a href="get_screens/index.html">
+							get_screens</a>
+						&mdash; Normalizes $this-&gt;screens to ensure it&#39;s an array											</li>
+									<li><a href="has_errors/index.html">
+							has_errors</a>
+						&mdash; Determine if any errors have been added											</li>
+									<li><a href="output/index.html">
+							output</a>
+						&mdash; Generate and output the HTML for the metabox											</li>
+									<li><a href="output_errors/index.html">
+							output_errors</a>
+						&mdash; Display the messages as a WP Admin Notice											</li>
+									<li><a href="process_fields/index.html">
+							process_fields</a>
+						&mdash; Process fields to setup navigation and content with minimal PHP loops called by $this-&gt;output before actually outputting html											</li>
+									<li><a href="register/index.html">
+							register</a>
+						&mdash; Register the Metabox using WP Functions This is called automatically by constructor Utilizes class properties for registration											</li>
+									<li><a href="save/index.html">
+							save</a>
+						&mdash; Save field data Loops through fields and saves the data to postmeta Called by $this-&gt;save_actions()											</li>
+									<li><a href="save_actions/index.html">
+							save_actions</a>
+						&mdash; Perform Save Actions Triggers actions for before and after save And calls the save method which actually saves metadata											</li>
+									<li><a href="save_after/index.html">
+							save_after</a>
+						&mdash; Allows extending classes to perform additional save methods after the default save when the default save is not being overridden Called before $this-&gt;save() during $this-&gt;save_actions()											</li>
+									<li><a href="save_before/index.html">
+							save_before</a>
+						&mdash; Allows extending classes to perform additional save methods before the default save when the default save is not being overridden Called before $this-&gt;save() during $this-&gt;save_actions()											</li>
+									<li><a href="save_errors/index.html">
+							save_errors</a>
+						&mdash; Save messages to the database											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="../../../wp-login.php/index.html">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_admin_metabox/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="../../../../s29765.pcdn.co/wp-includes/css/buttons.min.css" type="text/css" media="all"/>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"c0e1df32b0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/quicktags.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"bf6fb03126","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/wp-embed.min.js"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
+
+</body></html>

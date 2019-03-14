@@ -1,0 +1,18 @@
+#header, #masthead, #inner-search-icon-container, #llms-footer {
+  display: none;
+}
+
+.devhub-wrap #content-area, .devhub-wrap .inner-wrap {
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+#page {
+  padding-bottom: 0;
+}
+
+.site-main .table-of-contents {
+  margin-right: 0 !important;
+}
+
+/*# sourceMappingURL=dashdocs.css.map */

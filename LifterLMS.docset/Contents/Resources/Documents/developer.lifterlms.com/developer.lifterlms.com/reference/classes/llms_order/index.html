@@ -1,0 +1,2035 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="../../../../s29765.pcdn.co/wp-includes/css/dashicons.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Order - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Order - LifterLMS Developer Hub"/>
+<meta property="og:description" content="LLMS_Order model."/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_order/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="LLMS_Order model."/>
+<meta name="twitter:title" content="LLMS_Order - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","logo":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Order Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_order/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.4.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.4.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="../../../../s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.0.3"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=7625"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_order%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_order%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-7625">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="../../../../s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-7625 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-363"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Order"></a><span class="trail-end">LLMS_Order</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-7625" class="post-7625 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_models_model-llms-order-php wp-parser-package-lifterlms-models">
+
+	
+	
+	<h1>LLMS_Order</h1>
+
+	<section class="summary">
+		<p><a href="https://developer.lifterlms.com/reference/classes/llms_order/">LLMS_Order</a> model.</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a>
+</li></ul></li>
+<li><a href="#related">Related</a>
+<ul>
+<li><a href="#uses">Uses</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="https://developer.lifterlms.com/reference/files/includes/models/model-llms-order.php/">includes/models/model.llms.order.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 77">class LLMS_Order extends LLMS_Post_Model {
+
+	protected $db_post_type = &#39;llms_order&#39;;
+	protected $model_post_type = &#39;order&#39;;
+
+	protected $properties = array(
+
+		&#39;anonymized&#39; =&gt; &#39;yesno&#39;,
+		&#39;coupon_amount&#39; =&gt; &#39;float&#39;,
+		&#39;coupon_amout_trial&#39; =&gt; &#39;float&#39;,
+		&#39;coupon_value&#39; =&gt; &#39;float&#39;,
+		&#39;coupon_value_trial&#39; =&gt; &#39;float&#39;,
+		&#39;original_total&#39; =&gt; &#39;float&#39;,
+		&#39;sale_price&#39; =&gt; &#39;float&#39;,
+		&#39;sale_value&#39; =&gt; &#39;float&#39;,
+		&#39;total&#39; =&gt; &#39;float&#39;,
+		&#39;trial_original_total&#39; =&gt; &#39;float&#39;,
+		&#39;trial_total&#39; =&gt; &#39;float&#39;,
+
+		&#39;access_length&#39; =&gt; &#39;absint&#39;,
+		&#39;billing_frequency&#39; =&gt; &#39;absint&#39;,
+		&#39;billing_length&#39; =&gt; &#39;absint&#39;,
+		&#39;coupon_id&#39; =&gt; &#39;absint&#39;,
+		&#39;plan_id&#39; =&gt; &#39;absint&#39;,
+		&#39;product_id&#39; =&gt; &#39;absint&#39;,
+		&#39;trial_length&#39; =&gt; &#39;absint&#39;,
+		&#39;user_id&#39; =&gt; &#39;absint&#39;,
+
+		&#39;access_expiration&#39; =&gt; &#39;text&#39;,
+		&#39;access_expires&#39; =&gt; &#39;text&#39;,
+		&#39;access_period&#39; =&gt; &#39;text&#39;,
+		&#39;billing_address_1&#39; =&gt; &#39;text&#39;,
+		&#39;billing_address_2&#39; =&gt; &#39;text&#39;,
+		&#39;billing_city&#39; =&gt; &#39;text&#39;,
+		&#39;billing_country&#39; =&gt; &#39;text&#39;,
+		&#39;billing_email&#39; =&gt; &#39;text&#39;,
+		&#39;billing_first_name&#39; =&gt; &#39;text&#39;,
+		&#39;billing_last_name&#39; =&gt; &#39;text&#39;,
+		&#39;billing_state&#39; =&gt; &#39;text&#39;,
+		&#39;billing_zip&#39; =&gt; &#39;text&#39;,
+		&#39;billing_period&#39; =&gt; &#39;text&#39;,
+		&#39;coupon_code&#39; =&gt; &#39;text&#39;,
+		&#39;coupon_type&#39; =&gt; &#39;text&#39;,
+		&#39;coupon_used&#39; =&gt; &#39;text&#39;,
+		&#39;currency&#39; =&gt; &#39;text&#39;,
+		&#39;on_sale&#39; =&gt; &#39;text&#39;,
+		&#39;order_key&#39; =&gt; &#39;text&#39;,
+		&#39;order_type&#39; =&gt; &#39;text&#39;,
+		&#39;payment_gateway&#39; =&gt; &#39;text&#39;,
+		&#39;plan_sku&#39; =&gt; &#39;text&#39;,
+		&#39;plan_title&#39; =&gt; &#39;text&#39;,
+		&#39;product_sku&#39; =&gt; &#39;text&#39;,
+		&#39;product_type&#39; =&gt; &#39;text&#39;,
+		&#39;title&#39; =&gt; &#39;text&#39;,
+		&#39;gateway_api_mode&#39; =&gt; &#39;text&#39;,
+		&#39;gateway_customer_id&#39; =&gt; &#39;text&#39;,
+		&#39;trial_offer&#39; =&gt; &#39;text&#39;,
+		&#39;trial_period&#39; =&gt; &#39;text&#39;,
+		&#39;user_ip_address&#39; =&gt; &#39;text&#39;,
+
+		&#39;date_access_expires&#39; =&gt; &#39;text&#39;,
+		&#39;date_billing_end&#39; =&gt; &#39;text&#39;,
+		&#39;date_next_payment&#39; =&gt; &#39;text&#39;,
+		&#39;date_trial_end&#39; =&gt; &#39;text&#39;,
+
+	);
+
+	/**
+	 * Add an admin-only note to the order visible on the admin panel
+	 * notes are recorded using the wp comments API &amp; DB
+	 *
+	 * @param    string     $note           note content
+	 * @param    boolean    $added_by_user  if this is an admin-submitted note adds user info to note meta
+	 * @return   null|int                   null on error or WP_Comment ID of the note
+	 * @since    3.0.0
+	 * @version  3.24.0
+	 */
+	public function add_note( $note, $added_by_user = false ) {
+
+		if ( ! $note ) {
+			return;
+		}
+
+		// added by a user from the admin panel
+		if ( $added_by_user &amp;&amp; is_user_logged_in() &amp;&amp; current_user_can( apply_filters( &#39;lifterlms_admin_order_access&#39;, &#39;manage_options&#39; ) ) ) {
+
+			$user_id = get_current_user_id();
+			$user = get_user_by( &#39;id&#39;, $user_id );
+			$author = $user-&gt;display_name;
+			$author_email = $user-&gt;user_email;
+
+		} else {
+
+			$user_id = 0;
+			$author = _x( &#39;LifterLMS&#39;, &#39;default order note author&#39;, &#39;lifterlms&#39; );
+			$author_email = strtolower( _x( &#39;LifterLms&#39;, &#39;default order note author&#39;, &#39;lifterlms&#39; ) ) . &#39;@&#39;;
+			$author_email .= isset( $_SERVER[&#39;HTTP_HOST&#39;] ) ? str_replace( &#39;www.&#39;, &#39;&#39;, $_SERVER[&#39;HTTP_HOST&#39;] ) : &#39;noreply.com&#39;;
+			$author_email = sanitize_email( $author_email );
+
+		}
+
+		$note_id = wp_insert_comment( apply_filters( &#39;llms_add_order_note_content&#39;, array(
+			&#39;comment_post_ID&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+			&#39;comment_author&#39; =&gt; $author,
+			&#39;comment_author_email&#39; =&gt; $author_email,
+			&#39;comment_author_url&#39; =&gt; &#39;&#39;,
+			&#39;comment_content&#39; =&gt; $note,
+			&#39;comment_type&#39; =&gt; &#39;llms_order_note&#39;,
+			&#39;comment_parent&#39; =&gt; 0,
+			&#39;user_id&#39; =&gt; $user_id,
+			&#39;comment_approved&#39; =&gt; 1,
+			&#39;comment_agent&#39; =&gt; &#39;LifterLMS&#39;,
+			&#39;comment_date&#39; =&gt; current_time( &#39;mysql&#39; ),
+		) ) );
+
+		do_action( &#39;llms_new_order_note_added&#39;, $note_id, $this );
+
+		return $note_id;
+
+	}
+
+	/**
+	 * Called after inserting a new order into the database
+	 * @return  void
+	 * @since   3.0.0
+	 * @version 3.0.0
+	 */
+	protected function after_create() {
+		// add a random key that can be passed in the URL and whatever
+		$this-&gt;set( &#39;order_key&#39;, $this-&gt;generate_order_key() );
+	}
+
+	/**
+	 * Calculate the date when billing should
+	 * applicable to orders created from plans with a set # of billing intervals
+	 * @return   int
+	 * @since    3.10.0
+	 * @version  3.10.0
+	 */
+	private function calculate_billing_end_date() {
+
+		$end = 0;
+
+		$num_payments = $this-&gt;get( &#39;billing_length&#39; );
+		if ( $num_payments ) {
+
+			$start = $this-&gt;get_date( &#39;date&#39;, &#39;U&#39; );
+
+			$period = $this-&gt;get( &#39;billing_period&#39; );
+			$frequency = $this-&gt;get( &#39;billing_frequency&#39; );
+
+			$end = $start;
+
+			$i = 0;
+			while ( $i &lt; $num_payments ) {
+				$end = strtotime( &#39;+&#39; . $frequency . &#39; &#39; . $period, $end );
+				$i++;
+			}
+		}
+
+		return apply_filters( &#39;llms_order_calculate_billing_end_date&#39;, $end, $this );
+
+	}
+
+	/**
+	 * Calculate the next payment due date
+	 * @param    string     $format  return format
+	 * @return   string
+	 * @since    3.10.0
+	 * @version  3.12.0
+	 */
+	private function calculate_next_payment_date( $format = &#39;Y-m-d H:i:s&#39; ) {
+
+		$start_time = $this-&gt;get_date( &#39;date&#39;, &#39;U&#39; );
+		$end_time = $this-&gt;get_date( &#39;date_billing_end&#39;, &#39;U&#39; );
+		if ( ! $end_time &amp;&amp; $this-&gt;get( &#39;billing_length&#39; ) ) {
+			$end_time = $this-&gt;calculate_billing_end_date();
+			$this-&gt;set( &#39;date_billing_end&#39;, date_i18n( &#39;Y-m-d H:i:s&#39;, $end_time ) );
+		}
+		$next_payment_time = $this-&gt;get_date( &#39;date_next_payment&#39;, &#39;U&#39; );
+
+		// if were on a trial and the trial hasn&#39;t ended yet next payment date is the date the trial ends
+		if ( $this-&gt;has_trial() &amp;&amp; ! $this-&gt;has_trial_ended() ) {
+
+			$next_payment_time = $this-&gt;get_trial_end_date( &#39;U&#39; );
+
+		} else {
+
+			// assume we&#39;ll start from the order start date
+			$from_time = $start_time;
+
+			if ( $next_payment_time &amp;&amp; $next_payment_time &lt; llms_current_time( &#39;timestamp&#39; ) ) {
+				// if we have a saved next payment that&#39;s old we can calculate from there
+
+				$from_time = $next_payment_time;
+
+			} else {
+
+				// check previous transactions and get the date from there
+				// this will be true of orders created prior to 3.10 when no payment dates were saved
+				$last_txn = $this-&gt;get_last_transaction( array( &#39;llms-txn-succeeded&#39;, &#39;llms-txn-refunded&#39; ), &#39;recurring&#39; );
+				$last_txn_time = $last_txn ? $last_txn-&gt;get_date( &#39;date&#39;, &#39;U&#39; ) : 0;
+				if ( $last_txn_time &amp;&amp; $last_txn_time &lt; llms_current_time( &#39;timestamp&#39; ) ) {
+					$from_time = $last_txn_time;
+				}
+			}
+
+			$period = $this-&gt;get( &#39;billing_period&#39; );
+			$frequency = $this-&gt;get( &#39;billing_frequency&#39; );
+			$next_payment_time = strtotime( &#39;+&#39; . $frequency . &#39; &#39; . $period, $from_time );
+
+			// Make sure the next payment is more than 2 hours in the future
+			// this ensures changes to the site&#39;s timezone because of daylight savings will never cause a 2nd renewal payment to be processed on the same day
+			// thanks WooCommerce Subscriptions &lt;3
+			$i = 1;
+			while ( $next_payment_time &lt; ( llms_current_time( &#39;timestamp&#39;, true ) + 2 * HOUR_IN_SECONDS ) &amp;&amp; $i &lt; 3000 ) {
+				$next_payment_time = strtotime( &#39;+&#39; . $frequency . &#39; &#39; . $period, $next_payment_time );
+				$i++;
+			}
+		}// End if().
+
+		// if the next payment is after the end time (where applicaple)
+		if ( 0 != $end_time &amp;&amp; ( $next_payment_time + 23 * HOUR_IN_SECONDS ) &gt; $end_time ) {
+			$ret = &#39;&#39;;
+		} elseif ( $next_payment_time &gt; 0 ) {
+			$ret = date_i18n( $format, $next_payment_time );
+		}
+
+		return apply_filters( &#39;llms_order_calculate_next_payment_date&#39;, $ret, $format, $this );
+
+	}
+
+	/**
+	 * Calculate the end date of the trial
+	 * @param    string     $format  desired return format of the date
+	 * @return   string
+	 * @since    3.10.0
+	 * @version  3.10.0
+	 */
+	private function calculate_trial_end_date( $format = &#39;Y-m-d H:i:s&#39; ) {
+
+		$start = $this-&gt;get_date( &#39;date&#39;, &#39;U&#39; ); // start with the date the order was initially created
+
+		$length = $this-&gt;get( &#39;trial_length&#39; );
+		$period = $this-&gt;get( &#39;trial_period&#39; );
+
+		$end = strtotime( &#39;+&#39; . $length . &#39; &#39; . $period, $start );
+
+		$ret = date_i18n( $format, $end );
+
+		return apply_filters( &#39;llms_order_calculate_trial_end_date&#39;, $ret, $format, $this );
+
+	}
+
+	/**
+	 * Determine if the order can be retried for recurring payments
+	 * @return   boolean
+	 * @since    3.10.0
+	 * @version  3.10.0
+	 */
+	public function can_be_retried() {
+
+		// only recurring orders can be retried
+		if ( ! $this-&gt;is_recurring() ) {
+			return false;
+		}
+
+		if ( &#39;yes&#39; !== get_option( &#39;lifterlms_recurring_payment_retry&#39;, &#39;yes&#39; ) ) {
+			return false;
+		}
+
+		// only active &amp; on-hold orders qualify for a retry
+		if ( ! in_array( $this-&gt;get( &#39;status&#39; ), array( &#39;llms-active&#39;, &#39;llms-on-hold&#39; ) ) ) {
+			return false;
+		}
+
+		// if the gateway isn&#39;t active or the gateway doesn&#39;t support recurring retries
+		$gateway = $this-&gt;get_gateway();
+		if ( is_wp_error( $gateway ) || ! $gateway-&gt;supports( &#39;recurring_retry&#39; ) ) {
+			return false;
+		}
+
+		// if we&#39;re here, we can retry
+		return true;
+
+	}
+
+	/**
+	 * Determine if an order can be resubscribed to
+	 * @return   bool
+	 * @since    3.19.0
+	 * @version  3.19.0
+	 */
+	public function can_resubscribe() {
+
+		$ret = false;
+
+		if ( $this-&gt;is_recurring() ) {
+
+			$allowed_statuses = apply_filters( &#39;llms_order_status_can_resubscribe_from&#39;, array(
+				&#39;llms-on-hold&#39;,
+				&#39;llms-pending&#39;,
+				&#39;llms-pending-cancel&#39;,
+			) );
+			$ret = in_array( $this-&gt;get( &#39;status&#39; ), $allowed_statuses );
+
+		}
+
+		return apply_filters( &#39;llms_order_can_resubscribe&#39;, $ret, $this );
+
+	}
+
+	/**
+	 * Generate an order key for the order
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function generate_order_key() {
+		return apply_filters( &#39;lifterlms_generate_order_key&#39;, uniqid( &#39;order-&#39; ) );
+	}
+
+	/**
+	 * Determine the date when access will expire
+	 * based on the access settings of the access plan
+	 * at the $start_date of acess
+	 *
+	 * @param    string     $format  date format
+	 * @return   string              date string
+	 *                               &#34;Lifetime Access&#34; for plans with lifetime access
+	 *                               &#34;To be Determined&#34; for limited date when access hasn&#39;t started yet
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function get_access_expiration_date( $format = &#39;Y-m-d&#39; ) {
+
+		$type = $this-&gt;get( &#39;access_expiration&#39; );
+
+		$ret = $this-&gt;get_date( &#39;date_access_expires&#39;, $format );
+		if ( ! $ret ) {
+
+			switch ( $type ) {
+				case &#39;lifetime&#39;:
+					$ret = __( &#39;Lifetime Access&#39;, &#39;lifterlms&#39; );
+				break;
+
+				case &#39;limited-date&#39;:
+					$ret = date_i18n( $format, ( $this-&gt;get_date( &#39;access_expires&#39;, &#39;U&#39; ) + ( DAY_IN_SECONDS - 1 ) ) );
+				break;
+
+				case &#39;limited-period&#39;:
+					if ( $this-&gt;get( &#39;start_date&#39; ) ) {
+						$time = strtotime( &#39;+&#39; . $this-&gt;get( &#39;access_length&#39; ) . &#39; &#39; . $this-&gt;get( &#39;access_period&#39; ), $this-&gt;get_date( &#39;start_date&#39;, &#39;U&#39; ) ) + ( DAY_IN_SECONDS - 1 );
+						$ret = date_i18n( $format, $time );
+					} else {
+						$ret = __( &#39;To be Determined&#39;, &#39;lifterlms&#39; );
+					}
+				break;
+
+				default:
+					$ret = apply_filters( &#39;llms_order_&#39; . $type . &#39;_access_expiration_date&#39;, $type, $this, $format );
+
+			}
+		}
+
+		return apply_filters( &#39;llms_order_get_access_expiration_date&#39;, $ret, $this, $format );
+
+	}
+
+	/**
+	 * Get the current status of a student&#39;s access based on the access plan data
+	 * stored on the order at the time of purchase
+	 * @return   string        &#39;inactive&#39; if the order is refunded, failed, pending, etc...
+	 *                         &#39;expired&#39;  if access has expired according to $this-&gt;get_access_expiration_date()
+	 *                         &#39;active&#39;   otherwise
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function get_access_status() {
+
+		$statuses = apply_filters( &#39;llms_order_allow_access_stasuses&#39;, array(
+			&#39;llms-active&#39;,
+			&#39;llms-completed&#39;,
+			&#39;llms-pending-cancel&#39;,
+			// recurring orders can expire but still grant access
+			// eg: 3monthly payments grants 1 year of access
+			// on the 4th month the order will be marked as expired
+			// but the access has not yet expired based on the data below
+			&#39;llms-expired&#39;,
+		) );
+
+		// if the order doesn&#39;t have one of the allowed statuses
+		// return &#39;inactive&#39; and don&#39;t bother checking expiration data
+		if ( ! in_array( $this-&gt;get( &#39;status&#39; ), $statuses ) ) {
+
+			return &#39;inactive&#39;;
+
+		}
+
+		// get the expiration date as a timestamp
+		$expires = $this-&gt;get_access_expiration_date( &#39;U&#39; );
+
+		// a translated non-numeric string will be returned for lifetime access
+		// so if we have a timestamp we should compare it against the current time
+		// to determine if access has expired
+		if ( is_numeric( $expires ) ) {
+
+			$now = llms_current_time( &#39;timestamp&#39; );
+
+			// expiration date is in the past
+			// eg: the access has already expired
+			if ( $expires &lt; $now ) {
+
+				return &#39;expired&#39;;
+
+			}
+		}
+
+		// we&#39;re active
+		return &#39;active&#39;;
+
+	}
+
+	/**
+	 * Retrieve arguments passed to order-related events processed by the action scheduler
+	 * @return   array
+	 * @since    3.19.0
+	 * @version  3.19.0
+	 */
+	protected function get_action_args() {
+		return array(
+			&#39;order_id&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+		);
+	}
+
+	/**
+	 * Get the formatted coupon amount with a currency symbol or percentage
+	 * @param    string     $payment  coupon discount type, either &#39;regular&#39; or &#39;trial&#39;
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_coupon_amount( $payment = &#39;regular&#39; ) {
+
+		if ( &#39;regular&#39; === $payment ) {
+			$amount = $this-&gt;get( &#39;coupon_amount&#39; );
+		} elseif ( &#39;trial&#39; === $payment ) {
+			$amount = $this-&gt;get( &#39;coupon_amount_trial&#39; );
+		}
+
+		$type = $this-&gt;get( &#39;coupon_type&#39; );
+		if ( &#39;percent&#39; === $type ) {
+			$amount = $amount . &#39;%&#39;;
+		} elseif ( &#39;dollar&#39; === $type ) {
+			$amount = llms_price( $amount );
+		}
+		return $amount;
+
+	}
+
+	/**
+	 * Retreive the customer&#39;s full name
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.18.0
+	 */
+	public function get_customer_name() {
+		if ( &#39;yes&#39; === $this-&gt;get( &#39;anonymized&#39; ) ) {
+			return __( &#39;Anonymous&#39;, &#39;lifterlms&#39; );
+		}
+		return trim( $this-&gt;get( &#39;billing_first_name&#39; ) . &#39; &#39; . $this-&gt;get( &#39;billing_last_name&#39; ) );
+	}
+
+	/**
+	 * An array of default arguments to pass to $this-&gt;create()
+	 * when creating a new post
+	 * @param    string  $title   Title to create the post with
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.10.0
+	 */
+	protected function get_creation_args( $title = &#39;&#39; ) {
+
+		if ( empty( $title ) ) {
+			$title = sprintf( __( &#39;Order &amp;ndash; %s&#39;, &#39;lifterlms&#39; ), strftime( _x( &#39;%b %d, %Y @ %I:%M %p&#39;, &#39;Order date parsed by strftime&#39;, &#39;lifterlms&#39; ), current_time( &#39;timestamp&#39; ) ) );
+		}
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;model_post_type . &#39;_get_creation_args&#39;, array(
+			&#39;comment_status&#39; =&gt; &#39;closed&#39;,
+			&#39;ping_status&#39;	 =&gt; &#39;closed&#39;,
+			&#39;post_author&#39; 	 =&gt; 1,
+			&#39;post_content&#39;   =&gt; &#39;&#39;,
+			&#39;post_excerpt&#39;   =&gt; &#39;&#39;,
+			&#39;post_password&#39;	 =&gt; uniqid( &#39;order_&#39; ),
+			&#39;post_status&#39; 	 =&gt; &#39;llms-&#39; . apply_filters( &#39;llms_default_order_status&#39;, &#39;pending&#39; ),
+			&#39;post_title&#39;     =&gt; $title,
+			&#39;post_type&#39; 	 =&gt; $this-&gt;get( &#39;db_post_type&#39; ),
+		), $this );
+	}
+
+	/**
+	 * Retreive the payment gateway instance for the order&#39;s selected payment gateway
+	 * @return   instance of an LLMS_Gateway
+	 * @since    1.0.0
+	 * @version  1.0.0
+	 */
+	public function get_gateway() {
+		$gateways = LLMS()-&gt;payment_gateways();
+		$gateway = $gateways-&gt;get_gateway_by_id( $this-&gt;get( &#39;payment_gateway&#39; ) );
+		if ( $gateway &amp;&amp; ( $gateway-&gt;is_enabled() || is_admin() ) ) {
+			return $gateway;
+		} else {
+			return new WP_Error( &#39;error&#39;, sprintf( __( &#39;Payment gateway %s could not be located or is no longer enabled&#39;, &#39;lifterlms&#39; ), $this-&gt;get( &#39;payment_gateway&#39; ) ) );
+		}
+	}
+
+	/**
+	 * Get the initial payment amount due on checkout
+	 * This will always be the value of &#34;total&#34; except when the product has a trial
+	 * @return   mixed
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_initial_price( $price_args = array(), $format = &#39;html&#39; ) {
+
+		if ( $this-&gt;has_trial() ) {
+			$price = &#39;trial_total&#39;;
+		} else {
+			$price = &#39;total&#39;;
+		}
+
+		return $this-&gt;get_price( $price, $price_args, $format );
+	}
+
+
+	/**
+	 * Get an array of the order notes
+	 * Each note is actually a WordPress comment
+	 * @param    integer    $number  number of comments to return
+	 * @param    integer    $page    page number for pagination
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_notes( $number = 10, $page = 1 ) {
+
+		$comments = get_comments( array(
+			&#39;status&#39; =&gt; &#39;approve&#39;,
+			&#39;number&#39;  =&gt; $number,
+			&#39;offset&#39;  =&gt; ( $page - 1 ) * $number,
+			&#39;post_id&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+		) );
+
+		return $comments;
+
+	}
+
+	/**
+	 * Retrieve an LLMS_Post_Model object for the associated product
+	 * @return   obj       LLMS_Course / LLMS_Membership instance
+	 * @since    3.8.0
+	 * @version  3.8.0
+	 */
+	public function get_product() {
+		return llms_get_post( $this-&gt;get( &#39;product_id&#39; ) );
+	}
+
+	/**
+	 * Retrieve the last (most recent) transaction processed for the order
+	 * @param    array|string  $status  filter by status (see transaction statuses)
+	 * @param    array|string  $type    filter by type [recurring|single|trial]
+	 * @return   obj|false              instance of the LLMS_Transaction or false if none found
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_last_transaction( $status = &#39;any&#39;, $type = &#39;any&#39; ) {
+		$txns = $this-&gt;get_transactions( array(
+			&#39;per_page&#39; =&gt; 1,
+			&#39;status&#39; =&gt; $status,
+			&#39;type&#39; =&gt; $type,
+		) );
+		if ( $txns[&#39;count&#39;] ) {
+			return array_pop( $txns[&#39;transactions&#39;] );
+		}
+		return false;
+	}
+
+	/**
+	 * Retrieve the date of the last (most recent) transaction
+	 * @param    array|string  $status  filter by status (see transaction statuses)
+	 * @param    array|string  $type    filter by type [recurring|single|trial]
+	 * @param    string        $format  date format of the return
+	 * @return   string|false           date or false if none found
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_last_transaction_date( $status = &#39;llms-txn-succeeded&#39;, $type = &#39;any&#39;, $format = &#39;Y-m-d H:i:s&#39; ) {
+		$txn = $this-&gt;get_last_transaction( $status, $type );
+		if ( $txn ) {
+			return $txn-&gt;get_date( &#39;date&#39;, $format );
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Retrive the due date of the next payment according to access plan terms
+	 * @param    string     $format  date format to return the date in (see php date())
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function get_next_payment_due_date( $format = &#39;Y-m-d H:i:s&#39; ) {
+
+		// single payments will never have a next payment date
+		if ( ! $this-&gt;is_recurring() ) {
+			return new WP_Error( &#39;not-recurring&#39;, __( &#39;Order is not recurring&#39;, &#39;lifterlms&#39; ) );
+		} elseif ( ! in_array( $this-&gt;get( &#39;status&#39; ), array( &#39;llms-active&#39;, &#39;llms-failed&#39;, &#39;llms-on-hold&#39;, &#39;llms-pending&#39;, &#39;llms-pending-cancel&#39; ) ) ) {
+			return new WP_Error( &#39;invalid-status&#39;, __( &#39;Invalid order status&#39;, &#39;lifterlms&#39; ), $this-&gt;get( &#39;status&#39; ) );
+		}
+
+		// retrieve the saved due date
+		$next_payment_date = $this-&gt;get_date( &#39;date_next_payment&#39;, &#39;U&#39; );
+
+		// calculate it if not saved
+		if ( ! $next_payment_date ) {
+			$next_payment_date = $this-&gt;calculate_next_payment_date( &#39;U&#39; );
+			if ( ! $next_payment_date ) {
+				return new WP_Error( &#39;plan-ended&#39;, __( &#39;No more payments due&#39;, &#39;lifterlms&#39; ) );
+			}
+		}
+
+		return date_i18n( $format, apply_filters( &#39;llms_order_get_next_payment_due_date&#39;, $next_payment_date, $this, $format ) );
+
+	}
+
+	/**
+	 * Get configured payment retry rules
+	 * @return   array
+	 * @since    3.10.0
+	 * @version  3.10.0
+	 */
+	private function get_retry_rules() {
+
+		$rules = array(
+			array(
+				&#39;delay&#39; =&gt; HOUR_IN_SECONDS * 12,
+				&#39;status&#39; =&gt; &#39;on-hold&#39;,
+				&#39;notifications&#39; =&gt; false,
+			),
+			array(
+				&#39;delay&#39; =&gt; DAY_IN_SECONDS,
+				&#39;status&#39; =&gt; &#39;on-hold&#39;,
+				&#39;notifications&#39; =&gt; true,
+			),
+			array(
+				&#39;delay&#39; =&gt; DAY_IN_SECONDS * 2,
+				&#39;status&#39; =&gt; &#39;on-hold&#39;,
+				&#39;notifications&#39; =&gt; true,
+			),
+			array(
+				&#39;delay&#39; =&gt; DAY_IN_SECONDS * 3,
+				&#39;status&#39; =&gt; &#39;on-hold&#39;,
+				&#39;notifications&#39; =&gt; true,
+			),
+		);
+
+		return apply_filters( &#39;llms_order_automatic_retry_rules&#39;, $rules, $this );
+
+	}
+
+	/**
+	 * SQL query to retrieve total amounts for transactions by type
+	 * @param    stirng  $type  &#39;amount&#39; or &#39;refund_amount&#39;
+	 * @return   float
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_transaction_total( $type = &#39;amount&#39; ) {
+
+		$statuses = array( &#39;llms-txn-refunded&#39; );
+
+		if ( &#39;amount&#39; === $type ) {
+			$statuses[] = &#39;llms-txn-succeeded&#39;;
+		}
+
+		$post_statuses = &#39;&#39;;
+		foreach ( $statuses as $i =&gt; $status ) {
+			$post_statuses .= &#34; p.post_status = &#39;$status&#39;&#34;;
+			if ( $i + 1 &lt; count( $statuses ) ) {
+				$post_statuses .= &#39;OR&#39;;
+			}
+		}
+
+		global $wpdb;
+		$grosse = $wpdb-&gt;get_var( $wpdb-&gt;prepare(
+			&#34;SELECT SUM( m2.meta_value )
+			 FROM $wpdb-&gt;posts AS p
+			 LEFT JOIN $wpdb-&gt;postmeta AS m1 ON m1.post_id = p.ID -- join for the ID
+			 LEFT JOIN $wpdb-&gt;postmeta AS m2 ON m2.post_id = p.ID -- get the actual amounts
+			 WHERE p.post_type = &#39;llms_transaction&#39;
+			   AND ( $post_statuses )
+			   AND m1.meta_key = &#39;{$this-&gt;meta_prefix}order_id&#39;
+			   AND m1.meta_value = %d
+			   AND m2.meta_key = &#39;{$this-&gt;meta_prefix}{$type}&#39;
+			;&#34;
+		, array( $this-&gt;get( &#39;id&#39; ) ) ) );
+
+		return floatval( $grosse );
+	}
+
+	/**
+	 * Get the start date for the order
+	 * gets the date of the first initially successful transaction
+	 * if none found, uses the created date of the order
+	 * @param    string     $format  desired return format of the date
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_start_date( $format = &#39;Y-m-d H:i:s&#39; ) {
+		// get the first recorded transaction
+		// refunds are okay b/c that would have initially given the user access
+		$txns = $this-&gt;get_transactions( array(
+			&#39;order&#39; =&gt; &#39;ASC&#39;,
+			&#39;orderby&#39; =&gt; &#39;date&#39;,
+			&#39;per_page&#39; =&gt; 1,
+			&#39;status&#39; =&gt; array( &#39;llms-txn-succeeded&#39;, &#39;llms-txn-refunded&#39; ),
+			&#39;type&#39; =&gt; &#39;any&#39;,
+		) );
+		if ( $txns[&#39;count&#39;] ) {
+			$txn = array_pop( $txns[&#39;transactions&#39;] );
+			$date = $txn-&gt;get_date( &#39;date&#39;, $format );
+		} else {
+			$date = $this-&gt;get_date( &#39;date&#39;, $format );
+		}
+		return apply_filters( &#39;llms_order_get_start_date&#39;, $date, $this );
+	}
+
+	/**
+	 * Retrieve an array of transactions associated with the order according to supplied arguments
+	 * @param    array      $args  array of query argument data, see example of arguments below
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.10.0
+	 */
+	public function get_transactions( $args = array() ) {
+
+		extract( wp_parse_args( $args, array(
+			&#39;status&#39; =&gt; &#39;any&#39;, // string or array or post statuses
+			&#39;type&#39; =&gt; &#39;any&#39;,   // string or array of transaction types [recurring|single|trial]
+			&#39;per_page&#39; =&gt; 50,  // int, number of transactions to return
+			&#39;paged&#39; =&gt; 1,      // int, page number of transactions to return
+			&#39;order&#39; =&gt; &#39;DESC&#39;,    //
+			&#39;orderby&#39; =&gt; &#39;date&#39;,  // field to order results by
+		) ) );
+
+		// assume any and use this to check for valid statuses
+		$statuses = llms_get_transaction_statuses();
+
+		// check statuses
+		if ( &#39;any&#39; !== $statuses ) {
+
+			// if status is a string, ensure it&#39;s a valid status
+			if ( is_string( $status ) &amp;&amp; in_array( $status, $statuses ) ) {
+				$statuses = array( $status );
+			} elseif ( is_array( $status ) ) {
+				$temp = array();
+				foreach ( $status as $stat ) {
+					if ( in_array( $stat, $statuses ) ) {
+						$temp[] = $stat;
+					}
+				}
+				$statuses = $temp;
+			}
+		}
+
+		// setup type meta query
+		$types = array(
+			&#39;relation&#39; =&gt; &#39;OR&#39;,
+		);
+
+		if ( &#39;any&#39; === $type ) {
+			$types[] = array(
+				&#39;key&#39; =&gt; $this-&gt;meta_prefix . &#39;payment_type&#39;,
+				&#39;value&#39; =&gt; &#39;recurring&#39;,
+			);
+			$types[] = array(
+				&#39;key&#39; =&gt; $this-&gt;meta_prefix . &#39;payment_type&#39;,
+				&#39;value&#39; =&gt; &#39;single&#39;,
+			);
+			$types[] = array(
+				&#39;key&#39; =&gt; $this-&gt;meta_prefix . &#39;payment_type&#39;,
+				&#39;value&#39; =&gt; &#39;trial&#39;,
+			);
+		} elseif ( is_string( $type ) ) {
+			$types[] = array(
+				&#39;key&#39; =&gt; $this-&gt;meta_prefix . &#39;payment_type&#39;,
+				&#39;value&#39; =&gt; $type,
+			);
+		} elseif ( is_array( $type ) ) {
+			foreach ( $type as $t ) {
+				$types[] = array(
+					&#39;key&#39; =&gt; $this-&gt;meta_prefix . &#39;payment_type&#39;,
+					&#39;value&#39; =&gt; $t,
+				);
+			}
+		}
+
+		// execute the query
+		$query = new WP_Query( apply_filters( &#39;llms_order_get_transactions_query&#39;, array(
+			&#39;meta_query&#39; =&gt; array(
+				&#39;relation&#39; =&gt; &#39;AND&#39;,
+				array(
+					&#39;key&#39; =&gt; $this-&gt;meta_prefix . &#39;order_id&#39;,
+					&#39;value&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+				),
+				$types,
+			),
+			&#39;order&#39; =&gt; $order,
+			&#39;orderby&#39; =&gt; $orderby,
+			&#39;post_status&#39; =&gt; $statuses,
+			&#39;post_type&#39; =&gt; &#39;llms_transaction&#39;,
+			&#39;posts_per_page&#39; =&gt; $per_page,
+			&#39;paged&#39; =&gt; $paged,
+		) ), $this, $status );
+
+		$transactions = array();
+
+		foreach ( $query-&gt;posts as $post ) {
+			$transactions[ $post-&gt;ID ] = llms_get_post( $post );
+		}
+
+		return array(
+			&#39;count&#39; =&gt; count( $query-&gt;posts ),
+			&#39;page&#39; =&gt; $paged,
+			&#39;pages&#39; =&gt; $query-&gt;max_num_pages,
+			&#39;transactions&#39; =&gt; $transactions,
+		);
+
+	}
+
+	/**
+	 * Retrieve the date when a trial will end
+	 * @param    string     $format  date return format
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_trial_end_date( $format = &#39;Y-m-d H:i:s&#39; ) {
+
+		if ( ! $this-&gt;has_trial() ) {
+
+			$trial_end_date = &#39;&#39;;
+
+		} else {
+
+			// retrieve the saved end date
+			$trial_end_date = $this-&gt;get_date( &#39;date_trial_end&#39;, $format );
+
+			// if not saved, calculate it
+			if ( ! $trial_end_date ) {
+
+				$trial_end_date = $this-&gt;calculate_trial_end_date( $format );
+
+			}
+		}
+
+		return apply_filters( &#39;llms_order_get_trial_end_date&#39;, $trial_end_date, $this );
+
+	}
+
+	/**
+	 * Gets the total revenue of an order
+	 * @param    string     $type    revenue type [grosse|net]
+	 * @return   float
+	 * @since    3.0.0
+	 * @version  3.1.3 - handle legacy orders
+	 */
+	public function get_revenue( $type = &#39;net&#39; ) {
+
+		if ( $this-&gt;is_legacy() ) {
+
+			$amount = $this-&gt;get( &#39;total&#39; );
+
+		} else {
+
+			$amount = $this-&gt;get_transaction_total( &#39;amount&#39; );
+
+			if ( &#39;net&#39; === $type ) {
+
+				$refunds = $this-&gt;get_transaction_total( &#39;refund_amount&#39; );
+
+				$amount = $amount - $refunds;
+
+			}
+		}
+
+		return apply_filters( &#39;llms_order_get_revenue&#39; , $amount, $type, $this );
+
+	}
+
+	/**
+	 * Get a link to view the order on the student dashboard
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.8.0
+	 */
+	public function get_view_link() {
+
+		$link = llms_get_endpoint_url( &#39;orders&#39;, $this-&gt;get( &#39;id&#39; ), llms_get_page_url( &#39;myaccount&#39; ) );
+		return apply_filters( &#39;llms_order_get_view_link&#39;, $link, $this );
+
+	}
+
+	/**
+	 * Determine if the student associated with this order has access
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function has_access() {
+		return ( &#39;active&#39; === $this-&gt;get_access_status() ) ? true : false;
+	}
+
+	/**
+	 * Determine if a coupon was used
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function has_coupon() {
+		return ( &#39;yes&#39; === $this-&gt;get( &#39;coupon_used&#39; ) );
+	}
+
+	/**
+	 * Determine if there was a discount applied to this order
+	 * via either a sale or a coupon
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function has_discount() {
+		return ( $this-&gt;has_coupon() || $this-&gt;has_sale() );
+	}
+
+	/**
+	 * Determine if the access plan was on sale during the purchase
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function has_sale() {
+		return ( &#39;yes&#39; === $this-&gt;get( &#39;on_sale&#39; ) );
+	}
+
+	/**
+	 * Determine if theres a payment scheduled for the order
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function has_scheduled_payment() {
+		$date = $this-&gt;get_next_payment_due_date();
+		return is_wp_error( $date ) ? false : true;
+	}
+
+	/**
+	 * Determine if the order has a trial
+	 * @return   boolean     true if has a trial, false if it doesn&#39;t
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function has_trial() {
+		return ( $this-&gt;is_recurring() &amp;&amp; &#39;yes&#39; === $this-&gt;get( &#39;trial_offer&#39; ) );
+	}
+
+	/**
+	 * Determine if the trial period has ended for the order
+	 * @return   boolean     true if ended, false if not ended
+	 * @since    3.0.0
+	 * @version  3.10.0
+	 */
+	public function has_trial_ended() {
+		return ( llms_current_time( &#39;timestamp&#39; ) &gt;= $this-&gt;get_trial_end_date( &#39;U&#39; ) );
+	}
+
+	/**
+	 * Initialize a pending order
+	 * Used during checkout
+	 * Assumes all data passed in has already been validated
+	 * @param    obj     $person   LLMS_Student
+	 * @param    obj     $plan     LLMS_Access_Plan
+	 * @param    obj     $gateway  LLMS_Gateway
+	 * @param    mixed   $coupon   LLMS_Coupon or false
+	 * @return   obj               $this
+	 * @since    3.8.0
+	 * @version  3.10.0
+	 */
+	public function init( $person, $plan, $gateway, $coupon = false ) {
+
+		// user related information
+		$this-&gt;set( &#39;user_id&#39;, $person-&gt;get_id() );
+		$this-&gt;set( &#39;user_ip_address&#39;, llms_get_ip_address() );
+		$this-&gt;set( &#39;billing_address_1&#39;, $person-&gt;get( &#39;billing_address_1&#39; ) );
+		$this-&gt;set( &#39;billing_address_2&#39;, $person-&gt;get( &#39;billing_address_2&#39; ) );
+		$this-&gt;set( &#39;billing_city&#39;, $person-&gt;get( &#39;billing_city&#39; ) );
+		$this-&gt;set( &#39;billing_country&#39;, $person-&gt;get( &#39;billing_country&#39; ) );
+		$this-&gt;set( &#39;billing_email&#39;, $person-&gt;get( &#39;user_email&#39; ) );
+		$this-&gt;set( &#39;billing_first_name&#39;, $person-&gt;get( &#39;first_name&#39; ) );
+		$this-&gt;set( &#39;billing_last_name&#39;, $person-&gt;get( &#39;last_name&#39; ) );
+		$this-&gt;set( &#39;billing_state&#39;, $person-&gt;get( &#39;billing_state&#39; ) );
+		$this-&gt;set( &#39;billing_zip&#39;, $person-&gt;get( &#39;billing_zip&#39; ) );
+		$this-&gt;set( &#39;billing_phone&#39;, $person-&gt;get( &#39;phone&#39; ) );
+
+		// access plan data
+		$this-&gt;set( &#39;plan_id&#39;, $plan-&gt;get( &#39;id&#39; ) );
+		$this-&gt;set( &#39;plan_title&#39;, $plan-&gt;get( &#39;title&#39; ) );
+		$this-&gt;set( &#39;plan_sku&#39;, $plan-&gt;get( &#39;sku&#39; ) );
+
+		// product data
+		$product = $plan-&gt;get_product();
+		$this-&gt;set( &#39;product_id&#39;, $product-&gt;get( &#39;id&#39; ) );
+		$this-&gt;set( &#39;product_title&#39;, $product-&gt;get( &#39;title&#39; ) );
+		$this-&gt;set( &#39;product_sku&#39;, $product-&gt;get( &#39;sku&#39; ) );
+		$this-&gt;set( &#39;product_type&#39;, $plan-&gt;get_product_type() );
+
+		$this-&gt;set( &#39;payment_gateway&#39;, $gateway-&gt;get_id() );
+		$this-&gt;set( &#39;gateway_api_mode&#39;, $gateway-&gt;get_api_mode() );
+
+		// trial data
+		if ( $plan-&gt;has_trial() ) {
+			$this-&gt;set( &#39;trial_offer&#39;, &#39;yes&#39; );
+			$this-&gt;set( &#39;trial_length&#39;, $plan-&gt;get( &#39;trial_length&#39; ) );
+			$this-&gt;set( &#39;trial_period&#39;, $plan-&gt;get( &#39;trial_period&#39; ) );
+			$trial_price = $plan-&gt;get_price( &#39;trial_price&#39;, array(), &#39;float&#39; );
+			$this-&gt;set( &#39;trial_original_total&#39;, $trial_price );
+			$trial_total = $coupon ? $plan-&gt;get_price_with_coupon( &#39;trial_price&#39;, $coupon, array(), &#39;float&#39; ) : $trial_price;
+			$this-&gt;set( &#39;trial_total&#39;, $trial_total );
+			$this-&gt;set( &#39;date_trial_end&#39;, $this-&gt;calculate_trial_end_date() );
+		} else {
+			$this-&gt;set( &#39;trial_offer&#39;, &#39;no&#39; );
+		}
+
+		$price = $plan-&gt;get_price( &#39;price&#39;, array(), &#39;float&#39; );
+		$this-&gt;set( &#39;currency&#39;, get_lifterlms_currency() );
+
+		// price data
+		if ( $plan-&gt;is_on_sale() ) {
+			$price_key = &#39;sale_price&#39;;
+			$this-&gt;set( &#39;on_sale&#39;, &#39;yes&#39; );
+			$sale_price = $plan-&gt;get( &#39;sale_price&#39;, array(), &#39;float&#39; );
+			$this-&gt;set( &#39;sale_price&#39;, $sale_price );
+			$this-&gt;set( &#39;sale_value&#39;, $price - $sale_price );
+		} else {
+			$price_key = &#39;price&#39;;
+			$this-&gt;set( &#39;on_sale&#39;, &#39;no&#39; );
+		}
+
+		// store original total before any discounts
+		$this-&gt;set( &#39;original_total&#39;, $price );
+
+		// get the actual total due after discounts if any are applicable
+		$total = $coupon ? $plan-&gt;get_price_with_coupon( $price_key, $coupon, array(), &#39;float&#39; ) : $$price_key;
+		$this-&gt;set( &#39;total&#39;, $total );
+
+		// coupon data
+		if ( $coupon ) {
+			$this-&gt;set( &#39;coupon_id&#39;, $coupon-&gt;get( &#39;id&#39; ) );
+			$this-&gt;set( &#39;coupon_amount&#39;, $coupon-&gt;get( &#39;coupon_amount&#39; ) );
+			$this-&gt;set( &#39;coupon_code&#39;, $coupon-&gt;get( &#39;title&#39; ) );
+			$this-&gt;set( &#39;coupon_type&#39;, $coupon-&gt;get( &#39;discount_type&#39; ) );
+			$this-&gt;set( &#39;coupon_used&#39;, &#39;yes&#39; );
+			$this-&gt;set( &#39;coupon_value&#39;, $$price_key - $total );
+			if ( $plan-&gt;has_trial() &amp;&amp; $coupon-&gt;has_trial_discount() ) {
+				$this-&gt;set( &#39;coupon_amount_trial&#39;, $coupon-&gt;get( &#39;trial_amount&#39; ) );
+				$this-&gt;set( &#39;coupon_value_trial&#39;, $trial_price - $trial_total );
+			}
+		} else {
+			$this-&gt;set( &#39;coupon_used&#39;, &#39;no&#39; );
+		}
+
+		// get all billing schedule related information
+		$this-&gt;set( &#39;billing_frequency&#39;, $plan-&gt;get( &#39;frequency&#39; ) );
+		if ( $plan-&gt;is_recurring() ) {
+			$this-&gt;set( &#39;billing_length&#39;, $plan-&gt;get( &#39;length&#39; ) );
+			$this-&gt;set( &#39;billing_period&#39;, $plan-&gt;get( &#39;period&#39; ) );
+			$this-&gt;set( &#39;order_type&#39;, &#39;recurring&#39; );
+			if ( $plan-&gt;get( &#39;length&#39; ) ) {
+				$this-&gt;set( &#39;date_billing_end&#39;, date_i18n( &#39;Y-m-d H:i:s&#39;, $this-&gt;calculate_billing_end_date() ) );
+			}
+			$this-&gt;set( &#39;date_next_payment&#39;, $this-&gt;calculate_next_payment_date() );
+		} else {
+			$this-&gt;set( &#39;order_type&#39;, &#39;single&#39; );
+		}
+
+		$this-&gt;set( &#39;access_expiration&#39;, $plan-&gt;get( &#39;access_expiration&#39; ) );
+
+		// get access related data so when payment is complete we can calculate the actual expiration date
+		if ( $plan-&gt;can_expire() ) {
+			$this-&gt;set( &#39;access_expires&#39;, $plan-&gt;get( &#39;access_expires&#39; ) );
+			$this-&gt;set( &#39;access_length&#39;, $plan-&gt;get( &#39;access_length&#39; ) );
+			$this-&gt;set( &#39;access_period&#39;, $plan-&gt;get( &#39;access_period&#39; ) );
+		}
+
+		do_action( &#39;lifterlms_new_pending_order&#39;, $this, $person );
+
+		return $this;
+
+	}
+
+	/**
+	 * Determine if the order is a legacy order migrated from 2.x
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function is_legacy() {
+		return ( &#39;publish&#39; === $this-&gt;get( &#39;status&#39; ) );
+	}
+
+	/**
+	 * Determine if the order is recurring or singular
+	 * @return   boolean      true if recurring, false if not
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function is_recurring() {
+		return $this-&gt;get( &#39;order_type&#39; ) === &#39;recurring&#39;;
+	}
+
+	/**
+	 * Schedule access expiration
+	 * @return   void
+	 * @since    3.19.0
+	 * @version  3.19.0
+	 */
+	public function maybe_schedule_expiration() {
+
+		// get epiration date based on setting
+		$expires = $this-&gt;get_access_expiration_date( &#39;U&#39; );
+
+		// will return a timestamp or &#34;Lifetime Access as a string&#34;
+		if ( is_numeric( $expires ) ) {
+
+			$this-&gt;unschedule_expiration();
+			wc_schedule_single_action( $expires, &#39;llms_access_plan_expiration&#39;, $this-&gt;get_action_args() );
+
+		}
+	}
+
+	/**
+	 * Schedules the next payment due on a recurring order
+	 * Can be called witnout consequence on a single payment order
+	 * Will always unschedule the scheduled action (if one exists) before scheduling another
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.12.0
+	 */
+	public function maybe_schedule_payment( $recalc = true ) {
+
+		if ( ! $this-&gt;is_recurring() ) {
+			return;
+		}
+
+		if ( $recalc ) {
+			$this-&gt;set( &#39;date_next_payment&#39;, $this-&gt;calculate_next_payment_date() );
+		}
+
+		$date = $this-&gt;get_next_payment_due_date( &#39;U&#39; );
+
+		// unschedule and reschedule
+		if ( $date &amp;&amp; ! is_wp_error( $date ) ) {
+
+			// unschedule the next action (does nothing if no action scheduled)
+			$this-&gt;unschedule_recurring_payment();
+
+			// convert our date to UTC before passing to the scheduler
+			$date = $date - ( HOUR_IN_SECONDS * get_option( &#39;gmt_offset&#39; ) );
+
+			// schedule the payment
+			wc_schedule_single_action( $date, &#39;llms_charge_recurring_payment&#39;, array(
+				&#39;order_id&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+			) );
+
+		} elseif ( is_wp_error( $date ) ) {
+
+			if ( &#39;plan-ended&#39; === $date-&gt;get_error_code() ) {
+
+				// unschedule the next action (does nothing if no action scheduled)
+				$this-&gt;unschedule_recurring_payment();
+
+				// add a note that the plan has completed
+				$this-&gt;add_note( __( &#39;Order payment plan completed.&#39;, &#39;lifterlms&#39; ) );
+
+			}
+		}
+
+	}
+
+	/**
+	 * Handles scheduling recurring payment retries when the gateway supports them
+	 * @return   void
+	 * @since    3.10.0
+	 * @version  3.10.0
+	 */
+	public function maybe_schedule_retry() {
+
+		if ( ! $this-&gt;can_be_retried() ) {
+			return;
+		}
+
+		$current_rule = $this-&gt;get( &#39;last_retry_rule&#39; );
+		if ( &#39;&#39; === $current_rule ) {
+			$current_rule = 0;
+		} else {
+			$current_rule = $current_rule + 1;
+		}
+		$rules = $this-&gt;get_retry_rules();
+
+		if ( isset( $rules[ $current_rule ] ) ) {
+
+			$rule = $rules[ $current_rule ];
+
+			$next_payment_time = current_time( &#39;timestamp&#39; ) + $rule[&#39;delay&#39;];
+
+			// update the status
+			$this-&gt;set_status( $rule[&#39;status&#39;] );
+
+			// set the next payment date based on the rule&#39;s delay
+			$this-&gt;set_date( &#39;next_payment&#39;, date_i18n( &#39;Y-m-d H:i:s&#39;, $next_payment_time ) );
+
+			// save the rule for reference on potential future retries
+			$this-&gt;set( &#39;last_retry_rule&#39;, $current_rule );
+
+			// if notifications should be sent, trigger them
+			if ( $rule[&#39;notifications&#39;] ) {
+				do_action( &#39;llms_send_automatic_payment_retry_notification&#39;, $this );
+			}
+
+			$this-&gt;add_note( sprintf( esc_html__( &#39;Automatic retry attempt scheduled for %s&#39;, &#39;lifterlms&#39; ), date_i18n( get_option( &#39;date_format&#39; ) . &#39; &#39; . get_option( &#39;time_format&#39; ), $next_payment_time ) ) );
+
+			// generic action
+			do_action( &#39;llms_automatic_payment_retry_scheduled&#39;, $this );
+
+			// we are out of rules, fail the order, move on with our lives
+		} else {
+
+			$this-&gt;set_status( &#39;failed&#39; );
+			$this-&gt;set( &#39;last_retry_rule&#39;, &#39;&#39; );
+
+			$this-&gt;add_note( esc_html__( &#39;Maximum retry attempts reached.&#39;, &#39;lifterlms&#39; ) );
+
+			do_action( &#39;llms_automatic_payment_maximum_retries_reached&#39;, $this );
+
+		}// End if().
+
+	}
+
+	/**
+	 * Record a transaction for the order
+	 * @param    array      $data    optional array of additional data to store for the transcation
+	 * @return   obj        instance of LLMS_Transaction for the created transaction
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function record_transaction( $data = array() ) {
+
+		extract( array_merge(
+			array(
+				&#39;amount&#39; =&gt; 0,
+				&#39;completed_date&#39; =&gt; current_time( &#39;mysql&#39; ),
+				&#39;customer_id&#39; =&gt; &#39;&#39;,
+				&#39;fee_amount&#39; =&gt; 0,
+				&#39;source_id&#39; =&gt; &#39;&#39;,
+				&#39;source_description&#39; =&gt; &#39;&#39;,
+				&#39;transaction_id&#39; =&gt; &#39;&#39;,
+				&#39;status&#39; =&gt; &#39;llms-txn-succeeded&#39;,
+				&#39;payment_gateway&#39; =&gt; $this-&gt;get( &#39;payment_gateway&#39; ),
+				&#39;payment_type&#39; =&gt; &#39;single&#39;,
+			),
+			$data
+		) );
+
+		$txn = new LLMS_Transaction( &#39;new&#39;, $this-&gt;get( &#39;id&#39; ) );
+
+		$txn-&gt;set( &#39;api_mode&#39;, $this-&gt;get( &#39;gateway_api_mode&#39; ) );
+		$txn-&gt;set( &#39;amount&#39;, $amount );
+		$txn-&gt;set( &#39;currency&#39;, $this-&gt;get( &#39;currency&#39; ) );
+		$txn-&gt;set( &#39;gateway_completed_date&#39;, date_i18n( &#39;Y-m-d h:i:s&#39;, strtotime( $completed_date ) ) );
+		$txn-&gt;set( &#39;gateway_customer_id&#39;, $customer_id );
+		$txn-&gt;set( &#39;gateway_fee_amount&#39;, $fee_amount );
+		$txn-&gt;set( &#39;gateway_source_id&#39;, $source_id );
+		$txn-&gt;set( &#39;gateway_source_description&#39;, $source_description );
+		$txn-&gt;set( &#39;gateway_transaction_id&#39;, $transaction_id );
+		$txn-&gt;set( &#39;order_id&#39;, $this-&gt;get( &#39;id&#39; ) );
+		$txn-&gt;set( &#39;payment_gateway&#39;, $payment_gateway );
+		$txn-&gt;set( &#39;payment_type&#39;, $payment_type );
+		$txn-&gt;set( &#39;status&#39;, $status );
+
+		return $txn;
+
+	}
+
+	/**
+	 * Date field setter for date fields that require things to be updated when their value changes
+	 * This is mainly used to allow updating dates which are editable from the admin panel which
+	 * should trigger additional actions when updated
+	 *
+	 * Settable dates: date_next_payment, date_trial_end, date_access_expires
+	 *
+	 * @param    string     $date_key  date field to set
+	 * @param    string     $date_val  date string or a unix time stamp
+	 * @since    3.10.0
+	 * @version  3.19.0
+	 */
+	public function set_date( $date_key, $date_val ) {
+
+		// convert to timestamp if not already a timestamp
+		if ( ! is_numeric( $date_val ) ) {
+			$date_val = strtotime( $date_val );
+		}
+
+		$this-&gt;set( &#39;date_&#39; . $date_key, date( &#39;Y-m-d H:i:s&#39;, $date_val ) );
+
+		switch ( $date_key ) {
+
+			// reschedule access expiration
+			case &#39;access_expires&#39;:
+				$this-&gt;maybe_schedule_expiration();
+			break;
+
+			// additionally update the next payment date
+			// &amp; don&#39;t break because we want to reschedule payments too
+			case &#39;trial_end&#39;:
+				$this-&gt;set_date( &#39;next_payment&#39;, $this-&gt;calculate_next_payment_date( &#39;U&#39; ) );
+
+				// everything else reschedule&#39;s payments
+			default:
+				$this-&gt;maybe_schedule_payment( false );
+
+		}
+
+	}
+
+	/**
+	 * Update the status of an order
+	 * @param    string     $status  status name, accepts unprefixed statuses
+	 * @return   void
+	 * @since    3.8.0
+	 * @version  3.10.0
+	 */
+	public function set_status( $status ) {
+
+		if ( false === strpos( $status, &#39;llms-&#39; ) ) {
+			$status = &#39;llms-&#39; . $status;
+		}
+
+		$statuses = array_keys( llms_get_order_statuses( $this-&gt;get( &#39;order_type&#39; ) ) );
+
+		if ( in_array( $status, $statuses ) ) {
+			$this-&gt;set( &#39;status&#39;, $status );
+		}
+
+	}
+
+	/**
+	 * Record the start date of the access plan and schedule expiration
+	 * if expiration is required in the future
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function start_access() {
+
+		// only start access if access isn&#39;t already started
+		$date = $this-&gt;get( &#39;start_date&#39; );
+		if ( ! $date ) {
+
+			// set the start date to now
+			$date = llms_current_time( &#39;mysql&#39; );
+			$this-&gt;set( &#39;start_date&#39;, $date );
+
+		}
+
+		$this-&gt;unschedule_expiration();
+
+		// setup expiration
+		if ( in_array( $this-&gt;get( &#39;access_expiration&#39; ), array( &#39;limited-date&#39;, &#39;limited-period&#39; ) ) ) {
+
+			$expires_date = $this-&gt;get_access_expiration_date( &#39;Y-m-d H:i:s&#39; );
+			$this-&gt;set( &#39;date_access_expires&#39;, $expires_date );
+			$this-&gt;maybe_schedule_expiration();
+
+		}
+
+	}
+
+	/**
+	 * Cancels a scheduled expiration action
+	 * does nothing if no expiration is scheduled
+	 * @return   void
+	 * @since    3.19.0
+	 * @version  3.19.0
+	 */
+	public function unschedule_expiration() {
+
+		if ( wc_next_scheduled_action( &#39;llms_access_plan_expiration&#39;, $this-&gt;get_action_args() ) ) {
+			wc_unschedule_action( &#39;llms_access_plan_expiration&#39;, $this-&gt;get_action_args() );
+		}
+
+	}
+
+	/**
+	 * Cancels a scheduled recurring payment action
+	 * does nothing if no payments are scheduled
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.19.0
+	 */
+	public function unschedule_recurring_payment() {
+
+		if ( wc_next_scheduled_action( &#39;llms_charge_recurring_payment&#39;, $this-&gt;get_action_args() ) ) {
+			wc_unschedule_action( &#39;llms_charge_recurring_payment&#39;, $this-&gt;get_action_args() );
+		}
+
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.29.4/includes/models/model.llms.order.php#L77">View on GitHub</a></span>
+			</p>
+			</section>
+
+	<hr/>
+	<section class="related">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="related" tabindex="-1">Related <a href="#related" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Related</span></a></h2>
+
+					<article class="uses">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="uses" tabindex="-1">Uses <a href="#uses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Uses</span></a></h3>
+				<table id="uses-table">
+					<caption class="screen-reader-text">Uses</caption>
+					<thead>
+						<tr>
+							<th>Uses</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/abstracts/abstract.llms.post.model.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_post_model/">LLMS_Post_Model</a>
+							</td>
+							<td class="related-desc">
+								<p>Defines base methods and properties for programmatically interfacing with LifterLMS Custom Post Types</p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+							</article>
+		
+			</section>
+			<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/add_note/">
+							add_note</a>
+						&mdash; Add an admin-only note to the order visible on the admin panel notes are recorded using the wp comments API &amp; DB											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/after_create/">
+							after_create</a>
+						&mdash; Called after inserting a new order into the database											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/calculate_billing_end_date/">
+							calculate_billing_end_date</a>
+						&mdash; Calculate the date when billing should applicable to orders created from plans with a set # of billing intervals											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/calculate_next_payment_date/">
+							calculate_next_payment_date</a>
+						&mdash; Calculate the next payment due date											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/calculate_trial_end_date/">
+							calculate_trial_end_date</a>
+						&mdash; Calculate the end date of the trial											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/can_be_retried/">
+							can_be_retried</a>
+						&mdash; Determine if the order can be retried for recurring payments											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/can_resubscribe/">
+							can_resubscribe</a>
+						&mdash; Determine if an order can be resubscribed to											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/generate_order_key/">
+							generate_order_key</a>
+						&mdash; Generate an order key for the order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_access_expiration_date/">
+							get_access_expiration_date</a>
+						&mdash; Determine the date when access will expire based on the access settings of the access plan at the $start_date of acess											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_access_status/">
+							get_access_status</a>
+						&mdash; Get the current status of a student&#39;s access based on the access plan data stored on the order at the time of purchase											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_action_args/">
+							get_action_args</a>
+						&mdash; Retrieve arguments passed to order-related events processed by the action scheduler											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_coupon_amount/">
+							get_coupon_amount</a>
+						&mdash; Get the formatted coupon amount with a currency symbol or percentage											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_creation_args/">
+							get_creation_args</a>
+						&mdash; An array of default arguments to pass to $this-&gt;create() when creating a new post											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_customer_name/">
+							get_customer_name</a>
+						&mdash; Retreive the customer&#39;s full name											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_gateway/">
+							get_gateway</a>
+						&mdash; Retreive the payment gateway instance for the order&#39;s selected payment gateway											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_initial_price/">
+							get_initial_price</a>
+						&mdash; Get the initial payment amount due on checkout This will always be the value of &#34;total&#34; except when the product has a trial											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_last_transaction/">
+							get_last_transaction</a>
+						&mdash; Retrieve the last (most recent) transaction processed for the order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_last_transaction_date/">
+							get_last_transaction_date</a>
+						&mdash; Retrieve the date of the last (most recent) transaction											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_next_payment_due_date/">
+							get_next_payment_due_date</a>
+						&mdash; Retrive the due date of the next payment according to access plan terms											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_notes/">
+							get_notes</a>
+						&mdash; Get an array of the order notes Each note is actually a WordPress comment											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_product/">
+							get_product</a>
+						&mdash; Retrieve an LLMS_Post_Model object for the associated product											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_retry_rules/">
+							get_retry_rules</a>
+						&mdash; Get configured payment retry rules											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_revenue/">
+							get_revenue</a>
+						&mdash; Gets the total revenue of an order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_start_date/">
+							get_start_date</a>
+						&mdash; Get the start date for the order gets the date of the first initially successful transaction if none found, uses the created date of the order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_transaction_total/">
+							get_transaction_total</a>
+						&mdash; SQL query to retrieve total amounts for transactions by type											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_transactions/">
+							get_transactions</a>
+						&mdash; Retrieve an array of transactions associated with the order according to supplied arguments											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_trial_end_date/">
+							get_trial_end_date</a>
+						&mdash; Retrieve the date when a trial will end											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/get_view_link/">
+							get_view_link</a>
+						&mdash; Get a link to view the order on the student dashboard											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/has_access/">
+							has_access</a>
+						&mdash; Determine if the student associated with this order has access											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/has_coupon/">
+							has_coupon</a>
+						&mdash; Determine if a coupon was used											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/has_discount/">
+							has_discount</a>
+						&mdash; Determine if there was a discount applied to this order via either a sale or a coupon											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/has_sale/">
+							has_sale</a>
+						&mdash; Determine if the access plan was on sale during the purchase											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/has_scheduled_payment/">
+							has_scheduled_payment</a>
+						&mdash; Determine if theres a payment scheduled for the order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/has_trial/">
+							has_trial</a>
+						&mdash; Determine if the order has a trial											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/has_trial_ended/">
+							has_trial_ended</a>
+						&mdash; Determine if the trial period has ended for the order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/init/">
+							init</a>
+						&mdash; Initialize a pending order Used during checkout Assumes all data passed in has already been validated											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/is_legacy/">
+							is_legacy</a>
+						&mdash; Determine if the order is a legacy order migrated from 2.x											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/is_recurring/">
+							is_recurring</a>
+						&mdash; Determine if the order is recurring or singular											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/maybe_schedule_expiration/">
+							maybe_schedule_expiration</a>
+						&mdash; Schedule access expiration											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/maybe_schedule_payment/">
+							maybe_schedule_payment</a>
+						&mdash; Schedules the next payment due on a recurring order Can be called witnout consequence on a single payment order Will always unschedule the scheduled action (if one exists) before scheduling another											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/maybe_schedule_retry/">
+							maybe_schedule_retry</a>
+						&mdash; Handles scheduling recurring payment retries when the gateway supports them											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/record_transaction/">
+							record_transaction</a>
+						&mdash; Record a transaction for the order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/set_date/">
+							set_date</a>
+						&mdash; Date field setter for date fields that require things to be updated when their value changes This is mainly used to allow updating dates which are editable from the admin panel which should trigger additional actions when updated											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/set_status/">
+							set_status</a>
+						&mdash; Update the status of an order											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/start_access/">
+							start_access</a>
+						&mdash; Record the start date of the access plan and schedule expiration if expiration is required in the future											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/unschedule_expiration/">
+							unschedule_expiration</a>
+						&mdash; Cancels a scheduled expiration action does nothing if no expiration is scheduled											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_order/unschedule_recurring_payment/">
+							unschedule_recurring_payment</a>
+						&mdash; Cancels a scheduled recurring payment action does nothing if no payments are scheduled											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_order%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_order/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="../../../../s29765.pcdn.co/wp-includes/css/buttons.min.css" type="text/css" media="all"/>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"c0e1df32b0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/quicktags.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"bf6fb03126","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/wp-embed.min.js"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
+
+</body></html>

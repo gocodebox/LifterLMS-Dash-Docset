@@ -1,0 +1,1551 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="../../../../s29765.pcdn.co/wp-includes/css/dashicons.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>llms_get_post - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="llms_get_post - LifterLMS Developer Hub"/>
+<meta property="og:description" content="Retrieve the LLMS Post Model for a give post by ID or WP_Post Object"/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/functions/llms_get_post/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="Retrieve the LLMS Post Model for a give post by ID or WP_Post Object"/>
+<meta name="twitter:title" content="llms_get_post - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","logo":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; llms_get_post Comments Feed" href="https://developer.lifterlms.com/reference/functions/llms_get_post/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.4.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.4.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="../../../../s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.0.3"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=7115"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Ffunctions%2Fllms_get_post%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Ffunctions%2Fllms_get_post%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-function-template-default single single-wp-parser-function postid-7115">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="../../../../s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="../../index.html" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="../../../index.html">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="../../index.html">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-function-template-default single single-wp-parser-function postid-7115 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="../../../index.html" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="../../index.html" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="../index.html">Functions</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-683"></a><a class="dashAnchor" name="//apple_ref/cpp/Function/llms_get_post"></a><span class="trail-end">llms_get_post()</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-7115" class="post-7115 wp-parser-function type-wp-parser-function status-publish hentry wp-parser-source-file-includes_llms-functions-core-php wp-parser-package-lifterlms-functions wp-parser-since-3-3-0">
+
+	
+	
+	<h1>llms_get_post( <span class="arg-type">obj|int</span>&nbsp;<span class="arg-name">$post</span>,  <span class="arg-type">mixed</span>&nbsp;<span class="arg-name">$error</span>&nbsp;=&nbsp;<span class="arg-default">false</span>&nbsp;)</h1>
+
+	<section class="summary">
+		<p>Retrieve the LLMS Post Model for a give post by ID or WP_Post Object</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#return">Return</a></li>
+<li><a href="#source">Source</a></li>
+<li><a href="#changelog">Changelog</a>
+</li></ul></li>
+<li><a href="#related">Related</a>
+<ul>
+<li><a href="#used-by">Used By</a>
+</li></ul></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="parameters">
+		<h3 class="toc-heading" id="parameters" tabindex="-1">Parameters <a href="#parameters" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Parameters</span></a></h3>
+		<dl>
+												<dt>$post</dt>
+								<dd>
+					<p class="desc">
+													<span class="type">(<span class="obj">obj</span>|<span class="int">int</span>)</span>
+																			<span class="required">(Required)</span>
+																			<span class="description">instance of WP_Post or a WP Post ID</span>
+											</p>
+									</dd>
+												<dt>$error</dt>
+								<dd>
+					<p class="desc">
+													<span class="type">(<span class="mixed">mixed</span>)</span>
+																			<span class="required">(Optional)</span>
+																			<span class="description">determine what to return if the LLMS class isn&#39;t found                              post  = WP_Post                              falsy = false</span>
+											</p>
+											<p class="default">Default value: false</p>
+									</dd>
+					</dl>
+	</section>
+	<hr/>
+	<section class="return">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="return" tabindex="-1">Return <a href="#return" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Return</span></a></h3>
+		<p><span class="return-type">(mixed)</span> </p>
+	</section>
+	<hr/>
+	<section class="source-content">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="../../files/includes/llms-functions-core.php/index.html">includes/llms.functions.core.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 781">function llms_get_post( $post, $error = false ) {
+
+	$post = get_post( $post );
+	if ( ! $post ) {
+		return $post;
+	}
+
+	$post_type = explode( &#39;_&#39;, str_replace( &#39;llms_&#39;, &#39;&#39;, $post-&gt;post_type ) );
+	$class = &#39;LLMS&#39;;
+	foreach ( $post_type as $part ) {
+		$class .= &#39;_&#39; . ucfirst( $part );
+	}
+
+	if ( class_exists( $class ) ) {
+		return new $class( $post );
+	} elseif ( &#39;post&#39; === $error ) {
+		return $post;
+	}
+
+	return false;
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.29.4/includes/llms.functions.core.php#L781">View on GitHub</a></span>
+			</p>
+			</section>
+	<hr/>
+	<section class="changelog">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="changelog" tabindex="-1">Changelog <a href="#changelog" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Changelog</span></a></h3>
+
+		<table>
+			<caption class="screen-reader-text">Changelog</caption>
+			<thead>
+				<tr>
+					<th class="changelog-version">Version</th>
+					<th class="changelog-desc">Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+									
+					<tr>
+						<td><a href="../../since/3.3.0/index.html" alt="WordPress 3.3.0">3.3.0</a></td>
+						<td>Introduced.</td>
+					</tr>
+							</tbody>
+		</table>
+	</section>
+
+	<hr/>
+	<section class="related">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="related" tabindex="-1">Related <a href="#related" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Related</span></a></h2>
+
+		
+					
+			<article class="used-by">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="used-by" tabindex="-1">Used By <a href="#used-by" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Used By</span></a></h3>
+				<table id="used-by-table">
+					<caption class="screen-reader-text">Used By</caption>
+					<thead>
+						<tr>
+							<th>Used By</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/class.llms.course.data.php:</span>
+								<a href="../../classes/llms_course_data/__construct/index.html">LLMS_Course_Data::__construct()</a>
+							</td>
+							<td class="related-desc">
+								<p>Constructor</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/llms.template.functions.php:</span>
+								<a href="../lifterlms_course_continue_button/index.html">lifterlms_course_continue_button()</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.student.quizzes.php:</span>
+								<a href="../../classes/llms_student_quizzes/get_attempts_remaining_for_quiz/index.html">LLMS_Student_Quizzes::get_attempts_remaining_for_quiz()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get the # of attempts remaining by a student for a given quiz</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.question.choice.php:</span>
+								<a href="../../classes/llms_question_choice/set_question/index.html">LLMS_Question_Choice::set_question()</a>
+							</td>
+							<td class="related-desc">
+								<p>Sets question-related data from constructor</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.post.instructors.php:</span>
+								<a href="../../classes/llms_post_instructors/__construct/index.html">LLMS_Post_Instructors::__construct()</a>
+							</td>
+							<td class="related-desc">
+								<p>Constructor</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.section.php:</span>
+								<a href="../../classes/llms_section/get_previous/index.html">LLMS_Section::get_previous()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve the previous section</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.section.php:</span>
+								<a href="../../classes/llms_section/get_course/index.html">LLMS_Section::get_course()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an instance of <a href="../../classes/llms_course/index.html">LLMS_Course</a> for the sections&rsquo;s parent course</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.section.php:</span>
+								<a href="../../classes/llms_section/get_next/index.html">LLMS_Section::get_next()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve the previous section</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.order.php:</span>
+								<a href="../../classes/llms_order/get_transactions/index.html">LLMS_Order::get_transactions()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an array of transactions associated with the order according to supplied arguments</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.order.php:</span>
+								<a href="../../classes/llms_order/get_product/index.html">LLMS_Order::get_product()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an <a href="../../classes/llms_post_model/index.html">LLMS_Post_Model</a> object for the associated product</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.lesson.php:</span>
+								<a href="../../classes/llms_lesson/get_section/index.html">LLMS_Lesson::get_section()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an instance of <a href="../../classes/llms_course/index.html">LLMS_Course</a> for the elements&rsquo;s parent section</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.lesson.php:</span>
+								<a href="../../classes/llms_lesson/get_quiz/index.html">LLMS_Lesson::get_quiz()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an object for the assignd quiz (if a quiz is assigned )</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.lesson.php:</span>
+								<a href="../../classes/llms_lesson/get_course/index.html">LLMS_Lesson::get_course()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an instance of <a href="../../classes/llms_course/index.html">LLMS_Course</a> for the element&rsquo;s parent course</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.quiz.php:</span>
+								<a href="../../classes/llms_quiz/get_lessons/index.html">LLMS_Quiz::get_lessons()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve lessons this quiz is assigned to</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.quiz.php:</span>
+								<a href="../../classes/llms_quiz/get_lesson/index.html">LLMS_Quiz::get_lesson()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve <a href="../../classes/llms_lesson/index.html">LLMS_Lesson</a> for the quiz&rsquo;s parent lesson</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.quiz.attempt.question.php:</span>
+								<a href="../../classes/llms_quiz_attempt_question/get_question/index.html">LLMS_Quiz_Attempt_Question::get_question()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an instance of the <a href="../../classes/llms_question/index.html">LLMS_Question</a></p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.user.postmeta.php:</span>
+								<a href="../../classes/llms_user_postmeta/get_link/index.html">LLMS_User_Postmeta::get_link()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve a link for the item on the admin panel</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.instructor.php:</span>
+								<a href="../../classes/llms_instructor/get_posts/index.html">LLMS_Instructor::get_posts()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve instructor&rsquo;s posts (courses and memberships, mixed)</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.instructor.php:</span>
+								<a href="../../classes/llms_instructor/is_instructor/index.html">LLMS_Instructor::is_instructor()</a>
+							</td>
+							<td class="related-desc">
+								<p>Determine if the user is an instructor on a post</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.user.postmeta.php:</span>
+								<a href="../../classes/llms_user_postmeta/get_description/index.html">LLMS_User_Postmeta::get_description()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get a string used to describe the postmeta item</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.student.php:</span>
+								<a href="../../classes/llms_student/update_completion_status/index.html">LLMS_Student::update_completion_status()</a>
+							</td>
+							<td class="related-desc">
+								<p>Update the completion status of a track, course, section, or lesson for the current student Cascades up to parents and clears progress caches for parents Triggers actions for completion/incompetion Inserts / updates necessary user postmeta data</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.quiz.attempt.php:</span>
+								<a href="../../classes/llms_quiz_attempt/get_new_questions/index.html">LLMS_Quiz_Attempt::get_new_questions()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an array of blank questions for insertion into a new attempt during initialization</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.quiz.attempt.php:</span>
+								<a href="../../classes/llms_quiz_attempt/get_quiz/index.html">LLMS_Quiz_Attempt::get_quiz()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get an instance of the <a href="../../classes/llms_quiz/index.html">LLMS_Quiz</a> for the attempt</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.quiz.attempt.php:</span>
+								<a href="../../classes/llms_quiz_attempt/answer_question/index.html">LLMS_Quiz_Attempt::answer_question()</a>
+							</td>
+							<td class="related-desc">
+								<p>Answer a question records the selected option and whether or not the selected option was the correct option Automatically updates &amp; saves the attempt to the dabatase</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/processors/class.llms.processor.course.data.php:</span>
+								<a href="../../classes/llms_processor_course_data/schedule_from_lesson/index.html">LLMS_Processor_Course_Data::schedule_from_lesson()</a>
+							</td>
+							<td class="related-desc">
+								<p>Schedule recalculation from actions triggered against a lesson</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/processors/class.llms.processor.course.data.php:</span>
+								<a href="../../classes/llms_processor_course_data/task/index.html">LLMS_Processor_Course_Data::task()</a>
+							</td>
+							<td class="related-desc">
+								<p>Execute calculation for each item in the queue until all students in the course have been polled Stores the data in the postmeta table to be accessilbe via <a href="../../classes/llms_course/index.html">LLMS_Course</a></p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/llms.functions.core.php:</span>
+								<a href="../llms_get_post_parent_course/index.html">llms_get_post_parent_course()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve the parent course for a section, lesson, or quiz</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/abstracts/llms.abstract.notification.view.php:</span>
+								<a href="../../classes/llms_abstract_notification_view/__construct/index.html">LLMS_Abstract_Notification_View::__construct()</a>
+							</td>
+							<td class="related-desc">
+								<p>Constructor</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/abstracts/llms.abstract.notification.view.quiz.completion.php:</span>
+								<a href="../../classes/llms_abstract_notification_view_quiz_completion/set_merge_data/index.html">LLMS_Abstract_Notification_View_Quiz_Completion::set_merge_data()</a>
+							</td>
+							<td class="related-desc">
+								<p>Replace merge codes with actual values</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.question.manager.php:</span>
+								<a href="../../classes/llms_question_manager/get_question/index.html">LLMS_Question_Manager::get_question()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve a question associated with this quiz by question ID</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class-llms-grades.php:</span>
+								<a href="../../classes/llms_grades/get_grade/index.html">LLMS_Grades::get_grade()</a>
+							</td>
+							<td class="related-desc">
+								<p>Main grade getter function Uses caching by default and can bypass cache when requested</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class-llms-grades.php:</span>
+								<a href="../../classes/llms_grades/calculate_grade_from_children/index.html">LLMS_Grades::calculate_grade_from_children()</a>
+							</td>
+							<td class="related-desc">
+								<p>Calculates the grades for elements that have a list of children which are averaged / weighted to come up with the total grade</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.templates.dashboard.php:</span>
+								<a href="../lifterlms_template_student_dashboard_my_grades/index.html">lifterlms_template_student_dashboard_my_grades()</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.templates.loop.php:</span>
+								<a href="../lifterlms_loop_featured_video/index.html">lifterlms_loop_featured_video()</a>
+							</td>
+							<td class="related-desc">
+								<p>Output a featured video on the course tile in a LifterLMS Loop</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms-functions-access-plans.php:</span>
+								<a href="../llms_insert_access_plan/index.html">llms_insert_access_plan()</a>
+							</td>
+							<td class="related-desc">
+								<p>Create or update an access plan</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_3160_ensure_no_lesson_dupe_rels/index.html">llms_update_3160_ensure_no_lesson_dupe_rels()</a>
+							</td>
+							<td class="related-desc">
+								<p>Create duplicates for any quiz attached to multiple lessons</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_3160_update_question_data/index.html">llms_update_3160_update_question_data()</a>
+							</td>
+							<td class="related-desc">
+								<p>Update question &amp; choice data to new structure</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_3160_update_attempt_question_data/index.html">llms_update_3160_update_attempt_question_data()</a>
+							</td>
+							<td class="related-desc">
+								<p>Update question data to new formats &amp; match question choice indexes to new choice IDs</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_3160_update_quiz_to_lesson_rels/index.html">llms_update_3160_update_quiz_to_lesson_rels()</a>
+							</td>
+							<td class="related-desc">
+								<p>Ensure quizzes backreference their parent lessons</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_3120_update_order_end_dates/index.html">llms_update_3120_update_order_end_dates()</a>
+							</td>
+							<td class="related-desc">
+								<p>Add end dates to LifterLMS Orders which have a length but no saved end date</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_3130_create_default_instructors/index.html">llms_update_3130_create_default_instructors()</a>
+							</td>
+							<td class="related-desc">
+								<p>Setup default instructor data for courses and memberships</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_3160_update_quiz_settings/index.html">llms_update_3160_update_quiz_settings()</a>
+							</td>
+							<td class="related-desc">
+								<p>Add yes/no vals for quiz new quiz settings</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.updates.php:</span>
+								<a href="../llms_update_380_set_access_plan_visibility/index.html">llms_update_380_set_access_plan_visibility()</a>
+							</td>
+							<td class="related-desc">
+								<p>Add visibility settings to all access plans and delete the &ldquo;featured&rdquo; meta values for all access plans</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.access.php:</span>
+								<a href="../llms_is_quiz_accessible/index.html">llms_is_quiz_accessible()</a>
+							</td>
+							<td class="related-desc">
+								<p>Determine if a quiz should be accessible by a user</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.order.php:</span>
+								<a href="../llms_setup_pending_order/index.html">llms_setup_pending_order()</a>
+							</td>
+							<td class="related-desc">
+								<p>[llms_validate_order_data description]</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.access.php:</span>
+								<a href="../llms_is_post_restricted_by_drip_settings/index.html">llms_is_post_restricted_by_drip_settings()</a>
+							</td>
+							<td class="related-desc">
+								<p>Determine if a lesson/quiz is restricted by drip settings</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.access.php:</span>
+								<a href="../llms_is_post_restricted_by_prerequisite/index.html">llms_is_post_restricted_by_prerequisite()</a>
+							</td>
+							<td class="related-desc">
+								<p>Determine if a lesson/quiz is restricted by a prerequisite lesson</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/functions/llms.functions.access.php:</span>
+								<a href="../llms_is_post_restricted_by_time_period/index.html">llms_is_post_restricted_by_time_period()</a>
+							</td>
+							<td class="related-desc">
+								<p>Determine if a course (or lesson/quiz) is &ldquo;open&rdquo; according to course time period settings</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.ajax.handler.php:</span>
+								<a href="../../classes/llms_ajax_handler/quiz_start/index.html">LLMS_AJAX_Handler::quiz_start()</a>
+							</td>
+							<td class="related-desc">
+								<p>Start a Quiz Attempt</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.ajax.handler.php:</span>
+								<a href="../../classes/llms_ajax_handler/quiz_answer_question/index.html">LLMS_AJAX_Handler::quiz_answer_question()</a>
+							</td>
+							<td class="related-desc">
+								<p>AJAX Quiz answer question</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.ajax.handler.php:</span>
+								<a href="../../classes/llms_ajax_handler/instructors_mb_store/index.html">LLMS_AJAX_Handler::instructors_mb_store()</a>
+							</td>
+							<td class="related-desc">
+								<p>Store data for the instructors metabox</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.quiz.data.php:</span>
+								<a href="../../classes/llms_quiz_data/__construct/index.html">LLMS_Quiz_Data::__construct()</a>
+							</td>
+							<td class="related-desc">
+								<p>Constructor</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/controllers/class.llms.controller.orders.php:</span>
+								<a href="../../classes/llms_controller_orders/switch_payment_source/index.html">LLMS_Controller_Orders::switch_payment_source()</a>
+							</td>
+							<td class="related-desc">
+								<p>Handle form submission of the &ldquo;Update Payment Method&rdquo; form on the student dashboard when viewing a single order</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/controllers/class.llms.controller.orders.php:</span>
+								<a href="../../classes/llms_controller_orders/create_pending_order/index.html">LLMS_Controller_Orders::create_pending_order()</a>
+							</td>
+							<td class="related-desc">
+								<p>Handle form submission of the checkout / payment form</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/controllers/class.llms.controller.lesson.progression.php:</span>
+								<a href="../../classes/llms_controller_lesson_progression/quiz_maybe_prevent_lesson_completion/index.html">LLMS_Controller_Lesson_Progression::quiz_maybe_prevent_lesson_completion()</a>
+							</td>
+							<td class="related-desc">
+								<p>Before a lesson is marked as complete, check if all the lesson&rsquo;s quiz requirements are met</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/forms/controllers/class.llms.controller.account.php:</span>
+								<a href="../../classes/llms_controller_account/cancel_subscription/index.html">LLMS_Controller_Account::cancel_subscription()</a>
+							</td>
+							<td class="related-desc">
+								<p>Lets student cancel recurring access plan subscriptions from the student dashboard view order screen</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/shortcodes/class.llms.shortcode.course.outline.php:</span>
+								<a href="../../classes/llms_shortcode_course_outline/get_output/index.html">LLMS_Shortcode_Course_Outline::get_output()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve the actual content of the shortcode</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/shortcodes/class.llms.shortcode.course.author.php:</span>
+								<a href="../../classes/llms_shortcode_course_author/get_author_id/index.html">LLMS_Shortcode_Course_Author::get_author_id()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve the author ID of th course Lessons and Quizzes cascade up</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/shortcodes/class.llms.bbp.shortcode.course.forums.list.php:</span>
+								<a href="../../classes/llms_bbp_shortcode_course_forums_list/get_forums/index.html">LLMS_BBP_Shortcode_Course_Forums_List::get_forums()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrive the forum ids associated with the course</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/widgets/class.llms.bbp.widget.course.forums.list.php:</span>
+								<a href="../../classes/llms_bbp_widget_course_forums_list/widget/index.html">LLMS_BBP_Widget_Course_Forums_List::widget()</a>
+							</td>
+							<td class="related-desc">
+								<p>Output the wigdet</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.template.loader.php:</span>
+								<a href="../../classes/llms_template_loader/restricted_by_quiz/index.html">LLMS_Template_Loader::restricted_by_quiz()</a>
+							</td>
+							<td class="related-desc">
+								<p>Handle attempts to access quizzes</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.template.loader.php:</span>
+								<a href="../../classes/llms_template_loader/maybe_redirect_to_sales_page/index.html">LLMS_Template_Loader::maybe_redirect_to_sales_page()</a>
+							</td>
+							<td class="related-desc">
+								<p>Handle sales page redirects for courses &amp; memberships</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.achievements.php:</span>
+								<a href="../../classes/llms_achievements/get_achievements_by_post/index.html">LLMS_Achievements::get_achievements_by_post()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get a list of achievement Achievement Template IDs for a given post</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/integrations/class.llms.integration.bbpress.php:</span>
+								<a href="../../classes/llms_integration_bbpress/get_course_forum_ids/index.html">LLMS_Integration_BBPress::get_course_forum_ids()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve course ids restricted to a LifterLMS course</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.query.user.postmeta.php:</span>
+								<a href="../../classes/llms_query_user_postmeta/parse_args/index.html">LLMS_Query_User_Postmeta::parse_args()</a>
+							</td>
+							<td class="related-desc">
+								<p>Parses data passed to $statuses Convert strings to array and ensure resulting array contains only valid statuses If no valid statuses, returns to the default</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/output/index.html">LLMS_Admin_Builder::output()</a>
+							</td>
+							<td class="related-desc">
+								<p>Output the page content</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/process_detachments/index.html">LLMS_Admin_Builder::process_detachments()</a>
+							</td>
+							<td class="related-desc">
+								<p>Process lesson detachments from the heartbeat data</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/process_trash/index.html">LLMS_Admin_Builder::process_trash()</a>
+							</td>
+							<td class="related-desc">
+								<p>Delete/trash elements from heartbeat data</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/update_lessons/index.html">LLMS_Admin_Builder::update_lessons()</a>
+							</td>
+							<td class="related-desc">
+								<p>Update lesson from heartbeat data</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/update_quiz/index.html">LLMS_Admin_Builder::update_quiz()</a>
+							</td>
+							<td class="related-desc">
+								<p>Update quizzes during heartbeats</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/update_section/index.html">LLMS_Admin_Builder::update_section()</a>
+							</td>
+							<td class="related-desc">
+								<p>Update a section with data from the heartbeat</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/get_existing_posts/index.html">LLMS_Admin_Builder::get_existing_posts()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve a list of lessons the current user is allowed to clone/attach Used for ajax searching to add existing lessons</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/class.llms.admin.builder.php:</span>
+								<a href="../../classes/llms_admin_builder/handle_ajax/index.html">LLMS_Admin_Builder::handle_ajax()</a>
+							</td>
+							<td class="related-desc">
+								<p>A terrible Rest API for the course builder</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.courses.php:</span>
+								<a href="../../classes/llms_table_courses/get_data/index.html">LLMS_Table_Courses::get_data()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve data for a cell</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.quizzes.php:</span>
+								<a href="../../classes/llms_table_quizzes/get_data/index.html">LLMS_Table_Quizzes::get_data()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve data for a cell</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/widgets/class.llms.analytics.widget.lessoncompletions.php:</span>
+								<a href="../../classes/llms_analytics_lessoncompletions_widget/get_lesson_ids/index.html">LLMS_Analytics_Lessoncompletions_Widget::get_lesson_ids()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve an array of lesson ids for all the products in the current filter</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tabs/class.llms.admin.reporting.tab.courses.php:</span>
+								<a href="../../classes/llms_admin_reporting_tab_courses/breadcrumbs/index.html">LLMS_Admin_Reporting_Tab_Courses::breadcrumbs()</a>
+							</td>
+							<td class="related-desc">
+								<p>Add breadcrumb links to the tab depending on current view</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tabs/class.llms.admin.reporting.tab.courses.php:</span>
+								<a href="../../classes/llms_admin_reporting_tab_courses/output/index.html">LLMS_Admin_Reporting_Tab_Courses::output()</a>
+							</td>
+							<td class="related-desc">
+								<p>Output tab content</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tabs/class.llms.admin.reporting.tab.quizzes.php:</span>
+								<a href="../../classes/llms_admin_reporting_tab_quizzes/breadcrumbs/index.html">LLMS_Admin_Reporting_Tab_Quizzes::breadcrumbs()</a>
+							</td>
+							<td class="related-desc">
+								<p>Add breadcrumb links to the tab depending on current view</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tabs/class.llms.admin.reporting.tab.quizzes.php:</span>
+								<a href="../../classes/llms_admin_reporting_tab_quizzes/output/index.html">LLMS_Admin_Reporting_Tab_Quizzes::output()</a>
+							</td>
+							<td class="related-desc">
+								<p>Output tab content</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/post-tables/class.llms.admin.post.table.instructors.php:</span>
+								<a href="../../classes/llms_admin_post_table_instructors/manage_columns/index.html">LLMS_Admin_Post_Table_Instructors::manage_columns()</a>
+							</td>
+							<td class="related-desc">
+								<p>Manage content of custom columns</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/post-tables/class.llms.admin.post.table.lessons.php:</span>
+								<a href="../../classes/llms_admin_post_table_lessons/manage_columns/index.html">LLMS_Admin_Post_Table_Lessons::manage_columns()</a>
+							</td>
+							<td class="related-desc">
+								<p>Manage content of custom lesson columns</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.lesson.php:</span>
+								<a href="../../classes/llms_meta_box_lesson/get_fields/index.html">LLMS_Meta_Box_Lesson::get_fields()</a>
+							</td>
+							<td class="related-desc">
+								<p>This function is where extending classes can configure all the fields within the metabox The function must return an array which can be consumed by the &ldquo;output&rdquo; function</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.order.enrollment.php:</span>
+								<a href="../../classes/llms_meta_box_order_enrollment/output/index.html">LLMS_Meta_Box_Order_Enrollment::output()</a>
+							</td>
+							<td class="related-desc">
+								<p>Function to field WP::output() method call Passes output instruction to parent</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.instructors.php:</span>
+								<a href="../../classes/llms_metabox_instructors/get_fields/index.html">LLMS_Metabox_Instructors::get_fields()</a>
+							</td>
+							<td class="related-desc">
+								<p>Define metabox fields</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.order.transactions.php:</span>
+								<a href="../../classes/llms_meta_box_order_transactions/resend_receipt/index.html">LLMS_Meta_Box_Order_Transactions::resend_receipt()</a>
+							</td>
+							<td class="related-desc">
+								<p>Resend a receipt for a transaction</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.order.details.php:</span>
+								<a href="../../classes/llms_meta_box_order_details/output/index.html">LLMS_Meta_Box_Order_Details::output()</a>
+							</td>
+							<td class="related-desc">
+								<p>Function to field WP::output() method call Passes output instruction to parent</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.order.details.php:</span>
+								<a href="../../classes/llms_meta_box_order_details/save/index.html">LLMS_Meta_Box_Order_Details::save()</a>
+							</td>
+							<td class="related-desc">
+								<p>Save method Does nothing because there&rsquo;s no editable data in this metabox</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.order.submit.php:</span>
+								<a href="../../classes/llms_meta_box_order_submit/save/index.html">LLMS_Meta_Box_Order_Submit::save()</a>
+							</td>
+							<td class="related-desc">
+								<p>Save action, update order status</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/meta-boxes/class.llms.meta.box.course.builder.php:</span>
+								<a href="../../classes/llms_metabox_course_builder/output/index.html">LLMS_Metabox_Course_Builder::output()</a>
+							</td>
+							<td class="related-desc">
+								<p>Override the output method to output a button</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/post-types/class.llms.post.tables.php:</span>
+								<a href="../../classes/llms_admin_post_tables/handle_link_actions/index.html">LLMS_Admin_Post_Tables::handle_link_actions()</a>
+							</td>
+							<td class="related-desc">
+								<p>Handle events for our custom postrow actions</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.generator.php:</span>
+								<a href="../../classes/llms_generator/handle_prerequisites/index.html">LLMS_Generator::handle_prerequisites()</a>
+							</td>
+							<td class="related-desc">
+								<p>Updates course and lesson prerequisites If the prerequisite was included in the import, updates to the new imported version If the prereq is not included but the source matches, leaves the prereq intact as long as the prereq exists Otherwise removes prerequisite data from the new course / lesson</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.generator.php:</span>
+								<a href="../../classes/llms_generator/create_question/index.html">LLMS_Generator::create_question()</a>
+							</td>
+							<td class="related-desc">
+								<p>Creates a new questino</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/class.llms.quiz.legacy.php:</span>
+								<a href="../../classes/llms_quiz_legacy/get_course/index.html">LLMS_Quiz_Legacy::get_course()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve the course associated with the lesson</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.quiz.failed.php:</span>
+								<a href="../../classes/llms_notification_controller_quiz_failed/send_test/index.html">LLMS_Notification_Controller_Quiz_Failed::send_test()</a>
+							</td>
+							<td class="related-desc">
+								<p>Send a test notification to the currently logged in users Extending classes should redefine this in order to properly setup the controller with post_id and user_id data</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.payment.retry.php:</span>
+								<a href="../../classes/llms_notification_controller_payment_retry/get_subscriber/index.html">LLMS_Notification_Controller_Payment_Retry::get_subscriber()</a>
+							</td>
+							<td class="related-desc">
+								<p>Takes a subscriber type (student, author, etc) and retrieves a User ID</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.section.complete.php:</span>
+								<a href="../../classes/llms_notification_controller_section_complete/action_callback/index.html">LLMS_Notification_Controller_Section_Complete::action_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Callback function called when a section is completed by a student</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.quiz.failed.php:</span>
+								<a href="../../classes/llms_notification_controller_quiz_failed/action_callback/index.html">LLMS_Notification_Controller_Quiz_Failed::action_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Callback function called when a quiz is failed by a student</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.quiz.failed.php:</span>
+								<a href="../../classes/llms_notification_controller_quiz_failed/get_test_settings/index.html">LLMS_Notification_Controller_Quiz_Failed::get_test_settings()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get an array of LifterLMS Admin Page settings to send test notifications</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.enrollment.php:</span>
+								<a href="../../classes/llms_notification_controller_enrollment/action_callback/index.html">LLMS_Notification_Controller_Enrollment::action_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Callback function, called after enrollment into a course</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.purchase.receipt.php:</span>
+								<a href="../../classes/llms_notification_controller_purchase_receipt/get_subscriber/index.html">LLMS_Notification_Controller_Purchase_Receipt::get_subscriber()</a>
+							</td>
+							<td class="related-desc">
+								<p>Takes a subscriber type (student, author, etc) and retrieves a User ID</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.purchase.receipt.php:</span>
+								<a href="../../classes/llms_notification_controller_purchase_receipt/get_test_settings/index.html">LLMS_Notification_Controller_Purchase_Receipt::get_test_settings()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get an array of LifterLMS Admin Page settings to send test notifications</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.purchase.receipt.php:</span>
+								<a href="../../classes/llms_notification_controller_purchase_receipt/send_test/index.html">LLMS_Notification_Controller_Purchase_Receipt::send_test()</a>
+							</td>
+							<td class="related-desc">
+								<p>Send a test notification to the currently logged in users Extending classes should redefine this in order to properly setup the controller with post_id and user_id data</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.course.complete.php:</span>
+								<a href="../../classes/llms_notification_controller_course_complete/action_callback/index.html">LLMS_Notification_Controller_Course_Complete::action_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Callback function called when a course is completed by a student</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.quiz.passed.php:</span>
+								<a href="../../classes/llms_notification_controller_quiz_passed/get_test_settings/index.html">LLMS_Notification_Controller_Quiz_Passed::get_test_settings()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get an array of LifterLMS Admin Page settings to send test notifications</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.quiz.passed.php:</span>
+								<a href="../../classes/llms_notification_controller_quiz_passed/send_test/index.html">LLMS_Notification_Controller_Quiz_Passed::send_test()</a>
+							</td>
+							<td class="related-desc">
+								<p>Send a test notification to the currently logged in users Extending classes should redefine this in order to properly setup the controller with post_id and user_id data</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.manual.payment.due.php:</span>
+								<a href="../../classes/llms_notification_controller_manual_payment_due/get_subscriber/index.html">LLMS_Notification_Controller_Manual_Payment_Due::get_subscriber()</a>
+							</td>
+							<td class="related-desc">
+								<p>Takes a subscriber type (student, author, etc) and retrieves a User ID</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.quiz.passed.php:</span>
+								<a href="../../classes/llms_notification_controller_quiz_passed/action_callback/index.html">LLMS_Notification_Controller_Quiz_Passed::action_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Callback function called when a quiz is failed by a student</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.quiz.graded.php:</span>
+								<a href="../../classes/llms_notification_controller_quiz_graded/get_test_settings/index.html">LLMS_Notification_Controller_Quiz_Graded::get_test_settings()</a>
+							</td>
+							<td class="related-desc">
+								<p>Get an array of LifterLMS Admin Page settings to send test notifications</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.lesson.complete.php:</span>
+								<a href="../../classes/llms_notification_controller_lesson_complete/action_callback/index.html">LLMS_Notification_Controller_Lesson_Complete::action_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Callback function called when a lesson is completed by a student</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/views/class.llms.notification.view.quiz.graded.php:</span>
+								<a href="../../classes/llms_notification_view_quiz_graded/set_merge_data/index.html">LLMS_Notification_View_Quiz_Graded::set_merge_data()</a>
+							</td>
+							<td class="related-desc">
+								<p>Replace merge codes with actual values</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/notifications/controllers/class.llms.notification.controller.subscription.cancelled.php:</span>
+								<a href="../../classes/llms_notification_controller_subscription_cancelled/get_subscriber/index.html">LLMS_Notification_Controller_Subscription_Cancelled::get_subscriber()</a>
+							</td>
+							<td class="related-desc">
+								<p>Takes a subscriber type (student, author, etc) and retrieves a User ID</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>vendor/lifterlms/lifterlms-blocks/includes/class-llms-blocks-post-instructors.php:</span>
+								<a href="../../classes/llms_blocks_post_instructors/update_callback/index.html">LLMS_Blocks_Post_Instructors::update_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Update instructor information for a given object.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>vendor/lifterlms/lifterlms-blocks/includes/class-llms-blocks-post-instructors.php:</span>
+								<a href="../../classes/llms_blocks_post_instructors/get_callback/index.html">LLMS_Blocks_Post_Instructors::get_callback()</a>
+							</td>
+							<td class="related-desc">
+								<p>Retrieve instructor information for a give object.</p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+								<a href="#" class="show-more">Show 109 more used by</a>
+				<a href="#" class="hide-more">Hide more used by</a>
+							</article>
+			</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="../../../wp-login.php/index.html">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/functions/llms_get_post/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="../../../../s29765.pcdn.co/wp-includes/css/buttons.min.css" type="text/css" media="all"/>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"c0e1df32b0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/quicktags.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"bf6fb03126","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/wp-embed.min.js"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
+
+</body></html>

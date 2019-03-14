@@ -1,0 +1,1036 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="../../../../s29765.pcdn.co/wp-includes/css/dashicons.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="../../../../s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Data - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Data - LifterLMS Developer Hub"/>
+<meta property="og:description" content="Retrieve data sets used by various other classes and functions"/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_data/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="Retrieve data sets used by various other classes and functions"/>
+<meta name="twitter:title" content="LLMS_Data - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","logo":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Data Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_data/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.4.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.4.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="../../../../s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.0.3"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=5060"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_data%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_data%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-5060">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="../../../../s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-5060 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-271"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Data"></a><span class="trail-end">LLMS_Data</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-5060" class="post-5060 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_class-llms-data-php wp-parser-since-3-0-0">
+
+	
+	
+	<h1>LLMS_Data</h1>
+
+	<section class="summary">
+		<p>Retrieve data sets used by various other classes and functions</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a></li>
+<li><a href="#changelog">Changelog</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="https://developer.lifterlms.com/reference/files/includes/class-llms-data.php/">includes/class.llms.data.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 9">class LLMS_Data {
+
+	/**
+	 * Get the data data
+	 * @param    string     $dataset  dataset to retrieve data for [tracker|system_report]
+	 * @param    string     $format   data return format (unused for unrecalled reasons)
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.17.0
+	 */
+	public static function get_data( $dataset, $format = &#39;array&#39; ) {
+
+		$data = array();
+
+		// add admin email for tracker requests
+		if ( &#39;tracker&#39; === $dataset ) {
+			$data[&#39;email&#39;] = apply_filters( &#39;llms_get_data_admin_email&#39;, get_option( &#39;admin_email&#39; ) );
+		}
+
+		// general data
+		$data[&#39;url&#39;] = home_url();
+
+		// wp info
+		$data[&#39;wordpress&#39;] = self::get_wp_data();
+
+		// llms settings
+		$data[&#39;settings&#39;] = self::get_llms_settings();
+
+		// gateways
+		$data[&#39;gateways&#39;] = self::get_gateway_data();
+
+		// server info
+		$data[&#39;server&#39;] = self::get_server_data();
+
+		// browser / os
+		$data[&#39;browser&#39;] = self::get_browser_data();
+
+		// theme info
+		$data[&#39;theme&#39;] = self::get_theme_data();
+
+		// plugin info
+		$data[&#39;plugins&#39;] = self::get_plugin_data();
+
+		if ( &#39;tracker&#39; === $dataset ) {
+
+			// published content type counts
+			$data[&#39;post_counts&#39;] = self::get_post_type_counts();
+
+			// user data
+			$data[&#39;user_counts&#39;] = self::get_user_counts();
+
+			// count student engagements
+			$data[&#39;engagement_counts&#39;] = self::get_engagement_counts();
+
+			// order data
+			$data[&#39;order_counts&#39;] = self::get_order_counts();
+
+		}
+
+		$data[&#39;integrations&#39;] = self::get_integrations_data();
+
+		$data[&#39;template_overrides&#39;] = self::get_templates_data();
+
+		return $data;
+
+	}
+
+	/**
+	 * add browser and os info to the system report
+	 * @return   array
+	 * @since    3.17.0
+	 * @version  3.17.0
+	 */
+	private static function get_browser_data() {
+
+		$data = array(
+			&#39;HTTP_USER_AGENT&#39; =&gt; $_SERVER[&#39;HTTP_USER_AGENT&#39;],
+		);
+
+		return $data;
+
+	}
+
+	/**
+	 * Get student engagement counts for various llms interactions
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	private static function get_engagement_counts() {
+
+		global $wpdb;
+
+		$data = array();
+
+		$data[&#39;certificates&#39;] = absint( $wpdb-&gt;get_var( &#34;SELECT COUNT( * ) FROM {$wpdb-&gt;prefix}lifterlms_user_postmeta WHERE meta_key = &#39;_certificate_earned&#39;&#34; ) );
+		$data[&#39;achievements&#39;] = absint( $wpdb-&gt;get_var( &#34;SELECT COUNT( * ) FROM {$wpdb-&gt;prefix}lifterlms_user_postmeta WHERE meta_key = &#39;_achievement_earned&#39;&#34; ) );
+		$enrollments = $wpdb-&gt;get_results( &#34;SELECT meta_id FROM {$wpdb-&gt;prefix}lifterlms_user_postmeta WHERE meta_key = &#39;_status&#39; AND ( meta_value = &#39;Enrolled&#39; OR meta_value = &#39;enrolled&#39; ) GROUP BY user_id, post_id&#34; );
+		$data[&#39;enrollments&#39;] = count( $enrollments );
+		$data[&#39;course_completions&#39;] = absint( $wpdb-&gt;get_var( &#34;SELECT COUNT( * ) FROM {$wpdb-&gt;prefix}lifterlms_user_postmeta WHERE meta_key = &#39;_is_complete&#39; AND meta_value = &#39;yes&#39; &#34; ) );
+
+		return $data;
+
+	}
+
+	/**
+	 * Retrieve metadata from a file.
+	 * Copied from WCs get_file_version which is based on WP Core&#39;s get_file_data function.
+	 * @param    string    $file   Path to the file
+	 * @return   string
+	 * @since    3.11.2
+	 * @version  3.11.2
+	 */
+	private static function get_file_version( $file ) {
+
+		// Avoid notices if file does not exist
+		if ( ! file_exists( $file ) ) {
+			return &#39;&#39;;
+		}
+
+		// We don&#39;t need to write to the file, so just open for reading.
+		$fp = fopen( $file, &#39;r&#39; );
+
+		// Pull only the first 8kiB of the file in.
+		$file_data = fread( $fp, 8192 );
+
+		// PHP will close file handle, but we are good citizens.
+		fclose( $fp );
+
+		// Make sure we catch CR-only line endings.
+		$file_data = str_replace( &#34;\r&#34;, &#34;\n&#34;, $file_data );
+		$version   = &#39;&#39;;
+
+		if ( preg_match( &#39;/^[ \t\/*#@]*&#39; . preg_quote( &#39;@version&#39;, &#39;/&#39; ) . &#39;(.*)$/mi&#39;, $file_data, $match ) &amp;&amp; $match[1] ) {
+			$version = _cleanup_header_comment( $match[1] );
+		}
+
+		return $version;
+
+	}
+
+	/**
+	 * Get data about llms payment gateways
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.17.8
+	 */
+	private static function get_gateway_data() {
+
+		$data = array();
+
+		foreach ( LLMS()-&gt;payment_gateways()-&gt;get_payment_gateways() as $obj ) {
+
+			$data[ $obj-&gt;get_admin_title() ] = $obj-&gt;is_enabled() ? &#39;Enabled&#39; : &#39;Disabled&#39;;
+
+			if ( $obj-&gt;supports( &#39;test_mode&#39; ) ) {
+				$data[ $obj-&gt;get_admin_title() . &#39;_test_mode&#39; ] = $obj-&gt;is_test_mode_enabled() ? &#39;Enabled&#39; : &#39;Disabled&#39;;
+			}
+
+			$data[ $obj-&gt;get_admin_title() . &#39;_logging&#39; ] = $obj-&gt;get_logging_enabled();
+			$data[ $obj-&gt;get_admin_title() . &#39;_order&#39; ] = $obj-&gt;get_display_order();
+
+		}
+
+		return $data;
+
+	}
+
+	/**
+	 * Get data about existing llms integrations
+	 * @todo integration settings unique to the integration should be included here
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.17.8
+	 */
+	private static function get_integrations_data() {
+
+		$data = array();
+
+		$integrations = LLMS()-&gt;integrations();
+
+		foreach ( $integrations-&gt;integrations() as $obj ) {
+
+			// @todo upgrade this when integration absrtact is finished
+			if ( method_exists( $obj, &#39;is_available&#39; ) ) {
+
+				$data[ $obj-&gt;title ] = $obj-&gt;is_available() ? &#39;Yes&#39; : &#39;No&#39;;
+
+			}
+		}
+
+		return $data;
+
+	}
+
+	/**
+	 * Get LifterLMS settings
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.24.0
+	 */
+	private static function get_llms_settings() {
+
+		$data = array();
+
+		$data[&#39;version&#39;] = LLMS()-&gt;version;
+		$data[&#39;db_version&#39;] = get_option( &#39;lifterlms_db_version&#39; );
+
+		$data[&#39;course_catalog&#39;] = self::get_page_data( &#39;lifterlms_shop_page_id&#39; );
+		$data[&#39;membership_catalog&#39;] = self::get_page_data( &#39;lifterlms_memberships_page_id&#39; );
+		$data[&#39;student_dashboard&#39;] = self::get_page_data( &#39;lifterlms_myaccount_page_id&#39; );
+		$data[&#39;checkout_page&#39;] = self::get_page_data( &#39;lifterlms_checkout_page_id&#39; );
+
+		$data[&#39;course_catalog_per_page&#39;] = get_option( &#39;lifterlms_shop_courses_per_page&#39; );
+		$data[&#39;course_catalog_sorting&#39;] = get_option( &#39;lifterlms_shop_ordering&#39; );
+
+		$data[&#39;membership_catalog_per_page&#39;] = get_option( &#39;lifterlms_memberships_per_page&#39; );
+		$data[&#39;membership_catalog_sorting&#39;] = get_option( &#39;lifterlms_memberships_ordering&#39; );
+
+		$data[&#39;site_membership&#39;] = self::get_page_data( &#39;lifterlms_membership_required&#39; );
+
+		$data[&#39;courses_endpoint&#39;] = get_option( &#39;lifterlms_myaccount_courses_endpoint&#39; );
+		$data[&#39;edit_endpoint&#39;] = get_option( &#39;lifterlms_myaccount_edit_account_endpoint&#39; );
+		$data[&#39;lost_password_endpoint&#39;] = get_option( &#39;lifterlms_myaccount_lost_password_endpoint&#39; );
+		$data[&#39;vouchers_endpoint&#39;] = get_option( &#39;lifterlms_myaccount_redeem_vouchers_endpoint&#39; );
+
+		$data[&#39;autogenerate_username&#39;] = get_option( &#39;lifterlms_registration_generate_username&#39;, &#39;no&#39; );
+
+		$data[&#39;password_strength_meter&#39;] = get_option( &#39;lifterlms_registration_password_strength&#39;, &#39;no&#39; );
+		$data[&#39;minimum_password_strength&#39;] = get_option( &#39;lifterlms_registration_password_min_strength&#39; );
+
+		$data[&#39;terms_required&#39;] = get_option( &#39;lifterlms_registration_require_agree_to_terms&#39;, &#39;no&#39; );
+		$data[&#39;terms_page&#39;] = self::get_page_data( &#39;lifterlms_terms_page_id&#39; );
+
+		$data[&#39;checkout_names&#39;] = get_option( &#39;lifterlms_user_info_field_names_checkout_visibility&#39; );
+		$data[&#39;checkout_address&#39;] = get_option( &#39;lifterlms_user_info_field_address_checkout_visibility&#39; );
+		$data[&#39;checkout_phone&#39;] = get_option( &#39;lifterlms_user_info_field_phone_checkout_visibility&#39; );
+		$data[&#39;checkout_email_confirmation&#39;] = get_option( &#39;lifterlms_user_info_field_email_confirmation_checkout_visibility&#39;, &#39;no&#39; );
+
+		$data[&#39;open_registration&#39;] = get_option( &#39;lifterlms_enable_myaccount_registration&#39;, &#39;no&#39; );
+		$data[&#39;registration_names&#39;] = get_option( &#39;lifterlms_user_info_field_names_registration_visibility&#39; );
+		$data[&#39;registration_address&#39;] = get_option( &#39;lifterlms_user_info_field_address_registration_visibility&#39; );
+		$data[&#39;registration_phone&#39;] = get_option( &#39;lifterlms_user_info_field_phone_registration_visibility&#39; );
+		$data[&#39;registration_voucher&#39;] = get_option( &#39;lifterlms_voucher_field_registration_visibility&#39; );
+		$data[&#39;registration_email_confirmation&#39;] = get_option( &#39;lifterlms_user_info_field_email_confirmation_registration_visibility&#39;, &#39;no&#39; );
+
+		$data[&#39;account_names&#39;] = get_option( &#39;lifterlms_user_info_field_names_account_visibility&#39; );
+		$data[&#39;account_address&#39;] = get_option( &#39;lifterlms_user_info_field_address_account_visibility&#39; );
+		$data[&#39;account_phone&#39;] = get_option( &#39;lifterlms_user_info_field_phone_account_visibility&#39; );
+		$data[&#39;account_email_confirmation&#39;] = get_option( &#39;lifterlms_user_info_field_email_confirmation_account_visibility&#39;, &#39;no&#39; );
+
+		$data[&#39;confirmation_endpoint&#39;] = get_option( &#39;lifterlms_myaccount_confirm_payment_endpoint&#39; );
+		$data[&#39;force_ssl_checkout&#39;] = get_option( &#39;lifterlms_checkout_force_ssl&#39; );
+		$data[&#39;country&#39;] = get_lifterlms_country();
+		$data[&#39;currency&#39;] = get_lifterlms_currency();
+		$data[&#39;currency_position&#39;] = get_option( &#39;lifterlms_currency_position&#39; );
+		$data[&#39;thousand_separator&#39;] = get_option( &#39;lifterlms_thousand_separator&#39; );
+		$data[&#39;decimal_separator&#39;] = get_option( &#39;lifterlms_decimal_separator&#39; );
+		$data[&#39;decimals&#39;] = get_option( &#39;lifterlms_decimals&#39; );
+		$data[&#39;trim_zero_decimals&#39;] = get_option( &#39;lifterlms_trim_zero_decimals&#39;, &#39;no&#39; );
+
+		$data[&#39;recurring_payments&#39;] = ( LLMS_Site::get_feature( &#39;recurring_payments&#39; ) ) ? &#39;yes&#39; : &#39;no&#39;;
+
+		$data[&#39;email_from_address&#39;] = get_option( &#39;lifterlms_email_from_address&#39; );
+		$data[&#39;email_from_name&#39;] = get_option( &#39;lifterlms_email_from_name&#39; );
+		$data[&#39;email_footer_text&#39;] = get_option( &#39;lifterlms_email_footer_text&#39; );
+		$data[&#39;email_header_image&#39;] = get_option( &#39;lifterlms_email_header_image&#39; );
+		$data[&#39;cert_bg_width&#39;] = get_option( &#39;lifterlms_certificate_bg_img_width&#39; );
+		$data[&#39;cert_bg_height&#39;] = get_option( &#39;lifterlms_certificate_bg_img_height&#39; );
+		$data[&#39;cert_legacy_compat&#39;] = get_option( &#39;lifterlms_certificate_legacy_image_size&#39; );
+
+		return $data;
+
+	}
+
+	/**
+	 * Get number of orders per order status
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	private static function get_order_counts() {
+
+		$data = array();
+
+		$orders = wp_count_posts( &#39;llms_order&#39; );
+
+		foreach ( llms_get_order_statuses() as $status =&gt; $name ) {
+
+			$data[ $status ] = absint( $orders-&gt;{$status} );
+
+		}
+
+		return $data;
+
+	}
+
+	/**
+	 * Get an option that should return a page ID
+	 * and return the page name and ID as a formatted string
+	 * @param    string     $option  option name in the wp_options table
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	private static function get_page_data( $option ) {
+		$id = get_option( $option );
+		if ( absint( $id ) ) {
+			return sprintf( &#39;%1$s (#%2$d) [%3$s]&#39;, get_the_title( $id ), $id, get_permalink( $id ) );
+		}
+		return &#39;Not Set&#39;; // don&#39;t translate this or you won&#39;t be able to read it smartypants...
+	}
+
+	/**
+	 * get an array of plugin data, sorted into two arrays (active and inactive)
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	private static function get_plugin_data() {
+
+		// ensure we have our plugin function
+		if ( ! function_exists( &#39;get_plugins&#39; ) ) {
+			include ABSPATH . &#39;/wp-admin/includes/plugin.php&#39;;
+		}
+
+		$plugins = get_plugins();
+
+		$active = array();
+		$inactive = array();
+
+		foreach ( get_plugins() as $path =&gt; $data ) {
+
+			if ( is_plugin_active( $path ) ) {
+				$active[ $path ] = $data;
+			} else {
+				$inactive[ $path ] = $data;
+			}
+		}
+
+		return array(
+			&#39;active&#39; =&gt; $active,
+			&#39;inactive&#39; =&gt; $inactive,
+		);
+
+	}
+
+	/**
+	 * Retrieve the number of published posts for various LLMS post types
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	private static function get_post_type_counts() {
+
+		$data = array();
+
+		$posts = array(
+			&#39;course&#39;,
+			&#39;section&#39;,
+			&#39;lesson&#39;,
+			&#39;llms_quiz&#39;,
+			&#39;llms_question&#39;,
+			&#39;llms_review&#39;,
+
+			&#39;llms_membership&#39;,
+
+			&#39;llms_access_plan&#39;,
+			&#39;llms_coupon&#39;,
+			&#39;llms_voucher&#39;,
+
+			&#39;llms_engagement&#39;,
+			&#39;llms_achievement&#39;,
+			&#39;llms_certificate&#39;,
+			&#39;llms_email&#39;,
+		);
+
+		foreach ( $posts as $post_type ) {
+			$count = wp_count_posts( $post_type );
+			$data[ str_replace( &#39;llms_&#39;, &#39;&#39;, $post_type ) ] = absint( $count-&gt;publish );
+		}
+
+		return $data;
+
+	}
+
+	/**
+	 * Get PHP &amp; Server Data
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	private static function get_server_data() {
+
+		global $wpdb;
+
+		$data = array();
+
+		if ( function_exists( &#39;ini_get&#39; ) ) {
+			$data[&#39;php_max_input_vars&#39;] = ini_get( &#39;max_input_vars&#39; );
+			$data[&#39;php_memory_limit&#39;] = ini_get( &#39;memory_limit&#39; );
+			$data[&#39;php_post_max_size&#39;] = ini_get( &#39;post_max_size&#39; );
+			$data[&#39;php_time_limt&#39;] = ini_get( &#39;max_execution_time&#39; );
+			$data[&#39;php_suhosin&#39;] = extension_loaded( &#39;suhosin&#39; ) ? &#39;Yes&#39; : &#39;No&#39;;
+		}
+
+		$data[&#39;mysql_version&#39;] = $wpdb-&gt;db_version();
+
+		$data[&#39;php_curl&#39;] = function_exists( &#39;curl_init&#39; ) ? &#39;Yes&#39; : &#39;No&#39;;
+		$data[&#39;php_default_timezone&#39;] = date_default_timezone_get();
+		$data[&#39;php_fsockopen&#39;] = function_exists( &#39;fsockopen&#39; ) ? &#39;Yes&#39; : &#39;No&#39;;
+		$data[&#39;php_max_upload_size&#39;] = size_format( wp_max_upload_size() );
+		$data[&#39;php_soap&#39;] = class_exists( &#39;SoapClient&#39; ) ? &#39;Yes&#39; : &#39;No&#39;;
+
+		if ( function_exists( &#39;phpversion&#39; ) ) {
+			$data[&#39;php_version&#39;] = phpversion();
+		}
+
+		if ( isset( $_SERVER[&#39;SERVER_SOFTWARE&#39;] ) &amp;&amp; ! empty( $_SERVER[&#39;SERVER_SOFTWARE&#39;] ) ) {
+			$data[&#39;software&#39;] = $_SERVER[&#39;SERVER_SOFTWARE&#39;];
+		}
+
+		$data[&#39;wp_memory_limit&#39;] = WP_MEMORY_LIMIT;
+
+		ksort( $data );
+
+		return $data;
+	}
+
+	/**
+	 * Retrieve information about template overrides
+	 * @return   array
+	 * @since    3.11.2
+	 * @version  3.11.2
+	 */
+	private static function get_templates_data() {
+
+		$path = LLMS()-&gt;plugin_path() . &#39;/templates/&#39;;
+
+		$templates = array_merge( glob( $path . &#39;*.php&#39; ), glob( $path . &#39;**/*.php&#39; ) );
+
+		$overrides = array();
+
+		foreach ( $templates as $file ) {
+
+			$name = str_replace( $path, &#39;&#39;, $file );
+			$found = llms_get_template_override( $name );
+			if ( $found ) {
+				$overrides[] = array(
+					&#39;core_version&#39; =&gt; self::get_file_version( $file ),
+					&#39;location&#39; =&gt; $found,
+					&#39;version&#39; =&gt; self::get_file_version( $found . $name ),
+					&#39;template&#39; =&gt; $name,
+				);
+			}
+		}
+
+		return $overrides;
+
+	}
+
+	/**
+	 * Get an array of theme data
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.11.2
+	 */
+	private static function get_theme_data() {
+
+		$data = array();
+		// @codingStandardsIgnoreStart
+		$theme_data = wp_get_theme();
+		$data[&#39;name&#39;] = $theme_data-&gt;get( &#39;Name&#39; );
+		$data[&#39;version&#39;] = $theme_data-&gt;get( &#39;Version&#39; );
+		$data[&#39;themeuri&#39;] = $theme_data-&gt;get( &#39;ThemeURI&#39; );
+		$data[&#39;authoruri&#39;] = $theme_data-&gt;get( &#39;AuthorURI&#39; );
+		$data[&#39;template&#39;] = $theme_data-&gt;get( &#39;Template&#39; );
+		$data[&#39;child_theme&#39;] = is_child_theme() ? &#39;Yes&#39; : &#39;No&#39;;
+		$data[&#39;llms_support&#39;] = ( ! current_theme_supports( &#39;lifterlms&#39; ) ) ? &#39;No&#39; : &#39;Yes&#39;;
+		// @codingStandardsIgnoreEnd
+
+		return $data;
+
+	}
+
+	/**
+	 * Det the number of users and users by role registered on the site
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	private static function get_user_counts() {
+
+		$data = array();
+
+		$users = count_users();
+
+		$data = $users[&#39;avail_roles&#39;];
+		$data[&#39;total&#39;] = $users[&#39;total_users&#39;];
+
+		return $data;
+
+	}
+
+	/**
+	 * Get some WP core settings and info
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.24.0
+	 */
+	private static function get_wp_data() {
+
+		$data = array();
+
+		$data[&#39;home_url&#39;] = get_home_url();
+		$data[&#39;site_url&#39;] = get_site_url();
+		$data[&#39;login_url&#39;] = wp_login_url();
+		$data[&#39;version&#39;] = get_bloginfo( &#39;version&#39; );
+		$data[&#39;debug_mode&#39;] = ( defined( &#39;WP_DEBUG&#39; ) &amp;&amp; WP_DEBUG ) ? &#39;Yes&#39; : &#39;No&#39;;
+		$data[&#39;debug_log&#39;] = ( defined( &#39;WP_DEBUG_LOG&#39; ) &amp;&amp; WP_DEBUG_LOG ) ? &#39;Yes&#39; : &#39;No&#39;;
+		$data[&#39;debug_display&#39;] = ( defined( &#39;WP_DEBUG_DISPLAY&#39; ) &amp;&amp; WP_DEBUG_DISPLAY ) ? &#39;Yes&#39; : &#39;No&#39;;
+		$data[&#39;locale&#39;] = get_locale();
+		$data[&#39;multisite&#39;] = is_multisite() ? &#39;Yes&#39; : &#39;No&#39;;
+		$data[&#39;page_for_posts&#39;] = self::get_page_data( &#39;page_for_posts&#39; );
+		$data[&#39;page_on_front&#39;] = self::get_page_data( &#39;page_on_front&#39; );
+		$data[&#39;permalink_structure&#39;] = get_option( &#39;permalink_structure&#39; );
+		$data[&#39;show_on_front&#39;] = get_option( &#39;show_on_front&#39; );
+		$data[&#39;wp_cron&#39;] = ! ( defined( &#39;DISABLE_WP_CRON&#39; ) &amp;&amp; DISABLE_WP_CRON ) ? &#39;Yes&#39; : &#39;No&#39;;
+
+		return $data;
+
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.29.4/includes/class.llms.data.php#L9">View on GitHub</a></span>
+			</p>
+			</section>
+	<hr/>
+	<section class="changelog">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="changelog" tabindex="-1">Changelog <a href="#changelog" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Changelog</span></a></h3>
+
+		<table>
+			<caption class="screen-reader-text">Changelog</caption>
+			<thead>
+				<tr>
+					<th class="changelog-version">Version</th>
+					<th class="changelog-desc">Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/3.0.0/" alt="WordPress 3.0.0">3.0.0</a></td>
+						<td>Introduced.</td>
+					</tr>
+							</tbody>
+		</table>
+	</section>
+
+		<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_browser_data/">
+							get_browser_data</a>
+						&mdash; add browser and os info to the system report											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_data/">
+							get_data</a>
+						&mdash; Get the data data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_engagement_counts/">
+							get_engagement_counts</a>
+						&mdash; Get student engagement counts for various llms interactions											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_file_version/">
+							get_file_version</a>
+						&mdash; Retrieve metadata from a file.											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_gateway_data/">
+							get_gateway_data</a>
+						&mdash; Get data about llms payment gateways											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_integrations_data/">
+							get_integrations_data</a>
+						&mdash; Get data about existing llms integrations											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_llms_settings/">
+							get_llms_settings</a>
+						&mdash; Get LifterLMS settings											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_order_counts/">
+							get_order_counts</a>
+						&mdash; Get number of orders per order status											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_page_data/">
+							get_page_data</a>
+						&mdash; Get an option that should return a page ID and return the page name and ID as a formatted string											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_plugin_data/">
+							get_plugin_data</a>
+						&mdash; get an array of plugin data, sorted into two arrays (active and inactive)											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_post_type_counts/">
+							get_post_type_counts</a>
+						&mdash; Retrieve the number of published posts for various LLMS post types											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_server_data/">
+							get_server_data</a>
+						&mdash; Get PHP &amp; Server Data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_templates_data/">
+							get_templates_data</a>
+						&mdash; Retrieve information about template overrides											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_theme_data/">
+							get_theme_data</a>
+						&mdash; Get an array of theme data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_user_counts/">
+							get_user_counts</a>
+						&mdash; Det the number of users and users by role registered on the site											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_data/get_wp_data/">
+							get_wp_data</a>
+						&mdash; Get some WP core settings and info											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_data%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_data/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="../../../../s29765.pcdn.co/wp-includes/css/buttons.min.css" type="text/css" media="all"/>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"c0e1df32b0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/quicktags.min.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"bf6fb03126","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js"></script>
+<script type="text/javascript" src="../../../../s29765.pcdn.co/wp-includes/js/wp-embed.min.js"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
+
+</body></html>
