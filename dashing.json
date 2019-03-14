@@ -1,0 +1,25 @@
+{
+    "name": "LifterLMS",
+    "package": "LifterLMS",
+    "index": "index.html",
+    "selectors": {
+        "body.single-wp-parser-class #content-area .breadcrumb-trail .trail-end": "Class",
+        "body.single-wp-parser-function #content-area .breadcrumb-trail .trail-end": {
+          "type": "Function",
+          "regexp": "\\(\\)",
+          "replacement": ""
+        },
+        "body.single-wp-parser-hook #content-area .breadcrumb-trail .trail-end": "Hook",
+        "body.single-wp-parser-method #content-area .breadcrumb-trail .trail-end": {
+          "type": "Method",
+          "regexp": "\\(\\)",
+          "replacement": ""
+        }
+    },
+    "ignore": [
+        "ABOUT"
+    ],
+    "icon32x32": "icon@2x.png",
+    "allowJS": true,
+    "ExternalURL": "https://developer.lifterlms.com/"
+}

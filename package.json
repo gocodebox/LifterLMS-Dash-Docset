@@ -1,0 +1,15 @@
+{
+  "name": "lifterlms-dash-docset",
+  "version": "1.0.0",
+  "description": "Generate a LifterLMS docset suitable for Dash (https://kapeli.com/dash).",
+  "main": "index.js",
+  "scripts": {
+    "generate": "dashing build --source ./developer.lifterlms.com/"
+  },
+  "author": "Team LifterLMS <team@lifterlms.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rimraf": "^2.6.3",
+    "website-scraper": "^4.0.0"
+  }
+}
