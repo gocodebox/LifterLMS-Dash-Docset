@@ -1,10 +1,11 @@
 {
   "name": "lifterlms-dash-docset",
-  "version": "1.0.0",
+  "version": "3.29.4",
   "description": "Generate a LifterLMS docset suitable for Dash (https://kapeli.com/dash).",
   "main": "index.js",
   "scripts": {
-    "generate": "dashing build --source ./developer.lifterlms.com/"
+    "generate": "dashing build --source ./developer.lifterlms.com/",
+    "dist": "tar --exclude='.DS_Store' -cvzf LifterLMS.tgz LifterLMS.docset && mv LifterLMS.tgz Dash-User-Contributions/docsets/LifterLMS"
   },
   "author": "Team LifterLMS <team@lifterlms.com>",
   "license": "MIT",
