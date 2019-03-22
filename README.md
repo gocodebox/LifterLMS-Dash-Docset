@@ -15,5 +15,5 @@ A docset of [LifterLMS](https://lifterlms.com) for the Mac OS X app [Dash](https
 2. Install node dependencies: `npm install`
 3. Install [Dashing](https://github.com/technosophos/dashing): `brew install dashing`
 4. Scrape the docs from https://developer.lifterlms.com: `node index.js` (this takes a while)
-5. Generate the docset with Dashing: `npm run-script dashing`
+5. Generate the docset with Dashing: `npm run-script generate`
 
