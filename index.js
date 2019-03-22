@@ -35,22 +35,28 @@ class ScrapePlugins {
 	}
 }
 
-
+// URLs we'll ignore
+const blacklist = [ '/wp-login.php', 'google.com/recaptcha/api.js', ];
 
 // Scraping options
 const scrapingOptions = {
 	urls: [ source ],
 	directory: dest,
 	recursive: true,
-	maxRecursiveDepth: 5,
+	// maxRecursiveDepth: 5,
 	filenameGenerator: 'bySiteStructure',
 	urlFilter: function( url ) {
 
-		let addUrl = false;
+		// Skip blacklisted URLs.
+		if ( -1 !== blacklist.indexOf( url ) ) {
+			return false;
 
-		if ( isStatic( url ) ) {
+		// Static URLs are okay.
+		} else if ( isStatic( url ) ) {
 			return true;
 		}
+
+		let addUrl = false;
 
 		// only "local" URLs should be added.
 		addUrl = 0 === url.indexOf( 'https://developer.lifterlms.com' );
