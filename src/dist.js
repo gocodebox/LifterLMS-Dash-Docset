@@ -32,4 +32,7 @@ tar.c( {
 	// save the docset file changes.
 	fs.writeFileSync( docsetfile, JSON.stringify( json, null, 2 ) );
 
+	// Remove the original file
+	fs.unlinkSync( filename );
+
 } );
