@@ -4,7 +4,7 @@
   "description": "Generate a LifterLMS docset suitable for Dash (https://kapeli.com/dash).",
   "main": "index.js",
   "scripts": {
-    "scrape": "node index.js",
+    "scrape": "node src/scrape.js",
     "generate": "dashing build --source ./developer.lifterlms.com/developer.lifterlms.com/",
     "dist": "tar --exclude='.DS_Store' -cvzf LifterLMS.tgz LifterLMS.docset && mv LifterLMS.tgz Dash-User-Contributions/docsets/LifterLMS"
   },
