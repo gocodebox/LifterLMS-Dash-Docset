@@ -1,9 +1,1858 @@
-<html><head>
-<title>429, Rate Limited</title>
-</head>
-<body>
-<h1>429, Rate Limited</h1>
-<p>Wait a minute and try again</p>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+	<link href="/s29765.pcdn.co/wp-includes/css/dashicons.min.css?20181204" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Course - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v11.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://developer.lifterlms.com/reference/classes/llms_course/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Course - LifterLMS Developer Hub"/>
+<meta property="og:description" content="LLMS_Course model."/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_course/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="LLMS_Course model."/>
+<meta name="twitter:title" content="LLMS_Course - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"logo":{"@type":"ImageObject","@id":"https://developer.lifterlms.com/#logo","url":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png","width":1025,"height":280,"caption":"LifterLMS"},"image":{"@id":"https://developer.lifterlms.com/#logo"}},{"@type":"WebSite","@id":"https://developer.lifterlms.com/#website","url":"https://developer.lifterlms.com/","name":"LifterLMS Developer Hub","publisher":{"@id":"https://developer.lifterlms.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://developer.lifterlms.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://developer.lifterlms.com/reference/classes/llms_course/#webpage","url":"https://developer.lifterlms.com/reference/classes/llms_course/","inLanguage":"en-US","name":"LLMS_Course - LifterLMS Developer Hub","isPartOf":{"@id":"https://developer.lifterlms.com/#website"},"datePublished":"2019-03-13T18:37:22+00:00","dateModified":"2019-06-26T15:16:07+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Course Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_course/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.7.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.7.1';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="https://s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js?ver=7.7.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.1.1"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=7342"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_course%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_course%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-7342">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="https://s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-7342 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-1017"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Course"></a><span class="trail-end">LLMS_Course</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-7342" class="post-7342 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_models_model-llms-course-php wp-parser-package-lifterlms-models wp-parser-since-1-0-0 wp-parser-since-3-30-3">
+
+	
+	
+	<h1>LLMS_Course</h1>
+
+	<section class="summary">
+		<p><a href="https://developer.lifterlms.com/reference/classes/llms_course/">LLMS_Course</a> model.</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a></li>
+<li><a href="#changelog">Changelog</a>
+</li></ul></li>
+<li><a href="#related">Related</a>
+<ul>
+<li><a href="#uses">Uses</a></li>
+<li><a href="#used-by">Used By</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="../../files/includes/models/model-llms-course.php/index.html">includes/models/model.llms.course.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 47">class LLMS_Course
+extends LLMS_Post_Model
+implements LLMS_Interface_Post_Audio
+		 , LLMS_Interface_Post_Instructors
+		 , LLMS_Interface_Post_Sales_Page
+		 , LLMS_Interface_Post_Video {
+
+	protected $properties = array(
+
+		// public
+		&#39;audio_embed&#39; =&gt; &#39;text&#39;,
+		&#39;average_grade&#39; =&gt; &#39;float&#39;,
+		&#39;average_progress&#39; =&gt; &#39;float&#39;,
+		&#39;capacity&#39; =&gt; &#39;absint&#39;,
+		&#39;capacity_message&#39; =&gt; &#39;text&#39;,
+		&#39;course_closed_message&#39; =&gt; &#39;text&#39;,
+		&#39;course_opens_message&#39; =&gt; &#39;text&#39;,
+		&#39;content_restricted_message&#39; =&gt; &#39;text&#39;,
+		&#39;enable_capacity&#39; =&gt; &#39;yesno&#39;,
+		&#39;end_date&#39; =&gt; &#39;text&#39;,
+		&#39;enrollment_closed_message&#39; =&gt; &#39;text&#39;,
+		&#39;enrollment_end_date&#39; =&gt; &#39;text&#39;,
+		&#39;enrollment_opens_message&#39; =&gt; &#39;text&#39;,
+		&#39;enrollment_period&#39; =&gt; &#39;yesno&#39;,
+		&#39;enrollment_start_date&#39; =&gt; &#39;text&#39;,
+		&#39;has_prerequisite&#39; =&gt; &#39;yesno&#39;,
+		&#39;instructors&#39; =&gt; &#39;array&#39;,
+		&#39;length&#39; =&gt; &#39;text&#39;,
+		&#39;prerequisite&#39; =&gt; &#39;absint&#39;,
+		&#39;prerequisite_track&#39; =&gt; &#39;absint&#39;,
+		&#39;sales_page_content_page_id&#39; =&gt; &#39;absint&#39;,
+		&#39;sales_page_content_type&#39; =&gt; &#39;string&#39;,
+		&#39;sales_page_content_url&#39; =&gt; &#39;string&#39;,
+		&#39;tile_featured_video&#39; =&gt; &#39;yesno&#39;,
+		&#39;time_period&#39; =&gt; &#39;yesno&#39;,
+		&#39;start_date&#39; =&gt; &#39;text&#39;,
+		&#39;video_embed&#39; =&gt; &#39;text&#39;,
+
+		// private
+		&#39;temp_calc_data&#39; =&gt; &#39;array&#39;,
+	);
+
+	protected $db_post_type = &#39;course&#39;;
+	protected $model_post_type = &#39;course&#39;;
+
+	/**
+	 * @var array
+	 * @since 1.0.0
+	 */
+	public $sections;
+
+	/**
+	 * @var string
+	 * @since 1.0.0
+	 */
+	public $sku;
+
+	/**
+	 * Retrieve an instance of the Post Instructors model
+	 * @return   obj
+	 * @since    3.13.0
+	 * @version  3.13.0
+	 */
+	public function instructors() {
+		return new LLMS_Post_Instructors( $this );
+	}
+
+	/**
+	 * Retrieve the total points available for the course
+	 * @return   int
+	 * @since    3.24.0
+	 * @version  3.24.0
+	 */
+	public function get_available_points() {
+		$points = 0;
+		foreach ( $this-&gt;get_lessons() as $lesson ) {
+			$points += $lesson-&gt;get( &#39;points&#39; );
+		}
+		return apply_filters( &#39;llms_course_get_available_points&#39;, $points, $this );
+	}
+
+	/**
+	 * Get course&#39;s prerequisite id based on the type of prerequisite
+	 * @param    string     $type  Type of prereq to retrieve id for [course|track]
+	 * @return   int|false         Post ID of a course, taxonomy ID of a track, or false if none found
+	 * @since    3.0.0
+	 * @version  3.7.3
+	 */
+	public function get_prerequisite_id( $type = &#39;course&#39; ) {
+
+		if ( $this-&gt;has_prerequisite( $type ) ) {
+
+			switch ( $type ) {
+
+				case &#39;course&#39;:
+					$key = &#39;prerequisite&#39;;
+				break;
+
+				case &#39;course_track&#39;:
+					$key = &#39;prerequisite_track&#39;;
+				break;
+
+			}
+
+			if ( isset( $key ) ) {
+				return $this-&gt;get( $key );
+			}
+		}
+
+		return false;
+
+	}
+
+	/**
+	 * Attempt to get oEmbed for an audio provider
+	 * Falls back to the [audio] shortcode if the oEmbed fails
+	 * @return string
+	 * @since   1.0.0
+	 * @version 3.17.0
+	 */
+	public function get_audio() {
+		return $this-&gt;get_embed( &#39;audio&#39; );
+	}
+
+	/**
+	 * Retrieve course categories
+	 * @param    array      $args  array of args passed to wp_get_post_terms
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	public function get_categories( $args = array() ) {
+		return wp_get_post_terms( $this-&gt;get( &#39;id&#39; ), &#39;course_cat&#39;, $args );
+	}
+
+	/**
+	 * Get Difficulty
+	 * @param    string   $field  which field to return from the available term fields
+	 *                            any public variables from a WP_Term object are acceptable
+	 *                            term_id, name, slug, and more
+	 * @return   string
+	 * @since    1.0.0
+	 * @version  3.24.0
+	 */
+	public function get_difficulty( $field = &#39;name&#39; ) {
+
+		$terms = get_the_terms( $this-&gt;get( &#39;id&#39; ), &#39;course_difficulty&#39; );
+
+		if ( false === $terms ) {
+
+			return &#39;&#39;;
+
+		} else {
+
+			foreach ( $terms as $term ) {
+
+				return $term-&gt;$field;
+
+			}
+		}
+
+	}
+
+	/**
+	 * Retrieve course instructor information
+	 * @param    boolean    $exclude_hidden  if true, excludes hidden instructors from the return array
+	 * @return   array
+	 * @since    3.13.0
+	 * @version  3.13.0
+	 */
+	public function get_instructors( $exclude_hidden = false ) {
+
+		return apply_filters( &#39;llms_course_get_instructors&#39;,
+			$this-&gt;instructors()-&gt;get_instructors( $exclude_hidden ),
+			$this,
+			$exclude_hidden
+		);
+
+	}
+
+	/**
+	 * Get course lessons
+	 * @param    string     $return  type of return [ids|posts|lessons]
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.24.0
+	 */
+	public function get_lessons( $return = &#39;lessons&#39; ) {
+
+		$lessons = array();
+		foreach ( $this-&gt;get_sections( &#39;sections&#39; ) as $section ) {
+			$lessons = array_merge( $lessons, $section-&gt;get_lessons( &#39;posts&#39; ) );
+		}
+
+		if ( &#39;ids&#39; === $return ) {
+			$ret = wp_list_pluck( $lessons, &#39;ID&#39; );
+		} elseif ( &#39;posts&#39; === $return ) {
+			$ret = $lessons;
+		} else {
+			$ret = array_map( &#39;llms_get_post&#39;, $lessons );
+		}
+		return $ret;
+
+	}
+
+	/**
+	 * Retrieve an array of quizzes within a course
+	 * @return   array            array of WP_Post IDs of the quizzes
+	 * @since    3.12.0
+	 * @version  3.16.0
+	 */
+	public function get_quizzes() {
+
+		$quizzes = array();
+		foreach ( $this-&gt;get_lessons( &#39;lessons&#39; ) as $lesson ) {
+			if ( $lesson-&gt;has_quiz() ) {
+				$quizzes[] = $lesson-&gt;get( &#39;quiz&#39; );
+			}
+		}
+		return $quizzes;
+
+	}
+
+	/**
+	 * Get the URL to a WP Page or Custom URL when sales page redirection is enabled
+	 * @return   string
+	 * @since    3.20.0
+	 * @version  3.23.0
+	 */
+	public function get_sales_page_url() {
+
+		$type = $this-&gt;get( &#39;sales_page_content_type&#39; );
+		switch ( $type ) {
+
+			case &#39;page&#39;:
+				$url = get_permalink( $this-&gt;get( &#39;sales_page_content_page_id&#39; ) );
+			break;
+
+			case &#39;url&#39;:
+				$url = $this-&gt;get( &#39;sales_page_content_url&#39; );
+			break;
+
+			default:
+				$url = get_permalink( $this-&gt;get( &#39;id&#39; ) );
+
+		}
+
+		return apply_filters( &#39;llms_course_get_sales_page_url&#39;, $url, $this, $type );
+	}
+
+	/**
+	 * Get course sections
+	 * @param    string  $return  type of return [ids|posts|sections]
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.24.0
+	 */
+	public function get_sections( $return = &#39;sections&#39; ) {
+
+		$q = new WP_Query( array(
+			&#39;meta_key&#39; =&gt; &#39;_llms_order&#39;,
+			&#39;meta_query&#39; =&gt; array(
+				array(
+					&#39;key&#39; =&gt; &#39;_llms_parent_course&#39;,
+						&#39;value&#39; =&gt; $this-&gt;id,
+					),
+				),
+			&#39;order&#39; =&gt; &#39;ASC&#39;,
+			&#39;orderby&#39; =&gt; &#39;meta_value_num&#39;,
+			&#39;post_type&#39; =&gt; &#39;section&#39;,
+			&#39;posts_per_page&#39; =&gt; 500,
+		) );
+
+		if ( &#39;ids&#39; === $return ) {
+			$r = wp_list_pluck( $q-&gt;posts, &#39;ID&#39; );
+		} elseif ( &#39;posts&#39; === $return ) {
+			$r = $q-&gt;posts;
+		} else {
+			$r = array();
+			foreach ( $q-&gt;posts as $p ) {
+				$r[] = new LLMS_Section( $p );
+			}
+		}
+
+		return $r;
+
+	}
+
+	/**
+	 * Retrieve the number of enrolled students in the course
+	 * @return   int
+	 * @since    3.15.0
+	 * @version  3.15.0
+	 */
+	public function get_student_count() {
+
+		$query = new LLMS_Student_Query( array(
+			&#39;post_id&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+			&#39;statuses&#39; =&gt; array( &#39;enrolled&#39; ),
+			&#39;per_page&#39; =&gt; 1,
+		) );
+
+		return $query-&gt;found_results;
+
+	}
+
+	/**
+	 * Get an array of student IDs based on enrollment status in the course
+	 * @param    string|array  $statuses  list of enrollment statuses to query by
+	 *                                    status query is an OR relationship
+	 * @param    integer    $limit        number of results
+	 * @param    integer    $skip         number of results to skip (for pagination)
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_students( $statuses = &#39;enrolled&#39;, $limit = 50, $skip = 0 ) {
+
+		return llms_get_enrolled_students( $this-&gt;get( &#39;id&#39; ), $statuses, $limit, $skip );
+
+	}
+
+	/**
+	 * Retrieve course tags
+	 * @param    array      $args  array of args passed to wp_get_post_terms
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	public function get_tags( $args = array() ) {
+		return wp_get_post_terms( $this-&gt;get( &#39;id&#39; ), &#39;course_tag&#39;, $args );
+	}
+
+	/**
+	 * Retrieve course tracks
+	 * @param    array      $args  array of args passed to wp_get_post_terms
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	public function get_tracks( $args = array() ) {
+		return wp_get_post_terms( $this-&gt;get( &#39;id&#39; ), &#39;course_track&#39;, $args );
+	}
+
+	/**
+	 * Retrieve an array of students currently enrolled in the course
+	 * @param    integer    $limit   number of results
+	 * @param    integer    $skip    number of results to skip (for pagination)
+	 * @return   array
+	 * @since    1.0.0
+	 * @version  3.0.0 - updated the function to be less complicated
+	 */
+	public function get_enrolled_students( $limit, $skip ) {
+
+		return $this-&gt;get_students( &#39;enrolled&#39;, $limit, $skip );
+
+	}
+
+	/**
+	 * Get a user&#39;s percentage completion through the course
+	 * @return  float
+	 * @since   1.0.0
+	 * @version 3.17.2
+	 */
+	public function get_percent_complete( $user_id = &#39;&#39; ) {
+
+		$student = llms_get_student( $user_id );
+		if ( ! $student ) {
+			return 0;
+		}
+		return $student-&gt;get_progress( $this-&gt;get( &#39;id&#39; ), &#39;course&#39; );
+
+	}
+
+	/**
+	 * Retrieve an instance of the LLMS_Product for this course
+	 * @return   obj         instance of an LLMS_Product
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	public function get_product() {
+		return new LLMS_Product( $this-&gt;get( &#39;id&#39; ) );
+	}
+
+	/**
+	 * Attempt to get oEmbed for a video provider
+	 * Falls back to the [video] shortcode if the oEmbed fails
+	 * @return   string
+	 * @since    1.0.0
+	 * @version  3.17.0
+	 */
+	public function get_video() {
+		return $this-&gt;get_embed( &#39;video&#39; );
+	}
+
+	/**
+	 * Compare a course meta info date to the current date and get a bool
+	 * @param    string     $date_key  property key, eg &#34;start_date&#34; or &#34;enrollment_end_date&#34;
+	 * @return   boolean               true when the date is in the past
+	 *                                 false when the date is in the future
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function has_date_passed( $date_key ) {
+
+		$now = current_time( &#39;timestamp&#39; );
+		$date = $this-&gt;get_date( $date_key, &#39;U&#39; );
+
+		// if there&#39;s no date, we can&#39;t make a comparison
+		// so assume it&#39;s unset and unnecessary
+		// so return &#39;false&#39;
+		if ( ! $date ) {
+
+			return false;
+
+		} else {
+
+			return $now &gt; $date;
+
+		}
+
+	}
+
+	/**
+	 * Determine if the course is at capacity based on course capacity settings
+	 * @return   boolean    true if not at capacity, false if at or over capacity
+	 * @since    3.0.0
+	 * @version  3.15.0
+	 */
+	public function has_capacity() {
+
+		// capacity disabled, so there is capacity
+		if ( &#39;yes&#39; !== $this-&gt;get( &#39;enable_capacity&#39; ) ) {
+			return true;
+		}
+
+		$capacity = $this-&gt;get( &#39;capacity&#39; );
+		// no capacity restriction set, so it has capacity
+		if ( ! $capacity ) {
+			return true;
+		}
+
+		// compare results
+		return ( $this-&gt;get_student_count() &lt; $capacity );
+
+	}
+
+	/**
+	 * Determine if prerequisites are enabled and there are prereqs configured
+	 * @param    string   $type  determine if a specific type of prereq exists [any|course|track]
+	 * @return   boolean         Returns true if prereq is enabled and there is a prerequisite course or track
+	 * @since    3.0.0
+	 * @version  3.7.5
+	 */
+	public function has_prerequisite( $type = &#39;any&#39; ) {
+
+		if ( &#39;yes&#39; === $this-&gt;get( &#39;has_prerequisite&#39; ) ) {
+
+			if ( &#39;any&#39; === $type ) {
+
+				return ( $this-&gt;get( &#39;prerequisite&#39; ) || $this-&gt;get( &#39;prerequisite_track&#39; ) );
+
+			} elseif ( &#39;course&#39; === $type ) {
+
+				return ( $this-&gt;get( &#39;prerequisite&#39; ) ) ? true : false;
+
+			} elseif ( &#39;course_track&#39; === $type ) {
+
+				return ( $this-&gt;get( &#39;prerequisite_track&#39; ) ) ? true : false;
+
+			}
+		}
+
+		return false;
+
+	}
+
+	/**
+	 * Determine if sales page redirection is enabled
+	 * @return   string
+	 * @since    3.20.0
+	 * @version  3.23.0
+	 */
+	public function has_sales_page_redirect() {
+		$type = $this-&gt;get( &#39;sales_page_content_type&#39; );
+		return apply_filters( &#39;llms_course_has_sales_page_redirect&#39;, in_array( $type, array( &#39;page&#39;, &#39;url&#39; ) ), $this, $type );
+	}
+
+	/**
+	 * Determine if students can access course content based on the current date
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.7.0
+	 */
+	public function is_enrollment_open() {
+
+		// if no period is set, enrollment is automatically open
+		if ( &#39;yes&#39; !== $this-&gt;get( &#39;enrollment_period&#39; ) ) {
+
+			$ret = true;
+
+		} // End if().
+		else {
+
+			$ret = ( $this-&gt;has_date_passed( &#39;enrollment_start_date&#39; ) &amp;&amp; ! $this-&gt;has_date_passed( &#39;enrollment_end_date&#39; ) );
+
+		}
+
+		return apply_filters( &#39;llms_is_course_enrollment_open&#39;, $ret, $this );
+
+	}
+
+	/**
+	 * Determine if students can access course content based on the current date
+	 *
+	 * Note that enrollment does not affect the outcome of this check as regardless
+	 * of enrollment, once a course closes content is locked
+	 *
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.7.0
+	 */
+	public function is_open() {
+
+		// if a course time period is not enabled, just return true (content is accessible)
+		if ( &#39;yes&#39; !== $this-&gt;get( &#39;time_period&#39; ) ) {
+
+			$ret = true;
+
+		} // End if().
+		else {
+
+			$ret = ( $this-&gt;has_date_passed( &#39;start_date&#39; ) &amp;&amp; ! $this-&gt;has_date_passed( &#39;end_date&#39; ) );
+
+		}
+
+		return apply_filters( &#39;llms_is_course_open&#39;, $ret, $this );
+
+	}
+
+	/**
+	 * Determine if a prerequisite is completed for a student
+	 * @param    string     $type  type of prereq [course|track]
+	 * @return   boolean
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function is_prerequisite_complete( $type = &#39;course&#39;, $student_id = null ) {
+
+		if ( ! $student_id ) {
+			$student_id = get_current_user_id();
+		}
+
+		// no user or no prereqs so no reason to proceed
+		if ( ! $student_id || ! $this-&gt;has_prerequisite( $type ) ) {
+			return false;
+		}
+
+		$prereq_id = $this-&gt;get_prerequisite_id( $type );
+
+		// no prereq id of this type, no need to proceed
+		if ( ! $prereq_id ) {
+			return false;
+		}
+
+		// setup student
+		$student = new LLMS_Student( $student_id );
+
+		return $student-&gt;is_complete( $prereq_id, $type );
+
+	}
+
+	/**
+	 * Save instructor information
+	 * @param    array      $instructors  array of course instructor information
+	 * @since    3.13.0
+	 * @version  3.13.0
+	 */
+	public function set_instructors( $instructors = array() ) {
+
+		return $this-&gt;instructors()-&gt;set_instructors( $instructors );
+
+	}
+
+	/**
+	 * Add data to the course model when converted to array
+	 * Called before data is sorted and returned by $this-&gt;jsonSerialize()
+	 * @param    array     $arr   data to be serialized
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.8.0
+	 */
+	public function toArrayAfter( $arr ) {
+
+		$product = $this-&gt;get_product();
+		$arr[&#39;access_plans&#39;] = array();
+		foreach ( $product-&gt;get_access_plans( false, false ) as $p ) {
+			$arr[&#39;access_plans&#39;][] = $p-&gt;toArray();
+		}
+
+		$arr[&#39;sections&#39;] = array();
+		foreach ( $this-&gt;get_sections() as $s ) {
+			$arr[&#39;sections&#39;][] = $s-&gt;toArray();
+		}
+
+		$arr[&#39;categories&#39;] = $this-&gt;get_categories( array(
+			&#39;fields&#39; =&gt; &#39;names&#39;,
+		) );
+		$arr[&#39;tags&#39;] = $this-&gt;get_tags( array(
+			&#39;fields&#39; =&gt; &#39;names&#39;,
+		) );
+		$arr[&#39;tracks&#39;] = $this-&gt;get_tracks( array(
+			&#39;fields&#39; =&gt; &#39;names&#39;,
+		) );
+
+		$arr[&#39;difficulty&#39;] = $this-&gt;get_difficulty();
+
+		return $arr;
+
+	}
+
+
+
+
+
+
+
+
+	/**
+	 * @todo DEPRECATE
+	 */
+	public function get_children_sections() {
+
+		llms_deprecated_function( &#39;LLMS_Course::get_children_sections()&#39;, &#39;3.0.0&#39;, &#34;LLMS_Course::get_sections( &#39;posts&#39; )&#34; );
+		return $this-&gt;get_sections( &#39;posts&#39; );
+
+	}
+
+	/**
+	 * @todo DEPRECATE
+	 */
+	public function get_children_lessons() {
+
+		llms_deprecated_function( &#39;LLMS_Course::get_children_lessons()&#39;, &#39;3.0.0&#39;, &#34;LLMS_Course::get_lessons( &#39;posts&#39; )&#34; );
+		return $this-&gt;get_sections( &#39;posts&#39; );
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/**
+	 * Get WP user object for the course author
+	 * @return obj   instance of WP_User
+	 *
+	 * @since  3.0.0
+	 */
+	public function get_author() {
+		return new WP_User( $this-&gt;get_author_id() );
+	}
+
+
+	/**
+	 * Get the course author&#39;s WP User ID
+	 * @return int
+	 *
+	 * @since  3.0.0
+	 */
+	public function get_author_id() {
+		return $this-&gt;post-&gt;post_author;
+	}
+
+
+	/**
+	 * Get a the Display Name of the course author
+	 * @return string
+	 *
+	 * @since  3.0.0
+	 */
+	public function get_author_name() {
+		$author = $this-&gt;get_author();
+		return $author-&gt;display_name;
+	}
+
+	/**
+	 * Get SKU
+	 *
+	 * @return string
+	 */
+	public function get_sku() {
+
+		return $this-&gt;sku;
+
+	}
+
+	/**
+	 * Get the ID
+	 * @return int
+	 *
+	 * @since  3.0.0
+	 */
+	public function get_id() {
+		return $this-&gt;id;
+	}
+
+	/**
+	 * Get the Title
+	 * @return int
+	 *
+	 * @since  3.0.0
+	 */
+	public function get_title() {
+		return get_the_title( $this-&gt;get_id() );
+	}
+
+	/**
+	 * Get the course permalink
+	 * @return string
+	 *
+	 * @since  3.0.0
+	 */
+	public function get_permalink() {
+		return get_permalink( $this-&gt;get_id() );
+	}
+
+
+
+
+
+	/**
+	 * Return array of objects containing user meta data for a single post.
+	 *
+	 * @return  array
+	 */
+	public function get_user_postmeta_data( $post_id ) {
+		global $wpdb;
+
+		$user_id = get_current_user_id();
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+
+		$results = $wpdb-&gt;get_results( $wpdb-&gt;prepare(
+		&#39;SELECT * FROM &#39; . $table_name . &#39; WHERE post_id = %d&#39;, $user_id, $post_id) );
+
+		for ( $i = 0; $i &lt; count( $results ); $i++ ) {
+			$results[ $results[ $i ]-&gt;meta_key ] = $results[ $i ];
+			unset( $results[ $i ] );
+		}
+
+		return $results;
+	}
+
+	/**
+	 * Return array of objects containing user meta data for a single post.
+	 *
+	 * @return  array
+	 */
+	public function get_user_postmetas_by_key( $post_id, $meta_key ) {
+		global $wpdb;
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+
+		$results = $wpdb-&gt;get_results( $wpdb-&gt;prepare(
+		&#39;SELECT * FROM &#39; . $table_name . &#39; WHERE post_id = %s and meta_key = &#34;%s&#34; ORDER BY updated_date DESC&#39;, $post_id, $meta_key ) );
+
+		for ( $i = 0; $i &lt; count( $results ); $i++ ) {
+			$results[ $results[ $i ]-&gt;post_id ] = $results[ $i ];
+			unset( $results[ $i ] );
+		}
+
+		return $results;
+	}
+
+	/**
+	 * Get checkout url
+	 *
+	 * @return string
+	 */
+	public function get_checkout_url() {
+
+		if ( llms_is_alternative_checkout_enabled() || is_user_logged_in() ) {
+			$checkout_page_id = llms_get_page_id( &#39;checkout&#39; );
+		} else {
+			$checkout_page_id = llms_get_page_id( &#39;myaccount&#39; );
+		}
+
+		$checkout_url = apply_filters( &#39;lifterlms_get_checkout_url&#39;, $checkout_page_id ? get_permalink( $checkout_page_id ) : &#39;&#39; );
+
+		return apply_filters( &#39;lifterlms_product_purchase_checkout_redirect&#39;, add_query_arg( &#39;product-id&#39;, $this-&gt;id, $checkout_url ) );
+	}
+
+
+
+	public function get_start_date() {
+
+		if ( $this-&gt;start_date ) {
+			return $this-&gt;start_date;
+		} else {
+			return $this-&gt;post-&gt;post_date;
+		}
+
+	}
+
+	public function get_end_date() {
+		return $this-&gt;end_date;
+	}
+
+	/**
+	 * Find the next uncompleted lesson in the course syllabus
+	 * @return int [Next uncompleted lesson]
+	 */
+	public function get_next_uncompleted_lesson() {
+		$lessons_not_completed = array();
+
+		$lessons = $this-&gt;get_lessons( &#39;posts&#39; );
+
+		$user = new LLMS_Person;
+
+		foreach ( $lessons as $lesson ) {
+
+			$user_postmetas = $user-&gt;get_user_postmeta_data( get_current_user_id(), $lesson-&gt;ID );
+
+			if ( ! isset( $user_postmetas[&#39;_is_complete&#39;] ) ) {
+
+				array_push( $lessons_not_completed, $lesson-&gt;ID );
+			}
+		}
+		if ( $lessons_not_completed ) {
+			return $lessons_not_completed[0];
+		}
+	}
+
+	/**
+	 * Get all lesson ids associated with a course
+	 * @return array $array [array of all lesson ids in a course]
+	 */
+	public function get_lesson_ids() {
+		$lessons = array();
+
+		$args = array(
+			&#39;post_type&#39; 		=&gt; &#39;section&#39;,
+			&#39;posts_per_page&#39;	=&gt; 500,
+			&#39;meta_key&#39;			=&gt; &#39;_llms_order&#39;,
+			&#39;order&#39;				=&gt; &#39;ASC&#39;,
+			&#39;orderby&#39;			=&gt; &#39;meta_value_num&#39;,
+			&#39;meta_query&#39; 		=&gt; array(
+				array(
+					&#39;key&#39; 		=&gt; &#39;_llms_parent_course&#39;,
+	      			&#39;value&#39; 	=&gt; $this-&gt;id,
+	      			&#39;compare&#39; 	=&gt; &#39;=&#39;,
+	  			),
+		  	),
+		);
+
+		$sections = get_posts( $args );
+
+		foreach ( $sections as $s ) {
+			$section = new LLMS_Section( $s-&gt;ID );
+			$lessonset = $section-&gt;get_children_lessons();
+			foreach ( $lessonset as $lessonojb ) {
+				$lessons[] = $lessonojb-&gt;ID;
+			}
+		}
+
+		return $lessons;
+	}
+
+
+
+	/**
+	 * Get all sections
+	 * renamed in 3.0
+	 * @return array $sections [Returns array of all sections associated with a course.]
+	 */
+	public function get_syllabus_sections() {
+		$syllabus = $this-&gt;get_syllabus();
+		$sections = array();
+		if ( $syllabus ) {
+			foreach ( $syllabus as $key =&gt; $value ) {
+
+				array_push( $sections,$value[&#39;section_id&#39;] );
+			}
+		}
+		return $sections;
+	}
+
+	/**
+	 * Get the course short description
+	 *
+	 * @return string (html)
+	 */
+	public function get_short_description() {
+
+		$short_description = wpautop( $this-&gt;post-&gt;post_excerpt );
+
+		return $short_description;
+
+	}
+
+
+	/**
+	 * Get the Course Section and Lesson information
+	 *
+	 * @return array
+	 */
+	public function get_syllabus() {
+
+		$syllabus = $this-&gt;sections;
+
+		return $syllabus;
+
+	}
+
+
+
+	public function get_user_enroll_date( $user_id = &#39;&#39; ) {
+
+		$enrolled_date = &#39;&#39;;
+
+		//if no user get current user
+		if ( empty( $user_id ) ) {
+			$user_id = get_current_user_id();
+		}
+
+		if ( $this-&gt;is_user_enrolled( $user_id ) ) {
+
+			$user_post_data = self::get_user_post_data( $this-&gt;id, $user_id );
+
+			foreach ( $user_post_data as $upd ) {
+				if ( &#39;Enrolled&#39; === $upd-&gt;meta_value ) {
+					$enrolled_date = $upd-&gt;updated_date;
+				}
+			}
+		}
+
+		return $enrolled_date;
+
+	}
+
+	public static function get_user_post_data( $post_id, $user_id = &#39;&#39; ) {
+		global $wpdb;
+
+		$results = false;
+
+		if ( ! empty( $post_id ) ) {
+
+			// if user id is empty get current user id
+			if ( empty( $user_id ) ) {
+
+				$user_id = get_current_user_id();
+			}
+
+			// query user postmeta table
+			$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+			$results = $wpdb-&gt;get_results(
+				$wpdb-&gt;prepare(
+					&#39;SELECT * FROM &#39; . $table_name .
+						&#39; WHERE post_id = %s
+							AND user_id = %s&#39;,
+					$post_id, $user_id
+				)
+			);
+		}
+
+		return $results;
+
+	}
+
+	public static function check_enrollment( $course_id, $user_id = &#39;&#39; ) {
+		global $wpdb;
+
+		//set enrollment to false
+		$enrolled = false;
+
+		// if no course id then nothing we can do
+		if ( ! empty( $course_id ) ) {
+
+			// if user id is empty get current user id
+			if ( empty( $user_id ) ) {
+
+				$user_id = get_current_user_id();
+			}
+
+			//query user_postmeta table
+			$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+			$results = $wpdb-&gt;get_results(
+				$wpdb-&gt;prepare(
+					&#39;SELECT * FROM &#39; . $table_name .
+						&#39; WHERE post_id = %s
+							AND user_id = %s&#39;,
+					$course_id, $user_id
+				)
+			);
+
+			if ( $results ) {
+				foreach ( $results as $result ) {
+					if ( &#39;_status&#39; === $result-&gt;meta_key &amp;&amp; ( &#39;Enrolled&#39; === $result-&gt;meta_value || &#39;Expired&#39; === $result-&gt;meta_value ) ) {
+						$enrolled = $results;
+					}
+				}
+			}
+		}
+
+		return $enrolled;
+	}
+
+	public function is_user_enrolled( $user_id = &#39;&#39; ) {
+
+		$enrolled = false;
+
+		$user_post_data = self::get_user_post_data( $this-&gt;id, $user_id );
+
+		if ( $user_post_data ) {
+
+			foreach ( $user_post_data as $upd ) {
+				if ( &#39;_status&#39; === $upd-&gt;meta_key &amp;&amp; &#39;Enrolled&#39; === $upd-&gt;meta_value ) {
+					$enrolled = true;
+				}
+			}
+		}
+
+		return $enrolled;
+
+	}
+
+	public function get_student_progress( $user_id = &#39;&#39; ) {
+
+		// if user_id is empty get current user id
+		if ( empty( $user_id ) ) {
+
+			$user_id = get_current_user_id();
+		}
+
+		//check if user is enrolled
+		$enrollment = self::check_enrollment( $this-&gt;id, $user_id );
+
+		// set up course details and enrollment information
+		$obj = new stdClass();
+		$obj-&gt;id = $this-&gt;id;
+
+		if ( $enrollment ) {
+
+			$obj-&gt;is_enrolled = true;
+			$obj-&gt;is_complete = false;
+
+			//loop through returned rows and save data to object
+			foreach ( $enrollment as $row ) {
+
+				if ( &#39;_start_date&#39; === $row-&gt;meta_key ) {
+
+					$obj-&gt;start_date = $row-&gt;updated_date;
+
+				} elseif ( &#39;_is_complete&#39; === $row-&gt;meta_key ) {
+
+					$obj-&gt;is_complete = true;
+					$obj-&gt;completed_date = $row-&gt;updated_date;
+
+				} elseif ( &#39;status&#39; === $row-&gt;meta_key ) {
+
+					$obj-&gt;status = $row-&gt;meta_value;
+
+				}
+			}
+		} else {
+
+			$obj-&gt;is_enrolled = false;
+
+		}
+
+		//add sections array to object
+		$obj-&gt;sections = array();
+		//add lessons array to object
+		$obj-&gt;lessons = array();
+
+		$sections = $this-&gt;get_sections( &#39;posts&#39; );
+
+		foreach ( $sections as $child_section ) {
+			$section_obj = new LLMS_Section( $child_section-&gt;ID );
+
+			$section = array();
+			$section[&#39;id&#39;] = $section_obj-&gt;id;
+			$section[&#39;title&#39;] = $section_obj-&gt;post-&gt;post_title;
+
+			// get any user post meta data
+			$section[&#39;is_complete&#39;] = false;
+			$section_user_data = self::get_user_post_data( $section_obj-&gt;id, $user_id );
+
+			$obj-&gt;is_complete = false;
+			if ( $section_user_data ) {
+
+				//loop through returned rows and save data to object
+				foreach ( $section_user_data as $row ) {
+
+					if ( &#39;_is_complete&#39; === $row-&gt;meta_key ) {
+
+						$section[&#39;is_complete&#39;] = true;
+						$section[&#39;completed_date&#39;] = $row-&gt;updated_date;
+
+					}
+				}
+			}
+
+			$obj-&gt;sections[] = $section;
+
+			//get lesson data
+			$lessons = $section_obj-&gt;get_children_lessons();
+
+			if ( $lessons ) {
+
+				foreach ( $lessons as $child_lesson ) {
+					$lesson_obj = new LLMS_Lesson( $child_lesson-&gt;ID );
+
+					$lesson = array();
+					$lesson[&#39;id&#39;] = $lesson_obj-&gt;id;
+					$lesson[&#39;title&#39;] = $lesson_obj-&gt;post-&gt;post_title;
+					$lesson[&#39;parent_id&#39;] = $lesson_obj-&gt;get_parent_section();
+
+					$lesson[&#39;is_complete&#39;] = false;
+					$lesson_user_data = self::get_user_post_data( $lesson_obj-&gt;id, $user_id );
+
+					//loop through returned rows and save data to object
+					if ( $lesson_user_data ) {
+
+						foreach ( $lesson_user_data as $row ) {
+
+							if ( &#39;_is_complete&#39; === $row-&gt;meta_key ) {
+								$lesson[&#39;is_complete&#39;] = true;
+								$lesson[&#39;completed_date&#39;] = $row-&gt;updated_date;
+							}
+						}
+					}
+
+					$obj-&gt;lessons[] = $lesson;
+
+				}
+			}
+		}// End foreach().
+
+		return $obj;
+
+	}
+
+	/**
+	 * Get url to membership checkout page, depends on it is user logged in and is alternative checkout on.
+	 *
+	 * @return string
+	 */
+	public function get_membership_link() {
+		$memberships_required = get_post_meta( $this-&gt;id, &#39;_llms_restricted_levels&#39;, true );
+
+		if ( count( $memberships_required ) &gt; 1 ) {
+			$membership_url = get_permalink( llms_get_page_id( &#39;memberships&#39; ) );
+		} // End if().
+		else {
+			$membership_url = get_permalink( $memberships_required[0] );
+		}
+
+		return apply_filters( &#39;lifterlms_product_purchase_redirect_membership_required&#39;, $membership_url );
+	}
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.33.1/includes/models/model.llms.course.php#L47">View on GitHub</a></span>
+			</p>
+			</section>
+	<hr/>
+	<section class="changelog">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="changelog" tabindex="-1">Changelog <a href="#changelog" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Changelog</span></a></h3>
+
+		<table>
+			<caption class="screen-reader-text">Changelog</caption>
+			<thead>
+				<tr>
+					<th class="changelog-version">Version</th>
+					<th class="changelog-desc">Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/3.30.3/" alt="WordPress 3.30.3">3.30.3</a></td>
+						<td><span class="since-description">Explicitly define class properties.</span></td>
+					</tr>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/1.0.0/" alt="WordPress 1.0.0">1.0.0</a></td>
+						<td>Introduced.</td>
+					</tr>
+							</tbody>
+		</table>
+	</section>
+
+	<hr/>
+	<section class="related">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="related" tabindex="-1">Related <a href="#related" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Related</span></a></h2>
+
+					<article class="uses">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="uses" tabindex="-1">Uses <a href="#uses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Uses</span></a></h3>
+				<table id="uses-table">
+					<caption class="screen-reader-text">Uses</caption>
+					<thead>
+						<tr>
+							<th>Uses</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/abstracts/abstract.llms.post.model.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_post_model/">LLMS_Post_Model</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/">LLMS_Post_Model</a> abstract</p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+							</article>
+		
+					
+			<article class="used-by">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="used-by" tabindex="-1">Used By <a href="#used-by" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Used By</span></a></h3>
+				<table id="used-by-table">
+					<caption class="screen-reader-text">Used By</caption>
+					<thead>
+						<tr>
+							<th>Used By</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/class.llms.course.basic.php:</span>
+								<a href="../llms_course_basic/index.html">LLMS_Course_Basic</a>
+							</td>
+							<td class="related-desc">
+								<p>Basic course class Extends <a href="https://developer.lifterlms.com/reference/classes/llms_course/">LLMS_Course</a></p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+							</article>
+			</section>
+			<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="check_enrollment/index.html">
+							check_enrollment</a>
+																	</li>
+									<li><a href="get_audio/index.html">
+							get_audio</a>
+						&mdash; Attempt to get oEmbed for an audio provider Falls back to the [audio] shortcode if the oEmbed fails											</li>
+									<li><a href="get_author/index.html">
+							get_author</a>
+						&mdash; Get WP user object for the course author											</li>
+									<li><a href="get_author_id/index.html">
+							get_author_id</a>
+						&mdash; Get the course author&#39;s WP User ID											</li>
+									<li><a href="get_author_name/index.html">
+							get_author_name</a>
+						&mdash; Get a the Display Name of the course author											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_course/get_available_points/">
+							get_available_points</a>
+						&mdash; Retrieve the total points available for the course											</li>
+									<li><a href="get_categories/index.html">
+							get_categories</a>
+						&mdash; Retrieve course categories											</li>
+									<li><a href="get_checkout_url/index.html">
+							get_checkout_url</a>
+						&mdash; Get checkout url											</li>
+									<li><a href="get_children_lessons/index.html">
+							get_children_lessons</a>
+																	</li>
+									<li><a href="get_children_sections/index.html">
+							get_children_sections</a>
+																	</li>
+									<li><a href="get_difficulty/index.html">
+							get_difficulty</a>
+						&mdash; Get Difficulty											</li>
+									<li><a href="get_end_date/index.html">
+							get_end_date</a>
+																	</li>
+									<li><a href="get_enrolled_students/index.html">
+							get_enrolled_students</a>
+						&mdash; Retrieve an array of students currently enrolled in the course											</li>
+									<li><a href="get_id/index.html">
+							get_id</a>
+						&mdash; Get the ID											</li>
+									<li><a href="get_instructors/index.html">
+							get_instructors</a>
+						&mdash; Retrieve course instructor information											</li>
+									<li><a href="get_lesson_ids/index.html">
+							get_lesson_ids</a>
+						&mdash; Get all lesson ids associated with a course											</li>
+									<li><a href="get_lessons/index.html">
+							get_lessons</a>
+						&mdash; Get course lessons											</li>
+									<li><a href="get_membership_link/index.html">
+							get_membership_link</a>
+						&mdash; Get url to membership checkout page, depends on it is user logged in and is alternative checkout on.											</li>
+									<li><a href="get_next_uncompleted_lesson/index.html">
+							get_next_uncompleted_lesson</a>
+						&mdash; Find the next uncompleted lesson in the course syllabus											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_course/get_percent_complete/">
+							get_percent_complete</a>
+						&mdash; Get a user&#39;s percentage completion through the course											</li>
+									<li><a href="get_permalink/index.html">
+							get_permalink</a>
+						&mdash; Get the course permalink											</li>
+									<li><a href="get_prerequisite_id/index.html">
+							get_prerequisite_id</a>
+						&mdash; Get course&#39;s prerequisite id based on the type of prerequisite											</li>
+									<li><a href="get_product/index.html">
+							get_product</a>
+						&mdash; Retrieve an instance of the LLMS_Product for this course											</li>
+									<li><a href="get_quizzes/index.html">
+							get_quizzes</a>
+						&mdash; Retrieve an array of quizzes within a course											</li>
+									<li><a href="get_sales_page_url/index.html">
+							get_sales_page_url</a>
+						&mdash; Get the URL to a WP Page or Custom URL when sales page redirection is enabled											</li>
+									<li><a href="get_sections/index.html">
+							get_sections</a>
+						&mdash; Get course sections											</li>
+									<li><a href="get_short_description/index.html">
+							get_short_description</a>
+						&mdash; Get the course short description											</li>
+									<li><a href="get_sku/index.html">
+							get_sku</a>
+						&mdash; Get SKU											</li>
+									<li><a href="get_start_date/index.html">
+							get_start_date</a>
+																	</li>
+									<li><a href="get_student_count/index.html">
+							get_student_count</a>
+						&mdash; Retrieve the number of enrolled students in the course											</li>
+									<li><a href="get_student_progress/index.html">
+							get_student_progress</a>
+																	</li>
+									<li><a href="get_students/index.html">
+							get_students</a>
+						&mdash; Get an array of student IDs based on enrollment status in the course											</li>
+									<li><a href="get_syllabus/index.html">
+							get_syllabus</a>
+						&mdash; Get the Course Section and Lesson information											</li>
+									<li><a href="get_syllabus_sections/index.html">
+							get_syllabus_sections</a>
+						&mdash; Get all sections renamed in 3.0											</li>
+									<li><a href="get_tags/index.html">
+							get_tags</a>
+						&mdash; Retrieve course tags											</li>
+									<li><a href="get_title/index.html">
+							get_title</a>
+						&mdash; Get the Title											</li>
+									<li><a href="get_tracks/index.html">
+							get_tracks</a>
+						&mdash; Retrieve course tracks											</li>
+									<li><a href="get_user_enroll_date/index.html">
+							get_user_enroll_date</a>
+																	</li>
+									<li><a href="get_user_post_data/index.html">
+							get_user_post_data</a>
+																	</li>
+									<li><a href="get_user_postmeta_data/index.html">
+							get_user_postmeta_data</a>
+						&mdash; Return array of objects containing user meta data for a single post.											</li>
+									<li><a href="get_user_postmetas_by_key/index.html">
+							get_user_postmetas_by_key</a>
+						&mdash; Return array of objects containing user meta data for a single post.											</li>
+									<li><a href="get_video/index.html">
+							get_video</a>
+						&mdash; Attempt to get oEmbed for a video provider Falls back to the [video] shortcode if the oEmbed fails											</li>
+									<li><a href="has_capacity/index.html">
+							has_capacity</a>
+						&mdash; Determine if the course is at capacity based on course capacity settings											</li>
+									<li><a href="has_date_passed/index.html">
+							has_date_passed</a>
+						&mdash; Compare a course meta info date to the current date and get a bool											</li>
+									<li><a href="has_prerequisite/index.html">
+							has_prerequisite</a>
+						&mdash; Determine if prerequisites are enabled and there are prereqs configured											</li>
+									<li><a href="has_sales_page_redirect/index.html">
+							has_sales_page_redirect</a>
+						&mdash; Determine if sales page redirection is enabled											</li>
+									<li><a href="instructors/index.html">
+							instructors</a>
+						&mdash; Retrieve an instance of the Post Instructors model											</li>
+									<li><a href="is_enrollment_open/index.html">
+							is_enrollment_open</a>
+						&mdash; Determine if students can access course content based on the current date											</li>
+									<li><a href="is_open/index.html">
+							is_open</a>
+						&mdash; Determine if students can access course content based on the current date											</li>
+									<li><a href="is_prerequisite_complete/index.html">
+							is_prerequisite_complete</a>
+						&mdash; Determine if a prerequisite is completed for a student											</li>
+									<li><a href="is_user_enrolled/index.html">
+							is_user_enrolled</a>
+																	</li>
+									<li><a href="set_instructors/index.html">
+							set_instructors</a>
+						&mdash; Save instructor information											</li>
+									<li><a href="toarrayafter/index.html">
+							toArrayAfter</a>
+						&mdash; Add data to the course model when converted to array Called before data is sorted and returned by $this-&gt;jsonSerialize()											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_course%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_course/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="https://s29765.pcdn.co/wp-includes/css/buttons.min.css?ver=5.1.1" type="text/css" media="all"/>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js?ver=20160322"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"5a985f74d1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js?ver=20160524"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js?ver=20180724"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/quicktags.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js?ver=20181019"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js?ver=20160824"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"34505f0fee","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js?ver=20181019"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
 
 </body></html>

@@ -1,0 +1,1489 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><!-- Online page at https://developer.lifterlms.com/reference/classes/llms_analytics/ --><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="/s29765.pcdn.co/wp-includes/css/dashicons.min.css?20181204" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Analytics - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v11.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://developer.lifterlms.com/reference/classes/llms_analytics/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Analytics - LifterLMS Developer Hub"/>
+<meta property="og:description" content="Analytics Class"/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_analytics/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="Analytics Class"/>
+<meta name="twitter:title" content="LLMS_Analytics - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"logo":{"@type":"ImageObject","@id":"https://developer.lifterlms.com/#logo","url":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png","width":1025,"height":280,"caption":"LifterLMS"},"image":{"@id":"https://developer.lifterlms.com/#logo"}},{"@type":"WebSite","@id":"https://developer.lifterlms.com/#website","url":"https://developer.lifterlms.com/","name":"LifterLMS Developer Hub","publisher":{"@id":"https://developer.lifterlms.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://developer.lifterlms.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://developer.lifterlms.com/reference/classes/llms_analytics/#webpage","url":"https://developer.lifterlms.com/reference/classes/llms_analytics/","inLanguage":"en-US","name":"LLMS_Analytics - LifterLMS Developer Hub","isPartOf":{"@id":"https://developer.lifterlms.com/#website"},"datePublished":"2019-03-13T18:34:15+00:00","dateModified":"2019-03-13T18:34:15+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Analytics Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_analytics/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.7.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.7.1';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="https://s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js?ver=7.7.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.1.1"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=6007"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_analytics%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_analytics%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-6007">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="https://s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-6007 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-665"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Analytics"></a><span class="trail-end">LLMS_Analytics</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-6007" class="post-6007 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_class-llms-analytics-php">
+
+	
+	
+	<h1>LLMS_Analytics</h1>
+
+	<section class="summary">
+		<p>Analytics Class</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	<p>Manages large queries of grouped data</p>
+
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="https://developer.lifterlms.com/reference/files/includes/class-llms-analytics.php/">includes/class.llms.analytics.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 9">class LLMS_Analytics {
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+
+	}
+
+	//sales data
+	//get all product orders
+
+	//get orders
+	public static function get_orders( $values ) {
+
+		$args = array(
+		  &#39;post_type&#39; 		=&gt; &#39;llms_order&#39;,
+		  &#39;posts_per_page&#39;	=&gt; 5000,
+		  &#39;meta_query&#39; 		=&gt; array(),
+		);
+
+		if ( count( $values ) &gt; 1 ) {
+			$args[&#39;meta_query&#39;][&#39;relation&#39;] = &#39;AND&#39;;
+		}
+
+		foreach ( $values as $key =&gt; $value ) {
+			$args[&#39;meta_query&#39;][] = array(
+		      &#39;key&#39; =&gt; $value[&#39;key&#39;],
+		      &#39;value&#39; =&gt; $value[&#39;value&#39;],
+		      &#39;compare&#39; =&gt; $value[&#39;compare&#39;],
+			);
+		}
+
+		$orders = get_posts( $args );
+
+		$orders_data = array();
+
+		foreach ( $orders as $key =&gt; $value ) {
+
+			$order = LLMS_Product::get_order_data( $value-&gt;ID );
+			array_push( $orders_data, $order );
+
+		}
+
+		return $orders_data;
+	}
+
+
+	/**
+	 * Returns 10000 posts
+	 * @param  [string] $post_type [post type filter]
+	 * @return [mixed] [array of post objects or false if no results found]
+	 */
+	public static function get_posts( $post_type = &#39;&#39; ) {
+
+		// Venues
+		$args = array(
+			&#39;posts_per_page&#39;   =&gt; 10000,
+			&#39;orderby&#39;          =&gt; &#39;title&#39;,
+			&#39;order&#39;            =&gt; &#39;ASC&#39;,
+			&#39;post_type&#39;        =&gt; $post_type,
+			&#39;suppress_filters&#39; =&gt; true,
+		);
+		$posts = get_posts( $args );
+
+		return $posts;
+	}
+
+	public static function get_products() {
+		//get products
+		$courses = self::get_posts( &#39;course&#39; );
+		$memberhsips = self::get_posts( &#39;llms_membership&#39; );
+
+		//if courses or membership are false
+		//turn them into empty arrays
+		if ( ! $courses ) {
+			$courses  = array();
+		}
+		if ( ! $memberhsips ) {
+			$memberships  = array();
+		}
+
+		$products = array_merge( $courses, $memberhsips );
+
+		return $products;
+	}
+
+	/**
+	 * Get array of date / total $ made on site
+	 * Uses start and end date for timeline
+	 *
+	 * @param  [array] $orders     [array of order objects]
+	 * @param  [string] $start_date [date yyyy-mm-dd]
+	 * @param  [string] $end_date [date yyyy-mm-dd]
+	 *
+	 * @return [array]             [array of date / daily total]
+	 */
+	public static function get_total_sold_by_day( $orders, $start_date, $end_date ) {
+
+		$total_by_day = array();
+
+		$date = $start_date;
+
+		while ( $date &lt;= $end_date ) {
+
+			//set daily total to 0;
+			$daily_total = 0;
+
+			//loop through all objects and add values to total
+			foreach ( $orders as $key =&gt; $value ) {
+				if ( $value-&gt;order_date == $date ) {
+					$daily_total += $value-&gt;order_total;
+				}
+			}
+			$results = array( $date, $daily_total );
+
+			$total_by_day[] = $results;
+
+			//add one day to date
+			$date = LLMS_Date::db_date( $date . &#39;+ 1 day&#39; );
+
+		}
+
+		return $total_by_day;
+
+	}
+
+	public static function get_total_enrolled_by_day( $search ) {
+
+		$total_by_day = array();
+		$date = $search-&gt;start_date;
+		// array key counter
+		$i = 0;
+
+		while ( $date &lt;= $search-&gt;end_date ) {
+
+			//create array for each date and add to $total_by_day
+			$daily_results = array( $date );
+			$total_by_day[] = $daily_results;
+
+			if ( isset( $search-&gt;courses ) ) {
+
+				foreach ( $search-&gt;courses as $course ) {
+
+					$daily_total = 0;
+
+					//loop through all students and count enrolled students
+					if ( $search-&gt;students ) {
+						foreach ( $search-&gt;students as $key =&gt; $value ) {
+
+							if ( $value-&gt;post_id == $course-&gt;ID &amp;&amp; LLMS_Date::db_date( $value-&gt;enrolled_date ) &lt;= $date ) {
+
+								if ( &#39;Enrolled&#39; === $value-&gt;status ) {
+									$daily_total++;
+								}
+							}
+						}
+					}
+					array_push( $total_by_day[ $i ], $daily_total );
+				}
+			} elseif ( isset( $search-&gt;memberships ) ) {
+
+				foreach ( $search-&gt;memberships as $membership ) {
+
+					$daily_total = 0;
+
+					//loop through all students and count enrolled students
+					if ( $search-&gt;members ) {
+						foreach ( $search-&gt;members as $key =&gt; $value ) {
+
+							if ( $value-&gt;post_id == $membership-&gt;ID &amp;&amp; LLMS_Date::db_date( $value-&gt;enrolled_date ) &lt;= $date ) {
+
+								if ( &#39;Enrolled&#39; === $value-&gt;status ) {
+									$daily_total++;
+								}
+							}
+						}
+					}
+					array_push( $total_by_day[ $i ], $daily_total );
+				}
+			}// End if().
+
+			//add 1 to array key counter
+			$i++;
+			//add one day to date
+			$date = LLMS_Date::db_date( $date . &#39;+ 1 day&#39; );
+
+		}// End while().
+
+		return $total_by_day;
+
+	}
+
+	/**
+	 * Get total volume sold
+	 * @param  [array] $orders [array of order objects]
+	 * @return [float] [total sold]
+	 */
+	public static function get_total_sales( $orders ) {
+
+		$total_sold = 0;
+
+		if ( $orders ) {
+
+			foreach ( $orders as $order ) {
+
+				$total_sold += $order-&gt;order_total;
+
+			}
+		}
+		return $total_sold;
+	}
+
+
+	/**
+	* Get number of products sold
+	* @param  [array] $orders [array of order objects]
+	* @return [int] [total number of items sold]
+	*/
+	public static function get_total_units_sold( $orders ) {
+
+		$units = 0;
+
+		if ( $orders ) {
+
+			$units = count( $orders );
+
+		}
+
+		return $units;
+	}
+
+	/**
+	* Get number of coupons used
+	* @param  [array] $orders [array of order objects]
+	* @return [int] [total number of coupons used]
+	*/
+	public static function get_total_coupons_used( $orders ) {
+
+		$coupons = 0;
+
+		if ( $orders ) {
+
+			foreach ( $orders as $order ) {
+
+				if ( ! empty( $order-&gt;coupon_id ) ) {
+					$coupons++;
+				}
+			}
+		}
+
+		return $coupons;
+	}
+
+	/**
+	* Get dollar value of coupons used
+	* @param  [array] $orders [array of order objects]
+	* @return [int] [total $ coupons used]
+	*/
+	public static function get_total_coupon_amount( $orders ) {
+
+		$coupons = 0;
+
+		if ( $orders ) {
+
+			foreach ( $orders as $order ) {
+
+				if ( ! empty( $order-&gt;coupon_id ) ) {
+
+					//calculate coupon
+					$product = new LLMS_Product( $order-&gt;id );
+					$coupons += $product-&gt;get_coupon_discount_total( $order-&gt;order_total );
+
+				}
+			}
+		}
+
+		return $coupons;
+	}
+
+	/**
+	 * Get all currently enrolled students
+	 * @param  [int] $post_id [Course Id]
+	 * @return [array]          [array of enrollment objects]
+	 */
+	public static function get_enrolled_users( $post_id ) {
+		global $wpdb;
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+		$results = $wpdb-&gt;get_results(
+			$wpdb-&gt;prepare(
+				&#39;SELECT * FROM &#39; . $table_name .
+					&#39; WHERE post_id = %s
+						AND meta_value = &#34;Enrolled&#34;&#39;,
+				$post_id
+			)
+		);
+
+		return $results;
+
+	}
+
+	/**
+	 * Get all students enrolled in last n number of days
+	 * @param  [int] $number_of_days
+	 * @return [int]
+	 */
+	public static function get_users_enrolled_last_n_days( $number_of_days = 7 ) {
+		global $wpdb;
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+		$results = $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&#39;SELECT count(*) FROM &#39; . $table_name .
+						&#39; WHERE updated_date &gt; DATE_SUB(NOW(), INTERVAL %s DAY)
+						AND meta_value = &#34;Enrolled&#34;&#39;,
+				$number_of_days
+			)
+		);
+
+		return $results;
+	}
+
+	/**
+	 * Get all members registered in last n number of days
+	 * @param  [int] $number_of_days
+	 * @return [int]
+	 */
+	public static function get_members_registered_last_n_days( $number_of_days = 7 ) {
+		global $wpdb;
+
+		$results = $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&#39;SELECT count(*) FROM &#39; . $wpdb-&gt;users .
+						&#39; WHERE user_registered &gt; DATE_SUB(NOW(), INTERVAL %s DAY)&#39;,
+				$number_of_days
+			)
+		);
+
+		return $results;
+	}
+
+	/**
+	 * Get all lessons completed in last n number of days
+	 * @param  [int] $number_of_days
+	 * @return [int]
+	 */
+	public static function get_lessons_completed_last_n_days( $number_of_days = 7 ) {
+		global $wpdb;
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+		$results = $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&#39;SELECT count(*) FROM &#39; . $table_name . &#39;
+				WHERE meta_key = &#34;_is_complete&#34;
+				AND updated_date &gt; DATE_SUB(NOW(), INTERVAL %s DAY)&#39;,
+				$number_of_days
+			)
+		);
+
+		return $results;
+	}
+
+	public static function get_total_sales_last_n_days( $number_of_days = 7 ) {
+
+		$total = 0;
+		$args = array(
+				&#39;post_type&#39; 		=&gt; &#39;llms_order&#39;,
+				&#39;posts_per_page&#39;	=&gt; 5000,
+				&#39;meta_query&#39; 		=&gt; array(),
+				&#39;date_query&#39; =&gt; array(
+						array(
+								&#39;after&#39; =&gt; $number_of_days . &#39; day ago&#39;,
+						),
+				),
+		);
+
+		$orders = get_posts( $args );
+		foreach ( $orders as $order ) {
+			$total += get_post_meta( $order-&gt;ID, &#39;_llms_order_total&#39;, true );
+		}
+
+		return LLMS_Number::format_money_no_decimal( $total );
+	}
+
+
+
+	/**
+	 * Query user_postmeta for all users enrolled by course
+	 * @return [type] [description]
+	 */
+	public static function get_total_users_all_time( $post_id, $end_date ) {
+		global $wpdb;
+
+		//add 1 day to time to account for striptime
+		$end_date = LLMS_Date::db_date( $end_date . &#39;1 day&#39; );
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+		$results = $wpdb-&gt;get_results(
+			$wpdb-&gt;prepare(
+				&#39;SELECT
+					p.user_id,
+					p.post_id,
+					MAX(IF(pa.meta_key = &#34;_start_date&#34;, pa.updated_date, NULL)) AS enrolled_date,
+					MAX(IF(pa.meta_key = &#34;_status&#34;, pa.meta_value, NULL)) AS status,
+					MAX(IF(pa.meta_key = &#34;_is_complete&#34;, pa.updated_date, NULL)) AS completed_date
+					from &#39; . $table_name . &#39; p
+					left join &#39; . $table_name . &#39; pa on p.user_id = pa.user_id and p.post_id = pa.post_id
+					where p.post_id = %s
+					and p.updated_date &lt;= %s
+					group by p.user_id&#39;,
+				$post_id, $end_date
+			)
+		);
+
+		return $results;
+
+	}
+
+	public static function get_users( $post_id, $include_expired = false ) {
+		global $wpdb;
+
+		$students_array = array();
+		$students_large = array();
+		$students_small = array();
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+		$users_table = $wpdb-&gt;prefix . &#39;users&#39;;
+
+		if ( &#39;all_products&#39; === $post_id ) {
+
+			// query user_postmeta table
+			$results = $wpdb-&gt;get_results(
+				&#39;SELECT
+					user_id,
+					meta_value,
+					updated_date
+				FROM &#39; . $table_name . &#39;
+				WHERE meta_key = &#34;_status&#34;
+				AND ( meta_value = &#34;Enrolled&#34; OR meta_value = &#34;Expired&#34; )
+				AND EXISTS(SELECT 1 FROM &#39; . $users_table . &#39; WHERE ID = user_id)
+				group by user_id&#39;
+			);
+
+		} else {
+
+			// query user_postmeta table
+			$results = $wpdb-&gt;get_results(
+				$wpdb-&gt;prepare(
+					&#39;SELECT
+						user_id,
+						meta_value,
+						updated_date
+					FROM &#39; . $table_name . &#39;
+					WHERE meta_key = &#34;_status&#34;
+					AND post_id = %s
+					AND ( meta_value = &#34;Enrolled&#34; OR meta_value = &#34;Expired&#34; )
+					AND EXISTS(SELECT 1 FROM &#39; . $users_table . &#39; WHERE ID = user_id)
+					group by user_id&#39;,
+					$post_id
+				)
+			);
+
+		}
+
+		if ( $results ) {
+
+			foreach ( $results as $key =&gt; $student ) {
+
+				// if include expired students is false then remove expired students from array
+				if ( ! $include_expired &amp;&amp; &#39;Expired&#39; === $student-&gt;meta_value ) {
+
+					unset( $results[ $key ] );
+
+				} else {
+
+					//get member name
+					$first_name = get_user_meta( $student-&gt;user_id, &#39;first_name&#39;, true );
+					$last_name = get_user_meta( $student-&gt;user_id, &#39;last_name&#39;, true );
+					$user = get_user_by( &#39;id&#39;, $student-&gt;user_id );
+					$email = $user-&gt;user_email;
+					$profile_link = &#39;&lt;a href=&#34;&#39; . get_admin_url( &#39;&#39;, &#39;admin.php?page=llms-students&amp;tab=profile&amp;student=&#39; . $student-&gt;user_id ) . &#39;&#34;&gt;View&lt;/a&gt;&#39;;
+					//add data to large table array
+					$student_data = array(
+						$last_name,
+						$first_name,
+						$email,
+						$profile_link,
+					);
+					array_push( $students_large, $student_data );
+
+					//add data to small table array
+					$student_data = array(
+						$last_name,
+						$first_name,
+						$profile_link,
+					);
+					array_push( $students_small, $student_data );
+
+				}
+			}
+
+			$students_array[&#39;large&#39;] = $students_large;
+			//$students_array[&#39;small&#39;] = $students_small;
+		}// End if().
+
+		return $students_array;
+
+	}
+
+	/**
+	* Get number of students enrolled in course ever
+	* @param  [array] $students [array of student objects]
+	* @return [int] [total number of enrolled users]
+	*/
+	public static function get_total_users( $students ) {
+
+		$units = 0;
+
+		if ( $students ) {
+
+			$units = count( $students );
+
+		}
+
+		return $units;
+	}
+
+
+
+
+
+
+	/**
+	* Get number of students enrolled in course with status of enrolled
+	* @param  [array] $students [array of student objects]
+	* @return [int] [total number of enrolled users]
+	*/
+	public static function get_total_current_enrolled_users( $students ) {
+
+		$units = 0;
+
+		if ( $students ) {
+
+			foreach ( $students as $student ) {
+				if ( &#39;Enrolled&#39; === $student-&gt;status ) {
+					$units++;
+				}
+			}
+		}
+
+		return $units;
+	}
+
+	/**
+	* Get number of students enrolled in course with status of expired
+	* @param  [array] $students [array of student objects]
+	* @return [int] [total number of expired users]
+	*/
+	public static function get_total_current_expired_users( $students ) {
+
+		$units = 0;
+
+		if ( $students ) {
+
+			foreach ( $students as $student ) {
+				if ( &#39;Expired&#39; === $student-&gt;status ) {
+					$units++;
+				}
+			}
+		}
+
+		return $units;
+	}
+
+	public static function course_completion_percentage( $students ) {
+
+		if ( $students ) {
+
+			$total_students  = count( $students );
+			$total_done = 0;
+
+			foreach ( $students as $student ) {
+				if ( ! is_null( $student-&gt;completed_date ) ) {
+					$total_done++;
+				}
+			}
+
+			if ( 0 == $total_students ) {
+				return 0;
+			} else {
+				return $total_done / $total_students;
+			}
+		}
+	}
+
+	public static function get_membership_retention( $members ) {
+
+		if ( $members ) {
+
+			$total_members  = count( $members );
+			$current_members = 0;
+
+			foreach ( $members as $member ) {
+
+				if ( &#39;Enrolled&#39; === $member-&gt;status ) {
+					$current_members++;
+				}
+			}
+
+			if ( 0 == $total_members ) {
+				return 0;
+			} else {
+				return ( $current_members / $total_members );
+			}
+		}
+	}
+
+	public static function get_total_certs_issued( $product_id ) {
+		global $wpdb;
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+
+		if ( &#39;all_courses&#39; === $product_id ) {
+			$results = $wpdb-&gt;get_results(
+				&#39;SELECT *
+					from &#39; . $table_name . &#39;
+					where meta_key = &#34;_certificate_earned&#34;&#39;
+			);
+
+		} else {
+			$results = $wpdb-&gt;get_results(
+				$wpdb-&gt;prepare(
+					&#39;SELECT *
+						from &#39; . $table_name . &#39;
+						where meta_key = &#34;_certificate_earned&#34;
+						AND post_id = %s&#39;, $product_id
+				)
+			);
+		}
+
+		if ( $results ) {
+			return count( $results );
+		} else {
+			return 0;
+		}
+
+	}
+
+	/**
+	 * Gets completion percentage for each lesson in course
+	 * @param  [array] $search [analytics search object]
+	 * @return [array] [array of arrays]
+	 */
+	public static function get_lesson_completion_avg( $search ) {
+
+		$lesson_completions = array();
+		$all_students = 0;
+
+		if ( ! empty( $search-&gt;lessons ) ) {
+			//loop through each lesson
+			foreach ( $search-&gt;lessons as $lesson ) {
+				//create array and add post title
+				$lesson_array = array( $lesson-&gt;post_title );
+
+				$unit = 0;
+
+				if ( ! empty( $search-&gt;students ) ) {
+
+					$all_students = count( $search-&gt;students );
+
+					//loop through each student and check if lesson is completed
+					foreach ( $search-&gt;students as $student ) {
+
+						if ( self::is_lesson_completed( $student-&gt;user_id, $lesson-&gt;ID, $search-&gt;end_date ) ) {
+							$unit++;
+						}
+					}
+				}
+				if ( $all_students &gt; 0 ) {
+					//calculate completion percentage
+					$completion_percent = LLMS_Number::whole_number( ( $unit / $all_students ) );
+				} else {
+					$completion_percent = 0;
+				}
+
+				//add unit count to lesson array
+				array_push( $lesson_array, $completion_percent );
+
+				$lesson_completions[] = $lesson_array;
+
+			}
+
+			return $lesson_completions;
+		}// End if().
+
+	}
+
+	/**
+	 * Checks whether a lesson is completed
+	 * @param  [int]  $user_id   user id]
+	 * @param  [int]  $lesson_id [lesson id]
+	 * @param  string  $end_date  [optional end date]
+	 * @return boolean            [if lesson was completed before end date]
+	 */
+	public static function is_lesson_completed( $user_id, $lesson_id, $end_date = &#39;&#39; ) {
+		global $wpdb;
+
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+
+		$results = $wpdb-&gt;get_results( $wpdb-&gt;prepare(
+		&#39;SELECT updated_date FROM &#39; . $table_name . &#39; WHERE user_id = %s AND post_id = %d AND meta_key = &#34;_is_complete&#34;&#39;, $user_id, $lesson_id) );
+
+		if ( $results ) {
+
+			if ( ! empty( $end_date ) ) {
+
+				if ( LLMS_Date::db_date( $results[0]-&gt;updated_date ) &gt; $end_date ) {
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		return false;
+	}
+
+	public static function get_members( $search ) {
+
+		$members_array = array();
+		$members_large = array();
+		$members_small = array();
+
+		if ( ! empty( $search-&gt;members ) ) {
+
+			foreach ( $search-&gt;members as $member ) {
+
+				//get member name
+				$first_name = get_user_meta( $member-&gt;user_id, &#39;first_name&#39;, true );
+				$last_name = get_user_meta( $member-&gt;user_id, &#39;last_name&#39;, true );
+
+				//get enrollment and expiration date
+				$enrollment_date = LLMS_Date::db_date( $member-&gt;enrolled_date );
+				$exp_date = self::get_membership_exp_date_by_user( $search-&gt;product_id, $enrollment_date );
+				$profile_link = &#39;&lt;a href=&#34;&#39; . get_admin_url( &#39;&#39;, &#39;admin.php?page=llms-students&amp;tab=profile&amp;student=&#39; . $member-&gt;user_id ) . &#39;&#34;&gt;View&lt;/a&gt;&#39;;
+
+				//add data to large table array
+				$member_data = array(
+					$last_name,
+					$first_name,
+					$enrollment_date,
+					( $exp_date ? $exp_date : &#39;&#39; ),
+					$profile_link,
+				);
+				array_push( $members_large, $member_data );
+
+				//add data to small table array
+				$member_data = array(
+					$last_name,
+					$first_name,
+					$profile_link,
+				);
+				array_push( $members_small, $member_data );
+
+			}
+		}
+
+		$members_array[&#39;large&#39;] = $members_large;
+		$members_array[&#39;small&#39;] = $members_small;
+
+		return $members_array;
+	}
+
+	public static function get_membership_exp_date_by_user( $membership_id, $enrollment_date ) {
+
+		$interval = get_post_meta( $membership_id, &#39;_llms_expiration_interval&#39;, true );
+
+		if ( ! empty( $interval ) ) {
+
+			$period = get_post_meta( $membership_id, &#39;_llms_expiration_period&#39;, true );
+
+			$exp_date = LLMS_Date::db_date( $enrollment_date . &#39; +&#39; . $interval . &#39; &#39; . $period );
+
+			if ( $exp_date !== $enrollment_date ) {
+				return $exp_date;
+			}
+		}
+		return false;
+	}
+
+
+
+	public static function get_students( $search ) {
+
+		$student_arrays = array();
+		$students_large = array();
+		$students_small = array();
+
+		if ( ! empty( $search-&gt;students ) ) {
+
+			//create new course object
+			$course = new LLMS_Course( $search-&gt;product_id );
+
+			foreach ( $search-&gt;students as $student ) {
+
+				//get student name
+				$first_name = get_user_meta( $student-&gt;user_id, &#39;first_name&#39;, true );
+				$last_name = get_user_meta( $student-&gt;user_id, &#39;last_name&#39;, true );
+				$profile_link = &#39;&lt;a href=&#34;&#39; . get_admin_url( &#39;&#39;, &#39;admin.php?page=llms-students&amp;tab=profile&amp;student=&#39; . $student-&gt;user_id ) . &#39;&#34;&gt;View&lt;/a&gt;&#39;;
+
+				//get student progress information
+				$student_progress = $course-&gt;get_student_progress( $student-&gt;user_id );
+
+				$start_date = LLMS_Date::db_date( $student_progress-&gt;start_date );
+
+				//set variables for lesson progress statistics
+				$completed_lesson_count = 0;
+				$last_completed_lesson = &#39;&#39;;
+				$last_completed_lesson_date = 0;
+				$all_lesson_count = 0;
+
+				if ( ! empty( $student_progress-&gt;lessons ) ) {
+
+					$all_lesson_count = count( $student_progress-&gt;lessons );
+
+					foreach ( $student_progress-&gt;lessons as $lesson ) {
+
+						if ( $lesson[&#39;is_complete&#39;] ) {
+							//add 1 to completed lesson count
+							$completed_lesson_count++;
+							//if lesson completed date is &gt;  than the previous completed lesson date
+							//Set the last completed lesson and date
+							if ( $lesson[&#39;completed_date&#39;] &gt; $last_completed_lesson_date ) {
+								$last_completed_lesson = get_the_title( $lesson[&#39;id&#39;] );
+								$last_completed_lesson_date = LLMS_Date::db_date( $lesson[&#39;completed_date&#39;] );
+							}
+						}
+					}
+				} // End if().
+
+				//calculate % complete
+				if ( 0 == $all_lesson_count ) {
+					$completion_percent = &#39;0%&#39;;
+				} else {
+					$completion_percent = ( LLMS_Number::whole_number( $completed_lesson_count / $all_lesson_count ) . &#39;%&#39; );
+				}
+
+				//add data to large table array
+				$student_data = array(
+					$last_name,
+					$first_name,
+					$start_date,
+					$completion_percent,
+					( $last_completed_lesson ? $last_completed_lesson . &#39;, &#39; . $last_completed_lesson_date : &#39;&#39; ),
+					$profile_link,
+				);
+				array_push( $students_large, $student_data );
+
+				//add data to small table
+				$student_data = array(
+					$first_name,
+					$last_name,
+					$profile_link,
+				);
+				array_push( $students_small, $student_data );
+			} // End foreach().
+
+			$student_arrays[&#39;large&#39;] = $students_large;
+			$student_arrays[&#39;small&#39;] = $students_small;
+
+			return $student_arrays;
+		}// End if().
+
+	}
+
+	public static function get_user_enrollments( $user_id ) {
+		global $wpdb;
+		$table_name = $wpdb-&gt;prefix . &#39;lifterlms_user_postmeta&#39;;
+
+		// query user_postmeta table
+		$results = $wpdb-&gt;get_results(
+			$wpdb-&gt;prepare(
+				&#39;SELECT
+					*
+				FROM &#39; . $table_name . &#39;
+				WHERE meta_key = &#34;_status&#34;
+				AND meta_value = &#34;Enrolled&#34;
+				AND user_id = %s&#39;, $user_id
+			)
+		);
+
+		if ( $results ) {
+
+			foreach ( $results as $key =&gt; $value ) {
+
+				$post = get_post( $value-&gt;post_id );
+
+				if ( isset( $post ) ) {
+					$results[ $key ]-&gt;post_title = $post-&gt;post_title;
+					$results[ $key ]-&gt;post_type = $post-&gt;post_type;
+				} else {
+					$results[ $key ]-&gt;post_title = &#39;&#39;;
+					$results[ $key ]-&gt;post_type = &#39;&#39;;
+				}
+			}
+		}
+
+		return $results;
+	}
+
+	public static function get_orders_by_user( $user_id ) {
+
+		//set up search arguments
+		$values = array(
+			&#39;0&#39; =&gt; array(
+			 	&#39;key&#39; =&gt; &#39;_llms_user_id&#39;,
+				&#39;value&#39; =&gt; $user_id,
+				&#39;compare&#39; =&gt; &#39;=&#39;,
+			),
+		);
+
+		return self::get_orders( $values );
+
+	}
+
+	public static function get_courses_by_user_table( $user ) {
+
+		$courses_array = array();
+
+		foreach ( $user-&gt;courses as $course ) {
+			$c = new LLMS_Course( $course-&gt;post_id );
+			$comp = $c-&gt;get_percent_complete( $user-&gt;id );
+			$status = ( &#39;100&#39; == $comp ) ? &#39;Completed&#39; : &#39;Enrolled&#39;;
+			$link = get_edit_post_link( $course-&gt;post_id );
+			$title = ( $link ) ? &#39;&lt;a href=&#34;&#39; . $link . &#39;&#34;&gt;&#39; . $course-&gt;post_title . &#39;&lt;/a&gt;&#39; : $course-&gt;post_title;
+			$course_array = array( $title, LLMS_Date::db_date( $course-&gt;updated_date ), $status, $comp . &#39;%&#39; );
+			array_push( $courses_array, $course_array );
+		}
+
+		return $courses_array;
+
+	}
+
+	public static function get_memberships_by_user_table( $user ) {
+
+		$memberships = array();
+
+		foreach ( $user-&gt;memberships as $membership ) {
+			$link = get_edit_post_link( $membership-&gt;post_id );
+			$title = ( $link ) ? &#39;&lt;a href=&#34;&#39; . $link . &#39;&#34;&gt;&#39; . $membership-&gt;post_title . &#39;&lt;/a&gt;&#39; : $membership-&gt;post_title;
+
+			$membership_array = array( $title, LLMS_Date::db_date( $membership-&gt;updated_date ), $membership-&gt;meta_value );
+
+			array_push( $memberships, $membership_array );
+
+		}
+
+		return $memberships;
+
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.33.1/includes/class.llms.analytics.php#L9">View on GitHub</a></span>
+			</p>
+			</section>
+
+		<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="__construct/index.html">
+							__construct</a>
+						&mdash; Constructor											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/course_completion_percentage/">
+							course_completion_percentage</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_courses_by_user_table/">
+							get_courses_by_user_table</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="get_enrolled_users/index.html">
+							get_enrolled_users</a>
+						&mdash; Get all currently enrolled students											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_lesson_completion_avg/">
+							get_lesson_completion_avg</a>
+						&mdash; Gets completion percentage for each lesson in course											</li>
+									<li><a href="get_lessons_completed_last_n_days/index.html">
+							get_lessons_completed_last_n_days</a>
+						&mdash; Get all lessons completed in last n number of days											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_members/">
+							get_members</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="get_members_registered_last_n_days/index.html">
+							get_members_registered_last_n_days</a>
+						&mdash; Get all members registered in last n number of days											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_membership_exp_date_by_user/">
+							get_membership_exp_date_by_user</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_membership_retention/">
+							get_membership_retention</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_memberships_by_user_table/">
+							get_memberships_by_user_table</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_orders/">
+							get_orders</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_orders_by_user/">
+							get_orders_by_user</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_posts/">
+							get_posts</a>
+						&mdash; Returns 10000 posts											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_products/">
+							get_products</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_students/">
+							get_students</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_certs_issued/">
+							get_total_certs_issued</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_coupon_amount/">
+							get_total_coupon_amount</a>
+						&mdash; Get dollar value of coupons used											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_coupons_used/">
+							get_total_coupons_used</a>
+						&mdash; Get number of coupons used											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_current_enrolled_users/">
+							get_total_current_enrolled_users</a>
+						&mdash; Get number of students enrolled in course with status of enrolled											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_current_expired_users/">
+							get_total_current_expired_users</a>
+						&mdash; Get number of students enrolled in course with status of expired											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_enrolled_by_day/">
+							get_total_enrolled_by_day</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_sales/">
+							get_total_sales</a>
+						&mdash; Get total volume sold											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_sales_last_n_days/">
+							get_total_sales_last_n_days</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_sold_by_day/">
+							get_total_sold_by_day</a>
+						&mdash; Get array of date / total $ made on site Uses start and end date for timeline											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_units_sold/">
+							get_total_units_sold</a>
+						&mdash; Get number of products sold											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_users/">
+							get_total_users</a>
+						&mdash; Get number of students enrolled in course ever											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/get_total_users_all_time/">
+							get_total_users_all_time</a>
+						&mdash; Query user_postmeta for all users enrolled by course											</li>
+									<li><a href="get_user_enrollments/index.html">
+							get_user_enrollments</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="get_users/index.html">
+							get_users</a>
+						&mdash; Manages large queries of grouped data											</li>
+									<li><a href="get_users_enrolled_last_n_days/index.html">
+							get_users_enrolled_last_n_days</a>
+						&mdash; Get all students enrolled in last n number of days											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_analytics/is_lesson_completed/">
+							is_lesson_completed</a>
+						&mdash; Checks whether a lesson is completed											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_analytics%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="https://s29765.pcdn.co/wp-includes/css/buttons.min.css?ver=5.1.1" type="text/css" media="all"/>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js?ver=20160322"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"5a985f74d1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js?ver=20160524"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js?ver=20180724"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/quicktags.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js?ver=20181019"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js?ver=20160824"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"34505f0fee","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js?ver=20181019"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
+
+</body></html>

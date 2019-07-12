@@ -1,9 +1,1339 @@
-<html><head>
-<title>429, Rate Limited</title>
-</head>
-<body>
-<h1>429, Rate Limited</h1>
-<p>Wait a minute and try again</p>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+	<link href="/s29765.pcdn.co/wp-includes/css/dashicons.min.css?20181204" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Question - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v11.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://developer.lifterlms.com/reference/classes/llms_question/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Question - LifterLMS Developer Hub"/>
+<meta property="og:description" content="LLMS Quiz Question Model."/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_question/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="LLMS Quiz Question Model."/>
+<meta name="twitter:title" content="LLMS_Question - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"logo":{"@type":"ImageObject","@id":"https://developer.lifterlms.com/#logo","url":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png","width":1025,"height":280,"caption":"LifterLMS"},"image":{"@id":"https://developer.lifterlms.com/#logo"}},{"@type":"WebSite","@id":"https://developer.lifterlms.com/#website","url":"https://developer.lifterlms.com/","name":"LifterLMS Developer Hub","publisher":{"@id":"https://developer.lifterlms.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://developer.lifterlms.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://developer.lifterlms.com/reference/classes/llms_question/#webpage","url":"https://developer.lifterlms.com/reference/classes/llms_question/","inLanguage":"en-US","name":"LLMS_Question - LifterLMS Developer Hub","isPartOf":{"@id":"https://developer.lifterlms.com/#website"},"datePublished":"2019-03-13T18:37:35+00:00","dateModified":"2019-06-26T15:16:14+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Question Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_question/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.7.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.7.1';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="https://s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js?ver=7.7.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.1.1"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=7449"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_question%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_question%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-7449">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="https://s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-7449 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-2101"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Question"></a><span class="trail-end">LLMS_Question</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-7449" class="post-7449 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_models_model-llms-question-php wp-parser-package-lifterlms-models wp-parser-since-1-0-0 wp-parser-since-3-30-1">
+
+	
+	
+	<h1>LLMS_Question</h1>
+
+	<section class="summary">
+		<p>LLMS Quiz Question Model.</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a></li>
+<li><a href="#changelog">Changelog</a>
+</li></ul></li>
+<li><a href="#related">Related</a>
+<ul>
+<li><a href="#uses">Uses</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="../../files/includes/models/model-llms-question.php/index.html">includes/models/model.llms.question.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 21">class LLMS_Question extends LLMS_Post_Model {
+
+	protected $db_post_type = &#39;llms_question&#39;;
+	protected $model_post_type = &#39;question&#39;;
+
+	protected $properties = array(
+		&#39;content&#39; =&gt; &#39;html&#39;,
+		&#39;clarifications&#39; =&gt; &#39;html&#39;,
+		&#39;clarifications_enabled&#39; =&gt; &#39;yesno&#39;,
+		&#39;description_enabled&#39; =&gt; &#39;yesno&#39;,
+		&#39;image&#39; =&gt; &#39;array&#39;,
+		&#39;multi_choices&#39; =&gt; &#39;yesno&#39;,
+		&#39;parent_id&#39; =&gt; &#39;absint&#39;,
+		&#39;points&#39; =&gt; &#39;absint&#39;,
+		&#39;question_type&#39; =&gt; &#39;string&#39;,
+		&#39;question&#39; =&gt; &#39;html&#39;,
+		&#39;title&#39; =&gt; &#39;html&#39;,
+		&#39;video_enabled&#39; =&gt; &#39;yesno&#39;,
+		&#39;video_src&#39; =&gt; &#39;string&#39;,
+	);
+
+	/**
+	 * Create a new question choice
+	 * @param    array     $data  array of question choice data
+	 * @return   string|boolean
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function create_choice( $data ) {
+
+		$data = wp_parse_args( $data, array(
+			&#39;choice&#39; =&gt; &#39;&#39;,
+			&#39;choice_type&#39; =&gt; &#39;text&#39;,
+			&#39;correct&#39; =&gt; false,
+			&#39;marker&#39; =&gt; $this-&gt;get_next_choice_marker(),
+			&#39;question_id&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+		) );
+
+		$choice = new LLMS_Question_Choice( $this-&gt;get( &#39;id&#39; ) );
+		if ( $choice-&gt;create( $data ) ) {
+			return $choice-&gt;get( &#39;id&#39; );
+		}
+
+		return false;
+
+	}
+
+	/**
+	 * Delete a choice by ID
+	 * @param    string     $id  choice ID
+	 * @return   boolean
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function delete_choice( $id ) {
+
+		$choice = $this-&gt;get_choice( $id );
+		if ( ! $choice ) {
+			return false;
+		}
+		return $choice-&gt;delete();
+
+	}
+
+	/**
+	 * Retrieve the type of automatic grading that can be performed on the question
+	 * @return   string|false
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_auto_grade_type() {
+
+		if ( $this-&gt;supports( &#39;choices&#39; ) &amp;&amp; $this-&gt;supports( &#39;grading&#39;, &#39;auto&#39; ) ) {
+			return &#39;choices&#39;;
+		} elseif ( $this-&gt;supports( &#39;grading&#39;, &#39;conditional&#39; ) &amp;&amp; llms_parse_bool( $this-&gt;get( &#39;auto_grade&#39; ) ) ) {
+			return &#39;conditional&#39;;
+		}
+
+		return false;
+
+	}
+
+
+	/**
+	 * An array of default arguments to pass to $this-&gt;create() when creating a new post
+	 * @param    array  $args   args of data to be passed to wp_insert_post
+	 * @return   array
+	 * @since    3.16.0
+	 * @version  3.16.12
+	 */
+	protected function get_creation_args( $args = null ) {
+
+		// allow nothing to be passed in
+		if ( empty( $args ) ) {
+			$args = array();
+		}
+
+		// backwards compat to original 3.0.0 format when just a title was passed in
+		if ( is_string( $args ) ) {
+			$args = array(
+				&#39;post_title&#39; =&gt; $args,
+			);
+		}
+
+		if ( isset( $args[&#39;title&#39;] ) ) {
+			$args[&#39;post_title&#39;] = $args[&#39;title&#39;];
+			unset( $args[&#39;title&#39;] );
+		}
+		if ( isset( $args[&#39;content&#39;] ) ) {
+			$args[&#39;post_content&#39;] = $args[&#39;content&#39;];
+			unset( $args[&#39;content&#39;] );
+		}
+
+		$meta = isset( $args[&#39;meta_input&#39;] ) ? $args[&#39;meta_input&#39;] : array();
+
+		$props = array_diff( array_keys( $this-&gt;get_properties() ), array_keys( $this-&gt;get_post_properties() ) );
+
+		foreach ( $props as $prop ) {
+
+			if ( isset( $args[ $prop ] ) ) {
+
+				$meta[ $this-&gt;meta_prefix . $prop ] = $args[ $prop ];
+				unset( $args[ $prop ] );
+
+			}
+		}
+
+		$args[&#39;meta_input&#39;] = wp_parse_args( $meta, $meta );
+
+		$args = wp_parse_args( $args, array(
+			&#39;comment_status&#39; =&gt; &#39;closed&#39;,
+			&#39;meta_input&#39;     =&gt; array(),
+			&#39;menu_order&#39;     =&gt; 1,
+			&#39;ping_status&#39;	 =&gt; &#39;closed&#39;,
+			&#39;post_author&#39; 	 =&gt; get_current_user_id(),
+			&#39;post_content&#39;   =&gt; &#39;&#39;,
+			&#39;post_excerpt&#39;   =&gt; &#39;&#39;,
+			&#39;post_status&#39; 	 =&gt; &#39;publish&#39;,
+			&#39;post_title&#39;     =&gt; &#39;&#39;,
+			&#39;post_type&#39; 	 =&gt; $this-&gt;get( &#39;db_post_type&#39; ),
+		) );
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;model_post_type . &#39;_get_creation_args&#39;, $args, $this );
+
+	}
+
+	/**
+	 * Retrieve a choice by id
+	 * @param    string     $id   Choice ID
+	 * @return   obj|false
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_choice( $id ) {
+		$choice = new LLMS_Question_Choice( $this-&gt;get( &#39;id&#39; ), $id );
+		if ( $choice-&gt;exists() &amp;&amp; $this-&gt;get( &#39;id&#39; ) == $choice-&gt;get_question_id() ) {
+			return $choice;
+		}
+		return false;
+	}
+
+	/**
+	 * Retrieve the question&#39;s choices
+	 *
+	 * @since 3.16.0
+	 * @since 3.30.1 Improve choice sorting to accommodate numeric markers.
+	 *
+	 * @param string $return Optional. Determine how to return the choice data.
+	 *                       &#39;choices&#39; (default) returns an array of LLMS_Question_Choice objects.
+	 *                       &#39;ids&#39; returns an array of LLMS_Question_Choice ids.
+	 * @return array
+	 */
+	public function get_choices( $return = &#39;choices&#39; ) {
+
+		global $wpdb;
+		$results = $wpdb-&gt;get_results( $wpdb-&gt;prepare(
+			&#34;SELECT meta_key AS id
+				  , meta_value AS data
+			 FROM {$wpdb-&gt;postmeta}
+			 WHERE post_id = %d
+			   AND meta_key LIKE &#39;_llms_choice_%&#39;
+			;&#34;, $this-&gt;get( &#39;id&#39; )
+		) );
+
+		usort( $results, array( $this, &#39;sort_choices&#39; ) );
+
+		if ( &#39;ids&#39; === $return ) {
+			return wp_list_pluck( $results, &#39;id&#39; );
+		}
+
+		$ret = array();
+		foreach ( $results as $result ) {
+			$ret[] = new LLMS_Question_Choice( $this-&gt;get( &#39;id&#39; ), unserialize( $result-&gt;data ) );
+		}
+
+		return $ret;
+
+	}
+
+	/**
+	 * Retrieve the question description (post_content)
+	 * Add&#39;s extra allowed tags to wp_kses_post allowed tags so that async audio shortcodes will work properly
+	 * @return   string
+	 * @since    3.16.6
+	 * @version  3.16.6
+	 */
+	public function get_description() {
+
+		global $allowedposttags;
+		$allowedposttags[&#39;source&#39;] = array(
+			&#39;src&#39; =&gt; true,
+			&#39;type&#39; =&gt; true,
+		);
+		$desc = $this-&gt;get( &#39;content&#39; );
+		unset( $allowedposttags[&#39;source&#39;] );
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;get( &#39;question_type&#39; ) . &#39;_question_get_description&#39;, $desc, $this );
+
+	}
+
+	/**
+	 * Retrieve the correct values for a conditionally graded question
+	 * @return   array
+	 * @since    3.16.15
+	 * @version  3.16.15
+	 */
+	public function get_conditional_correct_value() {
+
+		$correct = explode( &#39;|&#39;, $this-&gt;get( &#39;correct_value&#39; ) );
+		$correct = array_map( &#39;trim&#39;, $correct );
+
+		return $correct;
+
+	}
+
+	/**
+	 * Retrieve correct choices for a given question
+	 * @return   array
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_correct_choice() {
+
+		$correct = false;
+
+		if ( $this-&gt;supports( &#39;choices&#39; ) &amp;&amp; $this-&gt;supports( &#39;grading&#39;, &#39;auto&#39; ) ) {
+
+			$multi = ( &#39;yes&#39; === $this-&gt;get( &#39;multi_choices&#39; ) );
+			$correct = array();
+
+			foreach ( $this-&gt;get_choices() as $choice ) {
+
+				if ( $choice-&gt;is_correct() ) {
+					$correct[] = $choice-&gt;get( &#39;id&#39; );
+					if ( ! $multi ) {
+						break;
+					}
+				}
+			}
+
+			// always sort multi choices for easy auto comparison
+			if ( $multi &amp;&amp; $this-&gt;supports( &#39;selectable&#39; ) ) {
+				sort( $correct );
+			}
+		}
+
+		return $correct;
+
+	}
+
+	/**
+	 * Get the question text (title)
+	 * @return   string
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_question( $format = &#39;html&#39; ) {
+		return apply_filters( &#39;llms_&#39; . $this-&gt;get( &#39;question_type&#39; ) . &#39;_question_get_question&#39;, $this-&gt;get( &#39;title&#39; ), $format, $this );
+	}
+
+	/**
+	 * Retrieve child questions (for question group)
+	 * @todo     need to prevent access for non-group questions...
+	 * @return   array
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_questions() {
+		return $this-&gt;questions()-&gt;get_questions();
+	}
+
+	/**
+	 * Retrieves an object cache key for the question&#39;s choices
+	 * @return   string
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	private function get_choice_cache_key() {
+
+		return sprintf( &#39;question_%d_choices&#39;, $this-&gt;get( &#39;id&#39; ) );
+
+	}
+
+	/**
+	 * Retrieve URL for an image associated with the question if it&#39;s enabled
+	 * @param    string|array   $size  registered image size or a numeric array with width/height
+	 * @return   string                empty string if no image or not supported
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_image( $size = &#39;full&#39;, $unused = null ) {
+
+		$url = &#39;&#39;;
+
+		if ( $this-&gt;has_image() ) {
+			$img = $this-&gt;get( &#39;image&#39; );
+			if ( isset( $img[&#39;id&#39;] ) &amp;&amp; is_numeric( $img[&#39;id&#39;] ) ) {
+				$src = wp_get_attachment_image_src( $img[&#39;id&#39;], $size );
+				if ( $src ) {
+					$url = $src[0];
+				} elseif ( isset( $img[&#39;src&#39;] ) ) {
+					$url = $img[&#39;src&#39;];
+				}
+			}
+		}
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;get( &#39;question_type&#39; ) . &#39;_question_get_image&#39;, $url, $this );
+
+	}
+
+	/**
+	 * Retrieve the next marker for question choices
+	 *
+	 * @since 3.16.0
+	 * @since 3.30.1 Fixed bug which caused the next marker to be 1 index too high.
+	 *
+	 * @return string
+	 */
+	protected function get_next_choice_marker() {
+		$next_index = count( $this-&gt;get_choices( &#39;ids&#39;, false ) );
+		$type = $this-&gt;get_question_type();
+		$markers = $type[&#39;choices&#39;][&#39;markers&#39;];
+		return $next_index &gt; count( $markers ) ? false : $markers[ $next_index ];
+	}
+
+	/**
+	 * Retrieve question type data for the given question
+	 * @return   array
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_question_type() {
+		return  llms_get_question_type( $this-&gt;get( &#39;question_type&#39; ) );
+	}
+
+	/**
+	 * Retrieve an instance of the questions parent LLMS_Quiz
+	 * @return   obj
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function get_quiz() {
+		return new LLMS_Quiz( $this-&gt;get( &#39;parent_id&#39; ) );
+	}
+
+	/**
+	 * Retrieve video embed for question featured video
+	 * @return   string
+	 * @since    3.16.0
+	 * @version  3.17.0
+	 */
+	public function get_video() {
+
+		$html = &#39;&#39;;
+		$embed = $this-&gt;get( &#39;video_src&#39; );
+
+		if ( $embed ) {
+
+			// get oembed
+			$html = wp_oembed_get( $embed );
+
+			// fallback to video shortcode
+			if ( ! $html ) {
+				$html = do_shortcode( &#39;[video src=&#34;&#39; . $embed . &#39;&#34;]&#39; );
+			}
+		}
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;get( &#39;question_type&#39; ) . &#39;_question_get_video&#39;, $html, $embed, $this );
+
+	}
+
+	/**
+	 * Attempt to grade a question
+	 * @param    array     $answer  selected answer(s)
+	 * @return   mixed     yes = correct
+	 *                     no  = incorrect
+	 *                     null = not auto gradable
+	 * @since    3.16.0
+	 * @version  3.16.15
+	 */
+	public function grade( $answer ) {
+
+		/**
+		 * Allow 3rd parties to do custom grading
+		 * If filter returns non-null will bypass core grading
+		 */
+		$grade = apply_filters( &#39;llms_&#39; . $this-&gt;get( &#39;question_type&#39; ) . &#39;_question_pre_grade&#39;, null, $answer, $this );
+
+		if ( is_null( $grade ) ) {
+
+			if ( $this-&gt;get( &#39;points&#39; ) &gt;= 1 ) {
+
+				$grading_type = $this-&gt;get_auto_grade_type();
+
+				if ( &#39;choices&#39; === $grading_type ) {
+
+					sort( $answer );
+					$grade = ( $answer === $this-&gt;get_correct_choice() ) ? &#39;yes&#39; : &#39;no&#39;;
+
+				} elseif ( &#39;conditional&#39; === $grading_type ) {
+
+					$correct = $this-&gt;get_conditional_correct_value();
+
+					// allow case sensitivity to be enabled if required
+					if ( false === apply_filters( &#39;llms_quiz_grading_case_sensitive&#39;, false, $answer, $correct, $this ) ) {
+
+						$answer = array_map( &#39;strtolower&#39;, $answer );
+						$correct = array_map( &#39;strtolower&#39;, $correct );
+
+					}
+
+					$grade = ( $answer === $correct ) ? &#39;yes&#39; : &#39;no&#39;;
+
+				}
+			}
+		}
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;get( &#39;question_type&#39; ) . &#39;_question_grade&#39;, $grade, $answer, $this );
+
+	}
+
+	/**
+	 * Determine if a description is enabled and not empty
+	 * @return   bool
+	 * @since    3.16.0
+	 * @version  3.16.12
+	 */
+	public function has_description() {
+		$enabled = $this-&gt;get( &#39;description_enabled&#39; );
+		$content = $this-&gt;get( &#39;content&#39; );
+		return ( &#39;yes&#39; === $enabled &amp;&amp; $content );
+	}
+
+	/**
+	 * Determine if a featured image is enabled and not empty
+	 * @return   bool
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function has_image() {
+		$img = $this-&gt;get( &#39;image&#39; );
+		if ( is_array( $img ) ) {
+			if ( ! empty( $img[&#39;enabled&#39;] ) &amp;&amp; ( ! empty( $img[&#39;id&#39;] ) || ! empty( $img[&#39;src&#39;] ) ) ) {
+				return ( &#39;yes&#39; === $img[&#39;enabled&#39;] );
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Determine if a featured video is enabled &amp; not empty
+	 * @return   bool
+	 * @since    3.16.0
+	 * @version  3.16.12
+	 */
+	public function has_video() {
+		$enabled = $this-&gt;get( &#39;video_enabled&#39; );
+		$src = $this-&gt;get( &#39;video_src&#39; );
+		return ( &#39;yes&#39; === $enabled &amp;&amp; $src );
+	}
+
+	/**
+	 * Determine if the question is an orphan
+	 * @return   bool
+	 * @since    3.27.0
+	 * @version  3.27.0
+	 */
+	public function is_orphan() {
+
+		$statuses = array( &#39;publish&#39;, &#39;draft&#39; );
+		$parent_id = $this-&gt;get( &#39;parent_id&#39; );
+
+		if ( ! $parent_id ) {
+			return true;
+		} elseif ( ! in_array( get_post_status( $parent_id ), $statuses, true ) ) {
+			return true;
+		}
+
+		return false;
+
+	}
+
+	/**
+	 * Access question manager (used for question groups)
+	 * @todo     need to prevent access for non-group questions...
+	 * @return   obj
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function questions() {
+		return new LLMS_Question_Manager( $this );
+	}
+
+	/**
+	 * Sort choices by marker.
+	 *
+	 * @since 3.30.1
+	 * @version 3.30.1
+	 *
+	 * @param string $choice_a Serialized choice data.
+	 * @param string $choice_b Serialized choice data.
+	 * @return int
+	 */
+	private function sort_choices( $choice_a, $choice_b ) {
+		$a_data = unserialize( $choice_a-&gt;data );
+		$b_data = unserialize( $choice_b-&gt;data );
+		return strnatcmp( $a_data[&#39;marker&#39;], $b_data[&#39;marker&#39;] );
+	}
+
+	/**
+	 * Determine if the question supports a question feature
+	 * @param    string     $feature  name of the feature (eg &#34;choices&#34;)
+	 * @param    mixed      $option   allow matching feature options
+	 * @return   boolean
+	 * @since    3.16.0
+	 * @version  3.16.15
+	 */
+	public function supports( $feature, $option = null ) {
+
+		$ret = false;
+
+		$type = $this-&gt;get_question_type();
+		if ( $type ) {
+			if ( &#39;choices&#39; === $feature ) {
+				$ret = ( ! empty( $type[&#39;choices&#39;] ) );
+			} elseif ( &#39;grading&#39; === $feature ) {
+				$ret = ( $type[&#39;grading&#39;] &amp;&amp; $option === $type[&#39;grading&#39;] );
+			} elseif ( &#39;points&#39; === $feature ) {
+				$ret = $type[&#39;points&#39;];
+			} elseif ( &#39;random_lock&#39; === $feature ) {
+				$ret = $type[&#39;random_lock&#39;];
+			} elseif ( &#39;selectable&#39; === $feature ) {
+				$ret = empty( $type[&#39;choices&#39;] ) ? false : $type[&#39;choices&#39;][&#39;selectable&#39;];
+			}
+		}
+
+		/**
+		 * @filter   llms_{$question_type}_question_supports
+		 * @param    boolean   $ret      return value
+		 * @param    string    $string   name of the feature being checked (eg &#34;choices&#34;)
+		 * @param    obj       $this     instance of the LLMS_Question
+		 * @usage    apply_filters( &#39;llms_choice_question_supports&#39;, function( $ret, $feature, $option, $question ) {
+		 *           	return $ret;
+		 *           }, 10, 4 );
+		 */
+		return apply_filters( &#39;llms_&#39; . $this-&gt;get( &#39;question_type&#39; ) . &#39;_question_supports&#39;, $ret, $feature, $option, $this );
+
+	}
+
+	/**
+	 * Called before data is sorted and returned by $this-&gt;toArray()
+	 * Extending classes should override this data if custom data should
+	 * be added when object is converted to an array or json
+	 * @param    array     $arr   array of data to be serialized
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.16.0
+	 */
+	protected function toArrayAfter( $arr ) {
+
+		unset( $arr[&#39;author&#39;] );
+		unset( $arr[&#39;date&#39;] );
+		unset( $arr[&#39;excerpt&#39;] );
+		unset( $arr[&#39;modified&#39;] );
+		unset( $arr[&#39;status&#39;] );
+
+		$choices = array();
+		foreach ( $this-&gt;get_choices() as $choice ) {
+			$choices[] = $choice-&gt;get_data();
+		}
+		$arr[&#39;choices&#39;] = $choices;
+
+		if ( &#39;group&#39; === $this-&gt;get( &#39;question_type&#39; ) ) {
+			$arr[&#39;questions&#39;] = array();
+			foreach ( $this-&gt;get_questions() as $question ) {
+				$arr[&#39;questions&#39;][] = $question-&gt;toArray();
+			}
+		}
+
+		return $arr;
+
+	}
+
+	/**
+	 * Update a question choice
+	 * if no id is supplied will create a new choice
+	 * @param    array     $data  array of choice data (see $this-&gt;create_choice())
+	 * @return   string|boolean
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	public function update_choice( $data ) {
+
+		// if there&#39;s no ID, we&#39;ll add a new choice
+		if ( ! isset( $data[&#39;id&#39;] ) ) {
+			return $this-&gt;create_choice( $data );
+		}
+
+		// get the question
+		$choice = $this-&gt;get_choice( $data[&#39;id&#39;] );
+		if ( ! $choice ) {
+			return false;
+		}
+
+		$choice-&gt;update( $data )-&gt;save();
+
+		// return choice ID
+		return $choice-&gt;get( &#39;id&#39; );
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/**
+	 * Get the correct option for the question
+	 * @return   array|null
+	 * @since    1.0.0
+	 * @version  3.9.0
+	 */
+	public function get_correct_option() {
+		$options = $this-&gt;get_options();
+		$key = $this-&gt;get_correct_option_key();
+		if ( ! is_null( $key ) &amp;&amp; isset( $options[ $key ] ) ) {
+			return $options[ $key ];
+		}
+		return null;
+	}
+
+	/**
+	 * Get the key of the correct option
+	 * @return   int|null
+	 * @since    3.9.0
+	 * @version  3.9.0
+	 */
+	public function get_correct_option_key() {
+		$options = $this-&gt;get_options();
+		foreach ( $options as $key =&gt; $option ) {
+			if ( $option[&#39;correct_option&#39;] ) {
+				return $key;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Retrieve quizzes this quiz is assigned to
+	 * @return   array              array of WP_Post IDs (quiz post types)
+	 * @since    3.12.0
+	 * @version  3.12.0
+	 */
+	public function get_quizzes() {
+
+		$id = absint( $this-&gt;get( &#39;id&#39; ) );
+		$len = strlen( strval( $id ) );
+
+		$str_like = &#39;%&#39; . sprintf( &#39;s:2:&#34;id&#34;;s:%1$d:&#34;%2$s&#34;;&#39;, $len, $id ) . &#39;%&#39;;
+		$int_like = &#39;%&#39; . sprintf( &#39;s:2:&#34;id&#34;;i:%1$s;&#39;, $id ) . &#39;%&#39;;
+
+		global $wpdb;
+		$query = $wpdb-&gt;get_col(
+			&#34;SELECT post_id
+			 FROM {$wpdb-&gt;postmeta}
+			 WHERE meta_key = &#39;_llms_questions&#39;
+			   AND (
+			   	      meta_value LIKE &#39;{$str_like}&#39;
+			   	   OR meta_value LIKE &#39;{$int_like}&#39;
+			   );&#34;
+		);
+
+		return $query;
+
+	}
+
+	/**
+	 * Don&#39;t add custom fields during toArray()
+	 * @param    array     $arr  post model array
+	 * @return   array
+	 * @since    3.16.11
+	 * @version  3.16.11
+	 */
+	protected function toArrayCustom( $arr ) {
+		return $arr;
+	}
+
+	/*
+		       /$$                                                               /$$                     /$$
+		      | $$                                                              | $$                    | $$
+		  /$$$$$$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
+		 /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$ /$$_____/ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
+		| $$  | $$| $$$$$$$$| $$  \ $$| $$  \__/| $$$$$$$$| $$        /$$$$$$$  | $$    | $$$$$$$$| $$  | $$
+		| $$  | $$| $$_____/| $$  | $$| $$      | $$_____/| $$       /$$__  $$  | $$ /$$| $$_____/| $$  | $$
+		|  $$$$$$$|  $$$$$$$| $$$$$$$/| $$      |  $$$$$$$|  $$$$$$$|  $$$$$$$  |  $$$$/|  $$$$$$$|  $$$$$$$
+		 \_______/ \_______/| $$____/ |__/       \_______/ \_______/ \_______/   \___/   \_______/ \_______/
+		                    | $$
+		                    | $$
+		                    |__/
+	*/
+
+	/**
+	 * Get the options for the question
+	 * @return     array
+	 * @since      1.0.0
+	 * @version    3.16.0
+	 * @deprecated 3.16.0
+	 */
+	public function get_options() {
+
+		llms_deprecated_function( &#39;LLMS_Question::get_options()&#39;, &#39;3.16.0&#39;, &#39;LLMS_Question::get_choices()&#39; );
+		return $this-&gt;get_choices();
+
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.33.1/includes/models/model.llms.question.php#L21">View on GitHub</a></span>
+			</p>
+			</section>
+	<hr/>
+	<section class="changelog">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="changelog" tabindex="-1">Changelog <a href="#changelog" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Changelog</span></a></h3>
+
+		<table>
+			<caption class="screen-reader-text">Changelog</caption>
+			<thead>
+				<tr>
+					<th class="changelog-version">Version</th>
+					<th class="changelog-desc">Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/3.30.1/" alt="WordPress 3.30.1">3.30.1</a></td>
+						<td><span class="since-description">Fixed choice sorting issues.</span></td>
+					</tr>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/1.0.0/" alt="WordPress 1.0.0">1.0.0</a></td>
+						<td>Introduced.</td>
+					</tr>
+							</tbody>
+		</table>
+	</section>
+
+	<hr/>
+	<section class="related">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="related" tabindex="-1">Related <a href="#related" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Related</span></a></h2>
+
+					<article class="uses">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="uses" tabindex="-1">Uses <a href="#uses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Uses</span></a></h3>
+				<table id="uses-table">
+					<caption class="screen-reader-text">Uses</caption>
+					<thead>
+						<tr>
+							<th>Uses</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/abstracts/abstract.llms.post.model.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_post_model/">LLMS_Post_Model</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/">LLMS_Post_Model</a> abstract</p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+							</article>
+		
+			</section>
+			<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="create_choice/index.html">
+							create_choice</a>
+						&mdash; Create a new question choice											</li>
+									<li><a href="delete_choice/index.html">
+							delete_choice</a>
+						&mdash; Delete a choice by ID											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_question/get_auto_grade_type/">
+							get_auto_grade_type</a>
+						&mdash; Retrieve the type of automatic grading that can be performed on the question											</li>
+									<li><a href="get_choice/index.html">
+							get_choice</a>
+						&mdash; Retrieve a choice by id											</li>
+									<li><a href="get_choice_cache_key/index.html">
+							get_choice_cache_key</a>
+						&mdash; Retrieves an object cache key for the question&#39;s choices											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_question/get_choices/">
+							get_choices</a>
+						&mdash; Retrieve the question&#39;s choices											</li>
+									<li><a href="get_conditional_correct_value/index.html">
+							get_conditional_correct_value</a>
+						&mdash; Retrieve the correct values for a conditionally graded question											</li>
+									<li><a href="get_correct_choice/index.html">
+							get_correct_choice</a>
+						&mdash; Retrieve correct choices for a given question											</li>
+									<li><a href="get_correct_option/index.html">
+							get_correct_option</a>
+						&mdash; Get the correct option for the question											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_question/get_correct_option_key/">
+							get_correct_option_key</a>
+						&mdash; Get the key of the correct option											</li>
+									<li><a href="get_creation_args/index.html">
+							get_creation_args</a>
+						&mdash; An array of default arguments to pass to $this-&gt;create() when creating a new post											</li>
+									<li><a href="get_description/index.html">
+							get_description</a>
+						&mdash; Retrieve the question description (post_content) Add&#39;s extra allowed tags to wp_kses_post allowed tags so that async audio shortcodes will work properly											</li>
+									<li><a href="get_image/index.html">
+							get_image</a>
+						&mdash; Retrieve URL for an image associated with the question if it&#39;s enabled											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_question/get_next_choice_marker/">
+							get_next_choice_marker</a>
+						&mdash; Retrieve the next marker for question choices											</li>
+									<li><a href="get_options/index.html">
+							get_options</a>
+						&mdash; Get the options for the question						&mdash; <span class="deprecated-method">deprecated</span>					</li>
+									<li><a href="get_question/index.html">
+							get_question</a>
+						&mdash; Get the question text (title)											</li>
+									<li><a href="get_question_type/index.html">
+							get_question_type</a>
+						&mdash; Retrieve question type data for the given question											</li>
+									<li><a href="get_questions/index.html">
+							get_questions</a>
+						&mdash; Retrieve child questions (for question group)											</li>
+									<li><a href="get_quiz/index.html">
+							get_quiz</a>
+						&mdash; Retrieve an instance of the questions parent LLMS_Quiz											</li>
+									<li><a href="get_quizzes/index.html">
+							get_quizzes</a>
+						&mdash; Retrieve quizzes this quiz is assigned to											</li>
+									<li><a href="get_video/index.html">
+							get_video</a>
+						&mdash; Retrieve video embed for question featured video											</li>
+									<li><a href="grade/index.html">
+							grade</a>
+						&mdash; Attempt to grade a question											</li>
+									<li><a href="has_description/index.html">
+							has_description</a>
+						&mdash; Determine if a description is enabled and not empty											</li>
+									<li><a href="has_image/index.html">
+							has_image</a>
+						&mdash; Determine if a featured image is enabled and not empty											</li>
+									<li><a href="has_video/index.html">
+							has_video</a>
+						&mdash; Determine if a featured video is enabled &amp; not empty											</li>
+									<li><a href="is_orphan/index.html">
+							is_orphan</a>
+						&mdash; Determine if the question is an orphan											</li>
+									<li><a href="questions/index.html">
+							questions</a>
+						&mdash; Access question manager (used for question groups)											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_question/sort_choices/">
+							sort_choices</a>
+						&mdash; Sort choices by marker.											</li>
+									<li><a href="supports/index.html">
+							supports</a>
+						&mdash; Determine if the question supports a question feature											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_question/toarrayafter/">
+							toArrayAfter</a>
+						&mdash; Called before data is sorted and returned by $this-&gt;toArray() Extending classes should override this data if custom data should be added when object is converted to an array or json											</li>
+									<li><a href="toarraycustom/index.html">
+							toArrayCustom</a>
+						&mdash; Don&#39;t add custom fields during toArray()											</li>
+									<li><a href="update_choice/index.html">
+							update_choice</a>
+						&mdash; Update a question choice if no id is supplied will create a new choice											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_question%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_question/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="https://s29765.pcdn.co/wp-includes/css/buttons.min.css?ver=5.1.1" type="text/css" media="all"/>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js?ver=20160322"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"5a985f74d1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js?ver=20160524"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js?ver=20180724"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/quicktags.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js?ver=20181019"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js?ver=20160824"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"34505f0fee","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js?ver=20181019"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
 
 </body></html>

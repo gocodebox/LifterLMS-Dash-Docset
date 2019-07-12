@@ -1,9 +1,1756 @@
-<html><head>
-<title>429, Rate Limited</title>
-</head>
-<body>
-<h1>429, Rate Limited</h1>
-<p>Wait a minute and try again</p>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+	<link href="/s29765.pcdn.co/wp-includes/css/dashicons.min.css?20181204" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Post_Model - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v11.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://developer.lifterlms.com/reference/classes/llms_post_model/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Post_Model - LifterLMS Developer Hub"/>
+<meta property="og:description" content="LLMS_Post_Model abstract"/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_post_model/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="LLMS_Post_Model abstract"/>
+<meta name="twitter:title" content="LLMS_Post_Model - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"logo":{"@type":"ImageObject","@id":"https://developer.lifterlms.com/#logo","url":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png","width":1025,"height":280,"caption":"LifterLMS"},"image":{"@id":"https://developer.lifterlms.com/#logo"}},{"@type":"WebSite","@id":"https://developer.lifterlms.com/#website","url":"https://developer.lifterlms.com/","name":"LifterLMS Developer Hub","publisher":{"@id":"https://developer.lifterlms.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://developer.lifterlms.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://developer.lifterlms.com/reference/classes/llms_post_model/#webpage","url":"https://developer.lifterlms.com/reference/classes/llms_post_model/","inLanguage":"en-US","name":"LLMS_Post_Model - LifterLMS Developer Hub","isPartOf":{"@id":"https://developer.lifterlms.com/#website"},"datePublished":"2019-03-13T18:36:13+00:00","dateModified":"2019-06-26T15:15:36+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Post_Model Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_post_model/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.7.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.7.1';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="https://s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js?ver=7.7.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.1.1"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=6801"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_post_model%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_post_model%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-6801">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="https://s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-6801 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-1943"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Post_Model"></a><span class="trail-end">LLMS_Post_Model</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-6801" class="post-6801 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_abstracts_abstract-llms-post-model-php wp-parser-package-lifterlms-abstracts wp-parser-since-3-0-0 wp-parser-since-3-30-0 wp-parser-since-3-30-2 wp-parser-since-3-30-3 wp-parser-since-3-31-0">
+
+	
+	
+	<h1>LLMS_Post_Model</h1>
+
+	<section class="summary">
+		<p><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/">LLMS_Post_Model</a> abstract</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a></li>
+<li><a href="#changelog">Changelog</a>
+</li></ul></li>
+<li><a href="#related">Related</a>
+<ul>
+<li><a href="#used-by">Used By</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="https://developer.lifterlms.com/reference/files/includes/abstracts/abstract-llms-post-model.php/">includes/abstracts/abstract.llms.post.model.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 22">abstract class LLMS_Post_Model implements JsonSerializable {
+
+	/**
+	 * Name of the post type as stored in the database
+	 * This will be prefixed (where applicable)
+	 * ie: &#34;llms_order&#34; for the &#34;llms_order&#34; post type
+	 * @var string
+	 * @since  3.0.0
+	 */
+	protected $db_post_type;
+
+	/**
+	 * WP Post ID
+	 * @var int
+	 * @since 3.0.0
+	 */
+	protected $id;
+
+	/**
+	 * Define this in extending classes
+	 * Allows models to use unprefixed post type names for filters and more
+	 * ie: &#34;order&#34; for the &#34;llms_order&#34; post type
+	 * @var string
+	 * @since 3.0.0
+	 */
+	protected $model_post_type;
+
+	/**
+	 * A prefix to add to all meta properties
+	 * Child classes can redefine this
+	 * @var string
+	 * @since 3.0.0
+	 */
+	protected $meta_prefix = &#39;_llms_&#39;;
+
+	/**
+	 * Instance of WP_Post
+	 * @var WP_Post
+	 * @since 3.0.0
+	 */
+	protected $post;
+
+	/**
+	 * Array of meta properties and their property type
+	 * @var     array
+	 * @since   3.3.0
+	 * @version 3.3.0
+	 */
+	protected $properties = array();
+
+	/**
+	 * Array of default property values
+	 * key =&gt; default value
+	 * @var  array
+	 * @since   3.24.0
+	 * @version 3.24.0
+	 */
+	protected $property_defaults = array();
+
+	/**
+	 * Constructor
+	 * Setup ID and related post property
+	 *
+	 * @param   string|int|LLMS_Post_Model|WP_Post $model &#39;new&#39;, WP post id, instance of an extending class, instance of WP_Post
+	 * @param   array                              $args  args to create the post, only applies when $model is &#39;new&#39;
+	 * @return  void
+	 * @since   3.0.0
+	 * @version 3.13.0
+	 */
+	public function __construct( $model, $args = array() ) {
+
+		if ( &#39;new&#39; === $model ) {
+			$model = $this-&gt;create( $args );
+			if ( ! is_wp_error( $model ) ) {
+				$created = true;
+			}
+		} else {
+			$created = false;
+		}
+
+		if ( empty( $model ) || is_wp_error( $model ) ) {
+			return;
+		}
+
+		if ( is_numeric( $model ) ) {
+
+			$this-&gt;id   = absint( $model );
+			$this-&gt;post = get_post( $this-&gt;id );
+
+		} elseif ( is_subclass_of( $model, &#39;LLMS_Post_Model&#39; ) ) {
+
+			$this-&gt;id   = absint( $model-&gt;id );
+			$this-&gt;post = $model-&gt;post;
+
+		} elseif ( $model instanceof WP_Post &amp;&amp; isset( $model-&gt;ID ) ) {
+
+			$this-&gt;id   = absint( $model-&gt;ID );
+			$this-&gt;post = $model;
+
+		}
+
+		if ( $created ) {
+			$this-&gt;after_create();
+		}
+
+	}
+
+
+	/**
+	 * Magic Getter
+	 * @param    string $key   key to retrieve
+	 * @return   mixed
+	 * @since    3.0.0
+	 * @version  3.24.0
+	 */
+	public function __get( $key ) {
+
+		// force numeric id and prevent filtering on the id
+		if ( &#39;id&#39; === $key ) {
+
+			return absint( $this-&gt;$key );
+
+		} elseif ( in_array( $key, array_keys( $this-&gt;get_post_properties() ) ) ) {
+
+			$post_key = &#39;post_&#39; . $key;
+
+			// ensure post is set globally for filters below
+			global $post;
+			$temp = $post;
+			$post = $this-&gt;post;
+
+			switch ( $key ) {
+
+				case &#39;content&#39;:
+					$val = llms_content( $this-&gt;post-&gt;$post_key );
+				break;
+
+				case &#39;excerpt&#39;:
+					$val = apply_filters( &#39;get_the_excerpt&#39;, $this-&gt;post-&gt;$post_key );
+				break;
+
+				case &#39;menu_order&#39;:
+					$val = $this-&gt;post-&gt;menu_order;
+				break;
+
+				case &#39;title&#39;:
+					$val = apply_filters( &#39;the_title&#39;, $this-&gt;post-&gt;$post_key, $this-&gt;get( &#39;id&#39; ) );
+				break;
+
+				default:
+					$val = $this-&gt;post-&gt;$post_key;
+
+			}
+
+			// return the original global
+			$post = $temp;
+
+		} elseif ( ! in_array( $key, $this-&gt;get_unsettable_properties() ) ) {
+
+			if ( metadata_exists( &#39;post&#39;,  $this-&gt;id, $this-&gt;meta_prefix . $key ) ) {
+				$val = get_post_meta( $this-&gt;id, $this-&gt;meta_prefix . $key, true );
+			} else {
+				$val = $this-&gt;get_default_value( $key );
+			}
+		} else {
+
+			return $this-&gt;$key;
+
+		}// End if().
+
+		// if we found a valid, apply default llms get get filter and return the value
+		if ( isset( $val ) ) {
+
+			if ( &#39;content&#39; !== $key ) {
+				$val = $this-&gt;scrub( $key, $val );
+			}
+			return apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_&#39; . $key, $val, $this );
+
+		}
+
+		// shouldn&#39;t ever get here
+		return false;
+
+	}
+
+	/**
+	 * Magic Isset
+	 * @param  string  $key  check if a key exists in the database
+	 * @return boolean
+	 * @since  3.0.0
+	 */
+	public function __isset( $key ) {
+		return metadata_exists( &#39;post&#39;, $this-&gt;id, $this-&gt;meta_prefix . $key );
+	}
+
+	/**
+	 * Magic Setter
+	 * @param string $key  key of the property
+	 * @param mixed  $val  value to set the property with
+	 * @return  void
+	 * @since  3.0.0
+	 */
+	public function __set( $key, $val ) {
+		$this-&gt;$key = $val;
+	}
+
+	/**
+	 * Allow extending classes to add custom meta properties to the object
+	 * @param    array      $props  key val array of prop key =&gt; prop type (see $this-&gt;properties)
+	 * @since    3.16.0
+	 * @version  3.16.0
+	 */
+	protected function add_properties( $props = array() ) {
+
+		$this-&gt;properties = array_merge( $this-&gt;properties, $props );
+
+	}
+
+	/**
+	 * Modify allowed post tags for wp_kses for this post
+	 * @return   void
+	 * @since    3.19.2
+	 * @version  3.19.2
+	 */
+	protected function allowed_post_tags_set() {
+		global $allowedposttags;
+		$allowedposttags[&#39;iframe&#39;] = array(
+			&#39;allowfullscreen&#39; =&gt; true,
+			&#39;frameborder&#39; =&gt; true,
+			&#39;height&#39; =&gt; true,
+			&#39;src&#39; =&gt; true,
+			&#39;width&#39; =&gt; true,
+		);
+	}
+
+	/**
+	 * Remove modified allowed post tags for wp_kses for this post
+	 * @return   void
+	 * @since    3.19.2
+	 * @version  3.19.2
+	 */
+	protected function allowed_post_tags_unset() {
+		global $allowedposttags;
+		unset( $allowedposttags[&#39;iframe&#39;] );
+	}
+
+	/**
+	 * Wrapper for $this-get() which allows translation of the database value before outputting on screen
+	 *
+	 * Extending classes should define this and translate any possible strings
+	 * with a switch statement or something
+	 * this will return the untranslated string if a translation isn&#39;t defined
+	 *
+	 * @param    string     $key  key to retrieve
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function translate( $key ) {
+		$val = $this-&gt;get( $key );
+		// ******* example *******
+		// switch( $key ) {
+		// 	case &#39;example_key&#39;:
+		// 		if ( &#39;example-val&#39; === $val ) {
+		// 			return translate( &#39;Example Key&#39;, &#39;lifterlms&#39; );
+		// 		}
+		// 	break;
+		// 	default:
+		// 		return $val;
+		// }
+		// ******* example *******
+		return $val;
+	}
+
+	/**
+	 * Wrapper for the $this-&gt;translate() that echos the result rather than returning it
+	 * @param    string     $key  key to retrieve
+	 * @return   void
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function _e( $key ) {
+		echo $this-&gt;translate( $key );
+	}
+
+	/**
+	 * Called immediately after creating / inserting a new post into the database
+	 * This stub can be overwritten by child classes
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 * @return  void
+	 */
+	protected function after_create() {}
+
+	/**
+	 * Create a new post of the Instantiated Model
+	 * This can be called by instantiating an instance with &#34;new&#34;
+	 * as the value passed to the constructor
+	 *
+	 * @since 3.0.0
+	 * @since 3.30.3 Use `wp_slash()` for the post title.
+	 *
+	 * @param string $title Title to create the post with.
+	 * @return int WP Post ID of the new Post on success or 0 on error.
+	 */
+	private function create( $title = &#39;&#39; ) {
+		return wp_insert_post( wp_slash( apply_filters( &#39;llms_new_&#39; . $this-&gt;model_post_type, $this-&gt;get_creation_args( $title ) ) ), true );
+	}
+
+	/**
+	 * Clones the Post if the post is cloneable
+	 * @return   mixed         WP_Error or WP Post ID of the clone (new) post
+	 * @since    3.3.0
+	 * @version  3.19.2
+	 */
+	public function clone_post() {
+
+		// if post type doesnt support cloning don&#39;t proceed
+		if ( ! $this-&gt;is_cloneable() ) {
+			return;
+		}
+
+		$this-&gt;allowed_post_tags_set();
+
+		$generator = new LLMS_Generator( $this-&gt;toArray() );
+		$generator-&gt;set_generator( &#39;LifterLMS/Single&#39; . ucwords( $this-&gt;model_post_type ) . &#39;Cloner&#39; );
+		if ( ! $generator-&gt;is_error() ) {
+			$generator-&gt;generate();
+		}
+
+		$this-&gt;allowed_post_tags_unset();
+
+		$generated = $generator-&gt;get_generated_posts();
+		if ( isset( $generated[ $this-&gt;db_post_type ] ) ) {
+			return $generated[ $this-&gt;db_post_type ][0];
+		}
+
+		return new WP_Error( &#39;generator-error&#39;, __( &#39;An unknown error occurred during post cloning. Please try again.&#39;, &#39;lifterlms&#39; ) );
+
+	}
+
+	/**
+	 * Trigger an export download of the given post type
+	 * @return   void
+	 * @since    3.3.0
+	 * @version  3.19.2
+	 */
+	public function export() {
+
+		// if post type doesnt support exporting don&#39;t proceed
+		if ( ! $this-&gt;is_exportable() ) {
+			return;
+		}
+
+		$title = str_replace( &#39; &#39;, &#39;-&#39;, $this-&gt;get( &#39;title&#39; ) );
+		$title = preg_replace( &#39;/[^a-zA-Z0-9-]/&#39;, &#39;&#39;, $title );
+
+		$filename = apply_filters( &#39;llms_post_model_export_filename&#39;, $title . &#39;_&#39; . current_time( &#39;Ymd&#39; ), $this );
+
+		header( &#39;Content-type: application/json&#39; );
+		header( &#39;Content-Disposition: attachment; filename=&#34;&#39; . $filename . &#39;.json&#34;&#39; );
+		header( &#39;Pragma: no-cache&#39; );
+		header( &#39;Expires: 0&#39; );
+
+		$this-&gt;allowed_post_tags_set();
+
+		$arr = $this-&gt;toArray();
+
+		$arr[&#39;_generator&#39;] = &#39;LifterLMS/Single&#39; . ucwords( $this-&gt;model_post_type ) . &#39;Exporter&#39;;
+		$arr[&#39;_source&#39;] = get_site_url();
+		$arr[&#39;_version&#39;] = LLMS()-&gt;version;
+
+		ksort( $arr );
+
+		echo json_encode( $arr );
+
+		$this-&gt;allowed_post_tags_unset();
+
+		die();
+
+	}
+
+	/**
+	 * Getter
+	 * @param  string $key  property key
+	 * @return mixed
+	 * @since  3.0.0
+	 */
+	public function get( $key ) {
+		return $this-&gt;$key;
+	}
+
+	/**
+	 * Getter for array values
+	 * Ensures that even empty values return an array
+	 * @param  string $key  property key
+	 * @return array
+	 * @since  3.0.0 [&lt;description&gt;]
+	 */
+	public function get_array( $key ) {
+		$val = $this-&gt;get( $key );
+		if ( ! is_array( $val ) ) {
+			$val = array( $val );
+		}
+		return $val;
+	}
+
+	/**
+	 * Getter for date strings with optional date format conversion
+	 * If no format is supplied, the default format available via $this-&gt;get_date_format() will be used
+	 * @param  string $key     property key
+	 * @param  string $format  any valid date format that can be passed to date()
+	 * @return string
+	 * @since  3.0.0
+	 */
+	public function get_date( $key, $format = null ) {
+		$format = ( ! $format ) ? $this-&gt;get_date_format() : $format;
+		$raw = $this-&gt;get( $key );
+		// only convert the date if we actually have something stored, otherwise we&#39;ll return the current date, which we probably aren&#39;t expecting
+		$date = $raw ? date_i18n( $format, strtotime( $raw ) ) : &#39;&#39;;
+		return apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_&#39; . $key . &#39;_date&#39;, $date, $this );
+	}
+
+	/**
+	 * Retrieve the default date format for the post model
+	 * This *can* be overridden by child classes if the post type requires a different default date format
+	 * If no format is supplied by the child class, the default WP date &amp; time formats available
+	 * via General Settings will be combined and used
+	 * @return string
+	 * @since  3.0.0
+	 */
+	protected function get_date_format() {
+		$format = get_option( &#39;date_format&#39; ) . &#39; &#39; . get_option( &#39;time_format&#39; );
+		return apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_date_format&#39;, $format );
+	}
+
+	/**
+	 * Get the default value of a property
+	 * If defaults don&#39;t exist returns an empty string in accordance with the return of get_post_meta() when no metadata exists
+	 * @param    string     $key  property key/name
+	 * @return   mixed
+	 * @since    3.24.0
+	 * @version  3.24.0
+	 */
+	public function get_default_value( $key ) {
+		$defaults = $this-&gt;get_property_defaults();
+		return isset( $defaults[ $key ] ) ? $defaults[ $key ] : &#39;&#39;;
+	}
+
+	/**
+	 * Retrieve URL for an image associated with the post
+	 * Currently only retrieves the featured image if the post type supports it
+	 * in the future this will allow retrieval of custom post images as well
+	 * @param    string|array   $size  registered image size or a numeric array with width/height
+	 * @param    string         $key   currently unused but here for forward compatibility if
+	 *                                 additional custom images are added
+	 * @return   string                empty string if no image or not supported
+	 * @since    3.3.0
+	 * @version  3.8.0
+	 */
+	public function get_image( $size = &#39;full&#39;, $key = &#39;&#39; ) {
+		if ( &#39;thumbnail&#39; === $key &amp;&amp; post_type_supports( $this-&gt;db_post_type, &#39;thumbnail&#39; ) ) {
+			$url = get_the_post_thumbnail_url( $this-&gt;get( &#39;id&#39; ), $size );
+		} else {
+			$id = $this-&gt;get( $key );
+			if ( is_numeric( $id ) ) {
+				$src = wp_get_attachment_image_src( $id, $size );
+				if ( $src ) {
+					$url = $src[0];
+				}
+			}
+		}
+		return ! empty( $url ) ? $url : &#39;&#39;;
+	}
+
+	/**
+	 * Retrieve the Post&#39;s post type data object
+	 * @return WP_Post_Type|null
+	 * @since  3.0.0
+	 */
+	public function get_post_type_data() {
+		return get_post_type_object( $this-&gt;get( &#39;type&#39; ) );
+	}
+
+	/**
+	 * Retrieve a label from the post type data object&#39;s labels object
+	 * @param    string $label key for the label
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.8.0
+	 */
+	public function get_post_type_label( $label = &#39;singular_name&#39; ) {
+		$obj = $this-&gt;get_post_type_data();
+		if ( property_exists( $obj, &#39;labels&#39; ) &amp;&amp; property_exists( $obj-&gt;labels, $label ) ) {
+			return $obj-&gt;labels-&gt;$label;
+		}
+		return &#39;&#39;;
+	}
+
+	/**
+	 * Getter for price strings with optional formatting options
+	 * @param    string $key         property key
+	 * @param    array  $price_args  optional array of arguments that can be passed to llms_price()
+	 * @param    string $format      optional format conversion method [html|raw|float]
+	 * @return   mixed
+	 * @since    3.0.0
+	 * @version  3.7.0
+	 */
+	public function get_price( $key, $price_args = array(), $format = &#39;html&#39; ) {
+
+		$price = $this-&gt;get( $key );
+
+		// handle empty or unset values gracefully
+		if ( &#39;&#39; === $price ) {
+			$price = 0;
+		}
+
+		if ( &#39;html&#39; == $format || &#39;raw&#39; === $format ) {
+			$price = llms_price( $price, $price_args );
+			if ( &#39;raw&#39; === $format ) {
+				$price = strip_tags( $price );
+			}
+		} elseif ( &#39;float&#39; === $format ) {
+			$price = floatval( number_format( $price, get_lifterlms_decimals(), &#39;.&#39;, &#39;&#39; ) );
+		} else {
+			$price = apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_&#39; . $key . &#39;_&#39; . $format, $price, $key, $price_args, $format, $this );
+		}
+
+		return apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_&#39; . $key . &#39;_price&#39;, $price, $key, $price_args, $format, $this );
+
+	}
+
+	/**
+	 * Retrieve the default values for properties
+	 * @return   array
+	 * @since    3.24.0
+	 * @version  3.24.0
+	 */
+	public function get_property_defaults() {
+		return apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_property_defaults&#39;, $this-&gt;property_defaults, $this );
+	}
+
+	/**
+	 * An array of default arguments to pass to $this-&gt;create()
+	 * when creating a new post
+	 * This *should* be overridden by child classes
+	 * @param    array  $args   args of data to be passed to wp_insert_post
+	 * @return   array
+	 * @since    3.0.0
+	 * @version  3.18.0
+	 */
+	protected function get_creation_args( $args = null ) {
+
+		// allow nothing to be passed in
+		if ( empty( $args ) ) {
+			$args = array();
+		}
+
+		// backwards compat to original 3.0.0 format when just a title was passed in
+		if ( is_string( $args ) ) {
+			$args = array(
+				&#39;post_title&#39; =&gt; $args,
+			);
+		}
+
+		$args = wp_parse_args( $args, array(
+			&#39;comment_status&#39; =&gt; &#39;closed&#39;,
+			&#39;ping_status&#39; =&gt; &#39;closed&#39;,
+			&#39;post_author&#39; =&gt; get_current_user_id(),
+			&#39;post_content&#39; =&gt; &#39;&#39;,
+			&#39;post_excerpt&#39; =&gt; &#39;&#39;,
+			&#39;post_status&#39; =&gt; &#39;draft&#39;,
+			&#39;post_title&#39; =&gt; &#39;&#39;,
+			&#39;post_type&#39; =&gt; $this-&gt;get( &#39;db_post_type&#39; ),
+		) );
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;model_post_type . &#39;_get_creation_args&#39;, $args, $this );
+	}
+
+	/**
+	 * Get media embeds
+	 * @param    string     $type  embed type [video|audio]
+	 * @param    string     $prop  postmeta property name, defaults to {$type}_embed
+	 * @return   string
+	 * @since    3.17.0
+	 * @version  3.17.5
+	 */
+	protected function get_embed( $type = &#39;video&#39;, $prop = &#39;&#39; ) {
+
+		$ret = &#39;&#39;;
+
+		$prop = $prop ? $prop : $type . &#39;_embed&#39;;
+		$url = $this-&gt;get( $prop );
+		if ( $url ) {
+
+			$ret = wp_oembed_get( $url );
+
+			if ( ! $ret ) {
+
+				$ret = do_shortcode( sprintf( &#39;[%1$s src=&#34;%2$s&#34;]&#39;, $type, $url ) );
+
+			}
+		}
+
+		return apply_filters( sprintf( &#39;llms_%1$s_get_%2$s&#39;, $this-&gt;model_post_type, $type ), $ret, $this, $type, $prop );
+
+	}
+
+	/**
+	 * Get a property&#39;s data type for scrubbing
+	 * used by $this-&gt;scrub() to determine how to scrub the property
+	 * @param   string $key  property key
+	 * @return  string
+	 * @since   3.3.0
+	 * @version 3.3.0
+	 */
+	protected function get_property_type( $key ) {
+
+		$props = $this-&gt;get_properties();
+
+		// check against the properties array
+		if ( in_array( $key, array_keys( $props ) ) ) {
+			$type = $props[ $key ];
+		} // End if().
+		else {
+			$type = &#39;text&#39;;
+		}
+
+		return $type;
+
+	}
+
+	/**
+	 * Retrieve an array of post properties
+	 * These properties need to be get/set with alternate methods
+	 *
+	 * @since 3.0.0
+	 * @since 3.31.0 Treat excerpts as HTML instead of plain text.
+	 *
+	 * @return array
+	 */
+	protected function get_post_properties() {
+		return apply_filters( &#39;llms_post_model_get_post_properties&#39;, array(
+			&#39;author&#39; =&gt; &#39;absint&#39;,
+			&#39;content&#39; =&gt; &#39;html&#39;,
+			&#39;date&#39; =&gt; &#39;text&#39;,
+			&#39;excerpt&#39; =&gt; &#39;html&#39;,
+			&#39;menu_order&#39; =&gt; &#39;absint&#39;,
+			&#39;modified&#39; =&gt; &#39;text&#39;,
+			&#39;name&#39; =&gt; &#39;text&#39;,
+			&#39;status&#39; =&gt; &#39;text&#39;,
+			&#39;title&#39; =&gt; &#39;text&#39;,
+			&#39;type&#39; =&gt; &#39;text&#39;,
+		), $this );
+	}
+
+	/**
+	 * Retrieve an array of properties defined by the model
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.16.0
+	 */
+	public function get_properties() {
+		$props = array_merge( $this-&gt;get_post_properties(), $this-&gt;properties );
+		return apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_properties&#39;, $props, $this );
+	}
+
+	/**
+	 * Retrieve the registered Label of the posts current status
+	 * @return   string
+	 * @since    3.0.0
+	 * @version  3.0.0
+	 */
+	public function get_status_name() {
+		$obj = get_post_status_object( $this-&gt;get( &#39;status&#39; ) );
+		return apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_status_name&#39;, $obj-&gt;label );
+	}
+
+	/**
+	 * Get an array of terms for a given taxonomy for the post
+	 * @param    string     $tax     taxonomy name
+	 * @param    boolean    $single  return only one term as an int, useful for taxes which
+	 *                               can only have one term (eg: visibilities and difficulties and such)
+	 * @return   mixed               when single a single term object or null
+	 *                               when not single an array of term objects
+	 * @since    3.8.0
+	 * @version  3.8.0
+	 */
+	public function get_terms( $tax, $single = false ) {
+
+		$terms = get_the_terms( $this-&gt;get( &#39;id&#39; ), $tax );
+
+		if ( $single ) {
+			return $terms ? $terms[0] : null;
+		}
+
+		return $terms ? $terms : array();
+
+	}
+
+	/**
+	 * Array of properties which *cannot* be set
+	 * If a child class adds any properties which should not be settable
+	 * the class should override this property and add their custom
+	 * properties to the array
+	 * @return array
+	 * @since 3.0.0
+	 */
+	protected function get_unsettable_properties() {
+		return apply_filters( &#39;llms_post_model_get_unsettable_properties&#39;, array(
+			&#39;db_post_type&#39;,
+			&#39;id&#39;,
+			&#39;meta_prefix&#39;,
+			&#39;model_post_type&#39;,
+			&#39;post&#39;,
+		), $this );
+	}
+
+	/**
+	 * Determine if the associated post is exportable
+	 * @return   boolean
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	public function is_cloneable() {
+		return post_type_supports( $this-&gt;db_post_type, &#39;llms-clone-post&#39; );
+	}
+
+	/**
+	 * Determine if the associated post is exportable
+	 * @return   boolean
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	public function is_exportable() {
+		return post_type_supports( $this-&gt;db_post_type, &#39;llms-export-post&#39; );
+	}
+
+	/**
+	 * Format the object for json serialization
+	 * encodes the results of $this-&gt;toArray()
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	public function jsonSerialize() {
+		return apply_filters( &#39;llms_post_model_json_serialize&#39;, $this-&gt;toArray(), $this );
+	}
+
+	/**
+	 * Scrub field according to it&#39;s type
+	 * This is automatically called by set() method before anything is actually set
+	 *
+	 * @param    string $key  property key
+	 * @param    mixed  $val  property value
+	 * @return   mixed
+	 * @since    3.0.0
+	 * @version  3.16.0
+	 */
+	protected function scrub( $key, $val ) {
+
+		$type = apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_property_type&#39;, $this-&gt;get_property_type( $key ), $this );
+
+		return apply_filters( &#39;llms_scrub_&#39; . $this-&gt;model_post_type . &#39;_field_&#39; . $key, $this-&gt;scrub_field( $val, $type ), $this, $key, $val );
+
+	}
+
+	/**
+	 * Scrub fields according to datatype
+	 * @param    mixed  $val   property value to scrub
+	 * @param    string $type  data type
+	 * @return   mixed
+	 * @since    3.0.0
+	 * @version  3.19.2
+	 */
+	protected function scrub_field( $val, $type ) {
+
+		if ( &#39;html&#39; !== $type &amp;&amp; &#39;array&#39; !== $type ) {
+			$val = strip_tags( $val );
+		}
+
+		switch ( $type ) {
+
+			case &#39;absint&#39;:
+				$val = absint( $val );
+			break;
+
+			case &#39;array&#39;:
+				if ( &#39;&#39; === $val ) {
+					$val = array();
+				}
+				$val = (array) $val;
+			break;
+
+			case &#39;bool&#39;:
+			case &#39;boolean&#39;:
+				$val = boolval( $val );
+			break;
+
+			case &#39;float&#39;:
+				$val = floatval( $val );
+			break;
+
+			case &#39;html&#39;:
+				$this-&gt;allowed_post_tags_set();
+				$val = wp_kses_post( $val );
+				$this-&gt;allowed_post_tags_unset();
+			break;
+
+			case &#39;int&#39;:
+				$val = intval( $val );
+			break;
+
+			case &#39;yesno&#39;:
+				$val = &#39;yes&#39; === $val ? &#39;yes&#39; : &#39;no&#39;;
+			break;
+
+			case &#39;text&#39;:
+			case &#39;string&#39;:
+			default:
+				$val = sanitize_text_field( $val );
+
+		}// End switch().
+
+		return $val;
+
+	}
+
+	/**
+	 * Setter
+	 *
+	 * @since 3.0.0
+	 * @since 3.30.3 Use `wp_slash()` when setting properties.
+	 *
+	 * @param string $key Key of the property.
+	 * @param mixed  $val Value to set the property with.
+	 * @return boolean true on success, false on error or if the submitted value is the same as what&#39;s in the database
+	 */
+	public function set( $key, $val ) {
+
+		$val = $this-&gt;scrub( $key, $val );
+
+		// update WordPress Post Properties using the wp_insert_post() function
+		if ( in_array( $key, array_keys( $this-&gt;get_post_properties() ) ) ) {
+
+			$post_key = &#39;post_&#39; . $key;
+
+			switch ( $key ) {
+
+				case &#39;content&#39;:
+					$val = apply_filters( &#39;content_save_pre&#39;, $val );
+				break;
+
+				case &#39;excerpt&#39;:
+					$val = apply_filters( &#39;excerpt_save_pre&#39;, $val );
+				break;
+
+				case &#39;menu_order&#39;:
+					$post_key = &#39;menu_order&#39;;
+				break;
+
+				case &#39;title&#39;:
+					$val = apply_filters( &#39;title_save_pre&#39;, $val );
+				break;
+
+			}
+
+			$args = array(
+				&#39;ID&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+			);
+
+			$args[ $post_key ] = apply_filters( &#39;llms_set_&#39; . $this-&gt;model_post_type . &#39;_&#39; . $key, $val, $this );
+
+			if ( wp_update_post( wp_slash( $args ) ) ) {
+				$this-&gt;post-&gt;{$post_key} = $val;
+				return true;
+			} else {
+				return false;
+			}
+		} // End if().
+		elseif ( ! in_array( $key, $this-&gt;get_unsettable_properties() ) ) {
+
+			$u = update_post_meta( $this-&gt;id, $this-&gt;meta_prefix . $key, apply_filters( &#39;llms_set_&#39; . $this-&gt;model_post_type . &#39;_&#39; . $key, $val, $this ) );
+			if ( is_numeric( $u ) || true === $u ) {
+				return true;
+			} else {
+				return false;
+			}
+		} // we have a problem...
+		else {
+
+			return false;
+
+		}
+
+	}
+
+	/**
+	 * Update terms for the post for a given taxonomy
+	 *
+	 * @param    array      $terms   array of terms (name or ids)
+	 * @param    string     $tax     the name of the tax
+	 * @param    boolean    $append  if true, will append the terms, false will replace existing terms
+	 *
+	 * @return bool
+	 * @since    3.8.0
+	 * @version  3.8.0
+	 */
+	public function set_terms( $terms, $tax, $append = false ) {
+		$set = wp_set_object_terms( $this-&gt;get( &#39;id&#39; ), $terms, $tax, $append );
+		// wp_set_object_terms has 3 options when unsuccessful and only 1 for success
+		// an array of terms when successful, let&#39;s keep it simple...
+		return is_array( $set );
+	}
+
+	/**
+	 * Coverts the object to an associative array
+	 * Any property returned by $this-&gt;get_properties() will be retrieved
+	 * via $this-&gt;get() and added to the array
+	 *
+	 * Extending classes can add additional properties to the array
+	 * by overriding $this-&gt;toArrayAfter()
+	 *
+	 * This function is also utilized to serialize the object to json
+	 *
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.17.0
+	 */
+	public function toArray() {
+
+		$arr = array(
+			&#39;id&#39; =&gt; $this-&gt;get( &#39;id&#39; ),
+		);
+
+		$props = array_diff( array_keys( $this-&gt;get_properties() ), array( &#39;content&#39;, &#39;excerpt&#39;, &#39;title&#39; ) );
+		$props = apply_filters( &#39;llms_get_&#39; . $this-&gt;model_post_type . &#39;_to_array_properties&#39;, $props, $this );
+
+		foreach ( $props as $prop ) {
+			$arr[ $prop ] = $this-&gt;get( $prop );
+		}
+
+		$arr[&#39;content&#39;] = $this-&gt;post-&gt;post_content;
+		$arr[&#39;excerpt&#39;] = $this-&gt;post-&gt;post_excerpt;
+		$arr[&#39;title&#39;] = $this-&gt;post-&gt;post_title;
+
+		// add the featured image if the post type supports it
+		if ( post_type_supports( $this-&gt;db_post_type, &#39;thumbnail&#39; ) ) {
+			$arr[&#39;featured_image&#39;] = $this-&gt;get_image( &#39;full&#39;, &#39;thumbnail&#39; );
+		}
+
+		// expand instructors if instructors are supported
+		if ( ! empty( $arr[&#39;instructors&#39;] ) &amp;&amp; method_exists( $this, &#39;instructors&#39; ) ) {
+
+			foreach ( $arr[&#39;instructors&#39;] as &amp;$data ) {
+				$instructor = llms_get_instructor( $data[&#39;id&#39;] );
+				if ( $instructor ) {
+					$data = array_merge( $data, $instructor-&gt;toArray() );
+				}
+			}
+		} elseif ( ! empty( $arr[&#39;author&#39;] ) ) {
+
+			$instructor = llms_get_instructor( $arr[&#39;author&#39;] );
+			if ( $instructor ) {
+				$arr[&#39;author&#39;] = $instructor-&gt;toArray();
+			}
+		}
+
+		// add custom fields
+		$arr = $this-&gt;toArrayCustom( $arr );
+
+		// allow extending classes to add properties easily without overriding the class
+		$arr = $this-&gt;toArrayAfter( $arr );
+
+		$cpt_data = $this-&gt;get_post_type_data();
+		if ( $cpt_data-&gt;public ) {
+			$arr[&#39;permalink&#39;] = get_permalink( $this-&gt;get( &#39;id&#39; ) );
+		}
+
+		ksort( $arr ); // because i&#39;m anal...
+
+		return apply_filters( &#39;llms_&#39; . $this-&gt;model_post_type . &#39;_to_array&#39;, $arr, $this );
+
+	}
+
+	/**
+	 * Called before data is sorted and returned by $this-&gt;toArray()
+	 * Extending classes should override this data if custom data should
+	 * be added when object is converted to an array or json
+	 * @param    array     $arr   array of data to be serialized
+	 * @return   array
+	 * @since    3.3.0
+	 * @version  3.3.0
+	 */
+	protected function toArrayAfter( $arr ) {
+		return $arr;
+	}
+
+	/**
+	 * Called by toArray to add custom fields via get_post_meta()
+	 * Removes all custom props registered to the $this-&gt;properties automatically
+	 * Also removes some fields used by the WordPress core that don&#39;t hold necessary data
+	 * Extending classes may override this class to exclude, extend, or modify the custom fields for a post type
+	 *
+	 * @since 3.16.11
+	 * @since 3.30.0 Use `maybe_unserialize()` to ensure array data is accessible as an array.
+	 * @since 3.30.2 Add filter to allow 3rd parties to prevent a field from being added to the custom field array.
+	 *
+	 * @param    array     $arr  existing post array
+	 * @return   array
+	 */
+	protected function toArrayCustom( $arr ) {
+
+		// Build an array of keys that are registered or can be excluded as a custom field.
+		$props = array_keys( $this-&gt;get_properties() );
+		foreach ( $props as &amp;$prop ) {
+			$prop = $this-&gt;meta_prefix . $prop;
+		}
+		$props[] = &#39;_edit_lock&#39;;
+		$props[] = &#39;_edit_last&#39;;
+
+		// Get all meta data.
+		$custom = array();
+		foreach ( get_post_meta( $this-&gt;get( &#39;id&#39; ) ) as $key =&gt; $vals ) {
+
+			// Skip registered fields or fields 3rd parties want to skip.
+			if ( in_array( $key, $props, true ) || apply_filters( &#39;llms_&#39; . $this-&gt;model_post_type . &#39;_skip_custom_field&#39;, false, $key, $this ) ) {
+				continue;
+			}
+
+			// add it.
+			$custom[ $key ] = array_map( &#39;maybe_unserialize&#39;, $vals );
+
+		}
+
+		// add the compiled custom array.
+		$arr[&#39;custom&#39;] = $custom;
+
+		return $arr;
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.33.1/includes/abstracts/abstract.llms.post.model.php#L22">View on GitHub</a></span>
+			</p>
+			</section>
+	<hr/>
+	<section class="changelog">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="changelog" tabindex="-1">Changelog <a href="#changelog" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Changelog</span></a></h3>
+
+		<table>
+			<caption class="screen-reader-text">Changelog</caption>
+			<thead>
+				<tr>
+					<th class="changelog-version">Version</th>
+					<th class="changelog-desc">Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/3.31.0/" alt="WordPress 3.31.0">3.31.0</a></td>
+						<td><span class="since-description">Treat <code>post_excerpt</code> fields as HTML instead of plain text.</span></td>
+					</tr>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/3.30.3/" alt="WordPress 3.30.3">3.30.3</a></td>
+						<td><span class="since-description">Use <code>wp_slash()</code> when creating new posts.</span></td>
+					</tr>
+									
+					<tr>
+						<td><a href="../../since/3.30.2/index.html" alt="WordPress 3.30.2">3.30.2</a></td>
+						<td><span class="since-description">Add filter to allow 3rd parties to prevent a field from being added to the custom field array.</span></td>
+					</tr>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/3.30.0/" alt="WordPress 3.30.0">3.30.0</a></td>
+						<td><span class="since-description">Improve handling of custom field data to <code>toArrayCustom()</code>.</span></td>
+					</tr>
+									
+					<tr>
+						<td><a href="https://developer.lifterlms.com/reference/since/3.0.0/" alt="WordPress 3.0.0">3.0.0</a></td>
+						<td>Introduced.</td>
+					</tr>
+							</tbody>
+		</table>
+	</section>
+
+	<hr/>
+	<section class="related">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="related" tabindex="-1">Related <a href="#related" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Related</span></a></h2>
+
+		
+					
+			<article class="used-by">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="used-by" tabindex="-1">Used By <a href="#used-by" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Used By</span></a></h3>
+				<table id="used-by-table">
+					<caption class="screen-reader-text">Used By</caption>
+					<thead>
+						<tr>
+							<th>Used By</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.user.achievement.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_user_achievement/">LLMS_User_Achievement</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_user_achievement/">LLMS_User_Achievement</a> model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.section.php:</span>
+								<a href="../llms_section/index.html">LLMS_Section</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_section/">LLMS_Section</a> model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.order.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_order/">LLMS_Order</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_order/">LLMS_Order</a> model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.lesson.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_lesson/">LLMS_Lesson</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_lesson/">LLMS_Lesson</a> model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.quiz.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_quiz/">LLMS_Quiz</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_quiz/">LLMS_Quiz</a> model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.access.plan.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_access_plan/">LLMS_Access_Plan</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_access_plan/">LLMS_Access_Plan</a> Model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.user.certificate.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_user_certificate/">LLMS_User_Certificate</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_user_certificate/">LLMS_User_Certificate</a> model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.question.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_question/">LLMS_Question</a>
+							</td>
+							<td class="related-desc">
+								<p>LLMS Quiz Question Model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.course.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_course/">LLMS_Course</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_course/">LLMS_Course</a> model.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/models/model.llms.transaction.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_transaction/">LLMS_Transaction</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_transaction/">LLMS_Transaction</a> model.</p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+								<a href="#" class="show-more">Show 5 more used by</a>
+				<a href="#" class="hide-more">Hide more used by</a>
+							</article>
+			</section>
+			<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="__construct/index.html">
+							__construct</a>
+						&mdash; Constructor Setup ID and related post property											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/__get/">
+							__get</a>
+						&mdash; Magic Getter											</li>
+									<li><a href="__isset/index.html">
+							__isset</a>
+						&mdash; Magic Isset											</li>
+									<li><a href="__set/index.html">
+							__set</a>
+						&mdash; Magic Setter											</li>
+									<li><a href="_e/index.html">
+							_e</a>
+						&mdash; Wrapper for the $this-&gt;translate() that echos the result rather than returning it											</li>
+									<li><a href="add_properties/index.html">
+							add_properties</a>
+						&mdash; Allow extending classes to add custom meta properties to the object											</li>
+									<li><a href="after_create/index.html">
+							after_create</a>
+						&mdash; Called immediately after creating / inserting a new post into the database This stub can be overwritten by child classes											</li>
+									<li><a href="allowed_post_tags_set/index.html">
+							allowed_post_tags_set</a>
+						&mdash; Modify allowed post tags for wp_kses for this post											</li>
+									<li><a href="allowed_post_tags_unset/index.html">
+							allowed_post_tags_unset</a>
+						&mdash; Remove modified allowed post tags for wp_kses for this post											</li>
+									<li><a href="clone_post/index.html">
+							clone_post</a>
+						&mdash; Clones the Post if the post is cloneable											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/create/">
+							create</a>
+						&mdash; Create a new post of the Instantiated Model This can be called by instantiating an instance with &#34;new&#34; as the value passed to the constructor											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/export/">
+							export</a>
+						&mdash; Trigger an export download of the given post type											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/get/">
+							get</a>
+						&mdash; Getter											</li>
+									<li><a href="get_array/index.html">
+							get_array</a>
+						&mdash; Getter for array values Ensures that even empty values return an array											</li>
+									<li><a href="get_creation_args/index.html">
+							get_creation_args</a>
+						&mdash; An array of default arguments to pass to $this-&gt;create() when creating a new post This *should* be overridden by child classes											</li>
+									<li><a href="get_date/index.html">
+							get_date</a>
+						&mdash; Getter for date strings with optional date format conversion If no format is supplied, the default format available via $this-&gt;get_date_format() will be used											</li>
+									<li><a href="get_date_format/index.html">
+							get_date_format</a>
+						&mdash; Retrieve the default date format for the post model This *can* be overridden by child classes if the post type requires a different default date format If no format is supplied by the child class, the default WP date &amp; time formats available via General Settings will be combined and used											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/get_default_value/">
+							get_default_value</a>
+						&mdash; Get the default value of a property If defaults don&#39;t exist returns an empty string in accordance with the return of get_post_meta() when no metadata exists											</li>
+									<li><a href="get_embed/index.html">
+							get_embed</a>
+						&mdash; Get media embeds											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/get_image/">
+							get_image</a>
+						&mdash; Retrieve URL for an image associated with the post Currently only retrieves the featured image if the post type supports it in the future this will allow retrieval of custom post images as well											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/get_post_properties/">
+							get_post_properties</a>
+						&mdash; Retrieve an array of post properties These properties need to be get/set with alternate methods											</li>
+									<li><a href="get_post_type_data/index.html">
+							get_post_type_data</a>
+						&mdash; Retrieve the Post&#39;s post type data object											</li>
+									<li><a href="get_post_type_label/index.html">
+							get_post_type_label</a>
+						&mdash; Retrieve a label from the post type data object&#39;s labels object											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/get_price/">
+							get_price</a>
+						&mdash; Getter for price strings with optional formatting options											</li>
+									<li><a href="get_properties/index.html">
+							get_properties</a>
+						&mdash; Retrieve an array of properties defined by the model											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/get_property_defaults/">
+							get_property_defaults</a>
+						&mdash; Retrieve the default values for properties											</li>
+									<li><a href="get_property_type/index.html">
+							get_property_type</a>
+						&mdash; Get a property&#39;s data type for scrubbing used by $this-&gt;scrub() to determine how to scrub the property											</li>
+									<li><a href="get_status_name/index.html">
+							get_status_name</a>
+						&mdash; Retrieve the registered Label of the posts current status											</li>
+									<li><a href="get_terms/index.html">
+							get_terms</a>
+						&mdash; Get an array of terms for a given taxonomy for the post											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/get_unsettable_properties/">
+							get_unsettable_properties</a>
+						&mdash; Array of properties which *cannot* be set If a child class adds any properties which should not be settable the class should override this property and add their custom properties to the array											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/is_cloneable/">
+							is_cloneable</a>
+						&mdash; Determine if the associated post is exportable											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/is_exportable/">
+							is_exportable</a>
+						&mdash; Determine if the associated post is exportable											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/jsonserialize/">
+							jsonSerialize</a>
+						&mdash; Format the object for json serialization encodes the results of $this-&gt;toArray()											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/scrub/">
+							scrub</a>
+						&mdash; Scrub field according to it&#39;s type This is automatically called by set() method before anything is actually set											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/scrub_field/">
+							scrub_field</a>
+						&mdash; Scrub fields according to datatype											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/set/">
+							set</a>
+						&mdash; Setter											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/set_terms/">
+							set_terms</a>
+						&mdash; Update terms for the post for a given taxonomy											</li>
+									<li><a href="toarray/index.html">
+							toArray</a>
+						&mdash; Coverts the object to an associative array Any property returned by $this-&gt;get_properties() will be retrieved via $this-&gt;get() and added to the array											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/toarrayafter/">
+							toArrayAfter</a>
+						&mdash; Called before data is sorted and returned by $this-&gt;toArray() Extending classes should override this data if custom data should be added when object is converted to an array or json											</li>
+									<li><a href="https://developer.lifterlms.com/reference/classes/llms_post_model/toarraycustom/">
+							toArrayCustom</a>
+						&mdash; Called by toArray to add custom fields via get_post_meta() Removes all custom props registered to the $this-&gt;properties automatically Also removes some fields used by the WordPress core that don&#39;t hold necessary data Extending classes may override this class to exclude, extend, or modify the custom fields for a post type											</li>
+									<li><a href="translate/index.html">
+							translate</a>
+						&mdash; Wrapper for $this-get() which allows translation of the database value before outputting on screen											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_post_model%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_post_model/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="https://s29765.pcdn.co/wp-includes/css/buttons.min.css?ver=5.1.1" type="text/css" media="all"/>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js?ver=20160322"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"5a985f74d1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js?ver=20160524"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js?ver=20180724"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/quicktags.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js?ver=20181019"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js?ver=20160824"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"34505f0fee","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js?ver=20181019"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
 
 </body></html>

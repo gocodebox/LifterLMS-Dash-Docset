@@ -13,7 +13,7 @@
 	<key>DashDocSetFamily</key>
 	<string>dashtoc</string>
 	<key>dashIndexFilePath</key>
-	<string>index.html</string>
+	<string>developer.lifterlms.com/developer.lifterlms.com/index.html</string>
 	<key>isJavaScriptEnabled</key><true/>
 	<key>DashDocSetFallbackURL</key>
 	<string>https://developer.lifterlms.com/</string>

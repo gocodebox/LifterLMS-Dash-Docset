@@ -1,0 +1,1496 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head>
+	<meta charset="UTF-8"/>
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+	<link rel="dns-prefetch" href="/s.w.org"/>
+	<link rel="dns-prefetch" href="/fonts.googleapis.com"/>
+	<link rel="dns-prefetch" href="/fonts.gstatic.com"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="/s29765.pcdn.co/wp-includes/css/dashicons.min.css?20181204" rel="stylesheet" type="text/css"/>
+	<link href="/fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i" rel="stylesheet" type="text/css"/>
+
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-150x150.png" sizes="32x32"/>
+	<link rel="icon" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png" sizes="192x192"/>
+	<link rel="apple-touch-icon-precomposed" href="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<meta name="msapplication-TileImage" content="https://s26875.pcdn.co/wp-content/uploads/2019/02/lifterlms-icon-square-300x300.png"/>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<title>LLMS_Admin_Table - LifterLMS Developer Hub</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v11.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://developer.lifterlms.com/reference/classes/llms_admin_table/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="LLMS_Admin_Table - LifterLMS Developer Hub"/>
+<meta property="og:description" content="LLMS_Admin_Table abstract."/>
+<meta property="og:url" content="https://developer.lifterlms.com/reference/classes/llms_admin_table/"/>
+<meta property="og:site_name" content="LifterLMS Developer Hub"/>
+<meta property="article:publisher" content="https://www.facebook.com/lifterlms"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="LLMS_Admin_Table abstract."/>
+<meta name="twitter:title" content="LLMS_Admin_Table - LifterLMS Developer Hub"/>
+<meta name="twitter:site" content="@lifterlms"/>
+<meta name="twitter:creator" content="@lifterlms"/>
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://developer.lifterlms.com/#organization","name":"LifterLMS","url":"https://developer.lifterlms.com/","sameAs":["https://www.facebook.com/lifterlms","https://www.instagram.com/lifterlms/","https://www.youtube.com/user/lifterlms","https://twitter.com/lifterlms"],"logo":{"@type":"ImageObject","@id":"https://developer.lifterlms.com/#logo","url":"https://s29765.pcdn.co/wp-content/uploads/2019/03/lifterlms-logo.png","width":1025,"height":280,"caption":"LifterLMS"},"image":{"@id":"https://developer.lifterlms.com/#logo"}},{"@type":"WebSite","@id":"https://developer.lifterlms.com/#website","url":"https://developer.lifterlms.com/","name":"LifterLMS Developer Hub","publisher":{"@id":"https://developer.lifterlms.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://developer.lifterlms.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://developer.lifterlms.com/reference/classes/llms_admin_table/#webpage","url":"https://developer.lifterlms.com/reference/classes/llms_admin_table/","inLanguage":"en-US","name":"LLMS_Admin_Table - LifterLMS Developer Hub","isPartOf":{"@id":"https://developer.lifterlms.com/#website"},"datePublished":"2019-03-13T18:36:36+00:00","dateModified":"2019-03-13T18:36:36+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="/s.w.org"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Feed" href="https://developer.lifterlms.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; Comments Feed" href="https://developer.lifterlms.com/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="LifterLMS Developer Hub &raquo; LLMS_Admin_Table Comments Feed" href="https://developer.lifterlms.com/reference/classes/llms_admin_table/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.7.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.7.1';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-40371053-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-40371053-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s29765.pcdn.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://s29765.pcdn.co/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="wporg-handbook-css-css" href="https://s29765.pcdn.co/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"/>
+<link rel="stylesheet" id="main-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/main.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="dashdocs-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/dashdocs.css?ver=20190314" type="text/css" media="all"/>
+<link rel="stylesheet" id="awesomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"/>
+<link rel="stylesheet" id="autocomplete-css-css" href="https://s29765.pcdn.co/wp-content/themes/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"/>
+<link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/developer.lifterlms.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js?ver=7.7.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/chapters.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script>
+<link rel="https://api.w.org/" href="https://developer.lifterlms.com/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.lifterlms.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s29765.pcdn.co/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.1.1"/>
+<link rel="shortlink" href="https://developer.lifterlms.com/?p=7008"/>
+<link rel="alternate" type="application/json+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_admin_table%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://developer.lifterlms.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_admin_table%2F&amp;format=xml"/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	<script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body id="wordpress-org" class="wp-parser-class-template-default single single-wp-parser-class postid-7008">
+
+	<div id="header">
+
+		<nav class="network-menu"><ul id="menu-main" class="menu"><li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7906"><a href="https://lifterlms.com">LifterLMS</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7909"><a href="https://lifterlms.com/docs/">Knowledge Base</a></li>
+<li id="menu-item-7910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7910"><a href="https://academy.lifterlms.com/">Academy</a></li>
+<li id="menu-item-7911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7911"><a href="https://blog.lifterlms.com/">Blog</a></li>
+<li id="menu-item-7912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7912"><a href="https://podcast.lifterlms.com/">Podcast</a></li>
+<li id="menu-item-7913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7913"><a href="https://make.lifterlms.com/">Contributors</a></li>
+</ul></nav>
+		<div class="wrapper">
+			<h1>
+				<a href="https://lifterlms.com/">
+					<span class="screen-reader-text">LifterLMS</span>
+					<img class="header-logo" src="https://s27051.pcdn.co/wp-content/uploads/2019/02/lifterlms_logo.png" alt="LifterLMS"/>
+				</a>
+			</h1>
+
+		</div>
+
+	</div>
+
+
+
+<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+		<h1 class="site-title">
+			<a href="https://developer.lifterlms.com/reference/" rel="home">Code Reference</a>
+		</h1>
+
+		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button>
+			<div id="primary-menu" class="menu-container"><ul id="menu-dev-resources" class="menu"><li id="menu-item-7915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7915"><a href="https://developer.lifterlms.com/">Home</a></li>
+<li id="menu-item-7914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7914"><a href="https://developer.lifterlms.com/reference/">Code Reference</a></li>
+</ul></div>		</nav>
+	</div>
+</header><!-- #masthead -->
+
+<div id="page" class="hfeed site devhub-wrap">
+	<a href="#main" class="screen-reader-text">Skip to content</a>
+
+								<div id="inner-search">
+					<div class="search-section section clear hide-if-js">
+
+
+	
+	<form role="search" method="get" class="searchform searchform-filtered" action="https://developer.lifterlms.com/">
+		<label for="search-field" class="screen-reader-text">Search for:</label>
+		<input type="text" id="search-field" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+		<button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button>
+	
+		<div class="search-post-type">
+			<span>Filter by type:</span>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-function"/> Functions</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-hook"/> Hooks</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-class"/> Classes</label>
+									<label><input type="checkbox" name="post_type[]" value="wp-parser-method"/> Methods</label>
+					</div>
+
+	
+	</form>
+
+</div><!-- /search-guide -->
+					<div id="inner-search-icon-container">
+						<div id="inner-search-icon">
+							<div class="dashicons dashicons-search"><span class="screen-reader-text">Search</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="site-content">
+
+	<div id="content-area" class="wp-parser-class-template-default single single-wp-parser-class postid-7008 code-reference">
+
+		
+		<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
+			<span class="trail-browse">Browse:</span> 
+			<span class="trail-begin"><a href="https://developer.lifterlms.com" title="LifterLMS Developer Hub" rel="home">Home</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/" title="Code Reference">Code Reference</a></span> <span class="sep">/</span> 
+			<span class="trail-inner"><a href="https://developer.lifterlms.com/reference/classes/">Classes</a></span> <span class="sep">/</span> <a class="dashingAutolink" name="autolink-564"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/LLMS_Admin_Table"></a><span class="trail-end">LLMS_Admin_Table</span>
+		</div>
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-7008" class="post-7008 wp-parser-class type-wp-parser-class status-publish hentry wp-parser-source-file-includes_abstracts_abstract-llms-admin-table-php">
+
+	
+	
+	<h1>LLMS_Admin_Table</h1>
+
+	<section class="summary">
+		<p><a href="https://developer.lifterlms.com/reference/classes/llms_admin_table/">LLMS_Admin_Table</a> abstract.</p>
+	</section>
+
+
+	
+	<div class="content-toc"><style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style><div class="table-of-contents"><h2>Contents</h2><ul class="items"><li><a href="#description">Description</a>
+<ul>
+<li><a href="#source">Source</a>
+</li></ul></li>
+<li><a href="#related">Related</a>
+<ul>
+<li><a href="#uses">Uses</a></li>
+<li><a href="#used-by">Used By</a>
+</li></ul></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#user-contributed-notes">User Contributed Notes</a></li></ul>
+</div>
+
+<hr/>
+<section class="description">
+	<h2 class="toc-heading" id="description" tabindex="-1">Description <a href="#description" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Description</span></a></h2>
+	
+	</section>
+
+	<hr/>
+	<section class="source-content">
+		<h3 class="toc-heading" id="source" tabindex="-1">Source <a href="#source" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Source</span></a></h3>
+		<p>
+			File: <a href="../../files/includes/abstracts/abstract-llms-admin-table.php/index.html">includes/abstracts/abstract.llms.admin.table.php</a>		</p>
+
+					<div class="source-code-container">
+				<pre class="brush: php; toolbar: false; first-line: 14">abstract class LLMS_Admin_Table extends LLMS_Abstract_Exportable_Admin_Table {
+
+	/**
+	 * Unique ID for the Table
+	 * @var  string
+	 */
+	protected $id = &#39;&#39;;
+
+	/**
+	 * When pagination is enabled, the current page
+	 * @var  integer
+	 */
+	protected $current_page = 1;
+
+	/**
+	 * Value of the field being filtered by
+	 * Only applicable if $filterby is set
+	 * @var  string
+	 */
+	protected $filter = &#39;&#39;;
+
+	/**
+	 * Field results are filtered by
+	 * @var  string
+	 */
+	protected $filterby = &#39;&#39;;
+
+	/**
+	 * Is the Table Exportable?
+	 * @var  boolean
+	 */
+	protected $is_exportable = false;
+
+	/**
+	 * When pagination enabled, determines if this is the last page of results
+	 * @var  boolean
+	 */
+	protected $is_last_page = true;
+
+	/**
+	 * If true, tfoot will add ajax pagination links
+	 * @var  boolean
+	 */
+	protected $is_paginated = false;
+
+	/**
+	 * Determine if the table is filterable
+	 * @var  boolean
+	 */
+	protected $is_filterable = false;
+
+	/**
+	 * If true will be a table with a larger font size
+	 * @var  bool
+	 */
+	protected $is_large = false;
+
+	/**
+	 * Determine of the table is searchable
+	 * @var  boolean
+	 */
+	protected $is_searchable = false;
+
+	/**
+	 * If true, tbody will be zebra striped
+	 * @var  boolean
+	 */
+	protected $is_zebra = true;
+
+	/**
+	 * If an integer supplied, used to jump to last page
+	 * @var  int
+	 */
+	protected $max_pages = null;
+
+	/**
+	 * Results sort order
+	 * &#39;ASC&#39; or &#39;DESC&#39;
+	 * Only applicable of $orderby is not set
+	 * @var  string
+	 */
+	protected $order = &#39;&#39;;
+
+	/**
+	 * Field results are sorted by
+	 * @var  string
+	 */
+	protected $orderby = &#39;&#39;;
+
+	/**
+	 * Number of records to display per page
+	 *
+	 * @var int
+	 */
+	protected $per_page = -1;
+
+	/**
+	 * The search query submitted for a searchable table
+	 * @var  string
+	 */
+	protected $search = &#39;&#39;;
+
+	/**
+	 * Table Data
+	 * Array of objects or arrays
+	 * each item represents as row in the table&#39;s body, each item is a cell
+	 * @var  array
+	 */
+	protected $tbody_data = array();
+
+	/**
+	 * Table Title Displayed on Screen
+	 * @var  string
+	 */
+	protected $title = &#39;&#39;;
+
+	/**
+	 * Retrieve data for a cell
+	 * @param    string     $key   the column id / key
+	 * @param    mixed      $data  object / array of data that the function can use to extract the data
+	 * @return   mixed
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	abstract protected function get_data( $key, $data );
+
+	/**
+	 * Execute a query to retrieve results from the table
+	 * @param    array      $args  array of query args
+	 * @return   void
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	abstract public function get_results( $args = array() );
+
+	/**
+	 * Define the structure of arguments used to pass to the get_results method
+	 * @return   array
+	 * @since    2.3.0
+	 * @version  2.3.0
+	 */
+	abstract public function set_args();
+
+	/**
+	 * Define the structure of the table
+	 * @return   array
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	abstract protected function set_columns();
+
+	/**
+	 * Constructor
+	 * @since    3.2.0
+	 * @version  3.28.0
+	 */
+	public function __construct() {
+		$this-&gt;title = $this-&gt;set_title();
+		$this-&gt;register_hooks();
+	}
+
+	/**
+	 * Ensure that a valid array of data is passed to a query
+	 * Used by AJAX methods to clean unnecessary parameters before passing the request data
+	 * to the get_results function
+	 * @param    array      $args  array of arguments
+	 * @return   array
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	protected function clean_args( $args = array() ) {
+
+		$allowed = array_keys( $this-&gt;get_args() );
+
+		foreach ( $args as $key =&gt; $val ) {
+			if ( ! in_array( $key, $allowed ) ) {
+				unset( $args[ $key ] );
+			}
+		}
+
+		return $args;
+
+	}
+
+	/**
+	 * Ensures that all data requested by $this-&gt;get_data if filterable
+	 * before being output on screen / in the export file
+	 * @param    mixed     $value     value to be displayed
+	 * @param    string    $key       column key / id
+	 * @param    mixed     $data      original data object / array
+	 * @param    string    $context   display context [display|export]
+	 * @return   mixed
+	 * @since    3.2.0
+	 * @version  3.17.6
+	 */
+	protected function filter_get_data( $value, $key, $data, $context = &#39;display&#39; ) {
+		return apply_filters( &#39;llms_table_get_data_&#39; . $this-&gt;id, $value, $key, $data, $context, $this );
+	}
+
+	/**
+	 * Retrieve the arguments defined in `set_args`
+	 * @return   array
+	 * @since    3.2.0
+	 * @version  3.15.0
+	 */
+	public function get_args() {
+
+		$default = array(
+			&#39;page&#39;    =&gt; $this-&gt;get_current_page(),
+			&#39;order&#39;   =&gt; $this-&gt;get_order(),
+			&#39;orderby&#39; =&gt; $this-&gt;get_orderby(),
+		);
+
+		if ( $this-&gt;is_filterable ) {
+			$default[&#39;filter&#39;] = $this-&gt;get_filter();
+			$default[&#39;filterby&#39;] = $this-&gt;get_filterby();
+		}
+
+		if ( $this-&gt;is_searchable ) {
+			$default[&#39;search&#39;] = $this-&gt;get_search();
+		}
+
+		$args = wp_parse_args( $this-&gt;set_args(), $default );
+
+		return apply_filters( &#39;llms_table_get_args_&#39; . $this-&gt;id, $args );
+	}
+
+	/**
+	 * Retrieve the array of columns defined by set_columns
+	 * @return   array
+	 * @since    3.2.0
+	 * @version  3.24.0
+	 */
+	public function get_columns( $context = &#39;display&#39; ) {
+
+		$cols = apply_filters( &#39;llms_table_get_&#39; . $this-&gt;id . &#39;_columns&#39;, $this-&gt;set_columns(), $context );
+
+		if ( $this-&gt;is_exportable ) {
+
+			foreach ( $cols as $id =&gt; $data ) {
+
+				if ( ! $this-&gt;is_col_visible( $data, $context ) ) {
+					unset( $cols[ $id ] );
+				}
+			}
+		}
+
+		return $cols;
+
+	}
+
+	/**
+	 * Get the current page
+	 * @return   int
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_current_page() {
+		return $this-&gt;current_page;
+	}
+
+	/**
+	 * Get $this-&gt;empty_msg string
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.15.0
+	 */
+	public function get_empty_message() {
+		return apply_filters( &#39;llms_table_get_&#39; . $this-&gt;id . &#39;_empty_message&#39;, $this-&gt;set_empty_message() );
+	}
+
+	/**
+	 * Get the text for the default/placeholder for a filterable column
+	 * @param    string     $column_id  id of the column
+	 * @return   string
+	 * @since    3.4.0
+	 * @version  3.15.0
+	 */
+	public function get_filter_placeholder( $column_id, $column_data ) {
+		$placeholder = __( &#39;Any&#39;, &#39;lifterlms&#39; );
+		if ( is_array( $column_data ) &amp;&amp; isset( $column_data[&#39;title&#39;] ) ) {
+			$placeholder = sprintf( __( &#39;Any %s&#39;, &#39;lifterlms&#39; ), $column_data[&#39;title&#39;] );
+		} elseif ( is_strinp( $column_data ) ) {
+			$placeholder = sprintf( __( &#39;Any %s&#39;, &#39;lifterlms&#39; ), $column_data );
+		}
+		return apply_filters( &#39;llms_table_get_&#39; . $this-&gt;id . &#39;_filter_placeholder&#39;, $placeholder, $column_id );
+	}
+
+	/**
+	 * Get the current filter
+	 * @return   string
+	 * @since    3.4.0
+	 * @version  3.4.0
+	 */
+	public function get_filter() {
+		return $this-&gt;filter;
+	}
+
+	/**
+	 * Get the current field results are filtered by
+	 * @return   string
+	 * @since    3.4.0
+	 * @version  3.4.0
+	 */
+	public function get_filterby() {
+		return $this-&gt;filterby;
+	}
+
+	/**
+	 * Retrieve a modified classname that can be passed via AJAX for new queries
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_handler() {
+		return str_replace( &#39;LLMS_Table_&#39;, &#39;&#39;, get_class( $this ) );
+	}
+
+	/**
+	 * Retrieve the max number of pages for the table
+	 * @return   int
+	 * @since    3.15.0
+	 * @version  3.15.0
+	 */
+	public function get_max_pages() {
+		return $this-&gt;max_pages;
+	}
+
+	/**
+	 * Get the current sort order
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_order() {
+		return $this-&gt;order;
+	}
+
+	/**
+	 * Get the current field results are ordered by
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_orderby() {
+		return $this-&gt;orderby;
+	}
+
+	/**
+	 * Get the current number of results to display per page
+	 *
+	 * @return  int
+	 * @since   3.28.0
+	 * @version 3.28.0
+	 */
+	public function get_per_page() {
+		return $this-&gt;per_page;
+	}
+
+	/**
+	 * Gets the opposite of the current order
+	 * Used to determine what order should be displayed when resorting
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	protected function get_new_order( $orderby = &#39;&#39; ) {
+
+		// current order matches submitted order, return opposite
+		if ( $this-&gt;orderby === $orderby ) {
+			return ( &#39;ASC&#39; === $this-&gt;order ) ? &#39;DESC&#39; : &#39;ASC&#39;;
+		} // End if().
+		else {
+			return &#39;ASC&#39;;
+		}
+
+	}
+
+	/**
+	 * Retrieves the current search query
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_search() {
+		return esc_attr( trim( $this-&gt;search ) );
+	}
+
+	/**
+	 * Get HTML for the filters displayed in the head of the table
+	 * @return   string
+	 * @since    3.4.0
+	 * @version  3.4.0
+	 */
+	public function get_table_filters_html() {
+		ob_start();
+		?&gt;
+		&lt;div class=&#34;llms-table-filters&#34;&gt;
+			&lt;?php foreach ( $this-&gt;get_columns() as $id =&gt; $data ) : ?&gt;
+				&lt;?php if ( is_array( $data ) &amp;&amp; isset( $data[&#39;filterable&#39;] ) &amp;&amp; is_array( $data[&#39;filterable&#39;] ) ) : ?&gt;
+					&lt;div class=&#34;llms-table-filter-wrap&#34;&gt;
+						&lt;select class=&#34;llms-select2 llms-table-filter&#34; id=&#34;&lt;?php printf( &#39;%1$s-%2$s-filter&#39;, $this-&gt;id, $id ); ?&gt;&#34; name=&#34;&lt;?php echo $id; ?&gt;&#34;&gt;
+							&lt;option value=&#34;&lt;?php echo $this-&gt;get_filter(); ?&gt;&#34;&gt;&lt;?php echo $this-&gt;get_filter_placeholder( $id, $data ); ?&gt;&lt;/option&gt;
+							&lt;?php foreach ( $data[&#39;filterable&#39;] as $val =&gt; $name ) : ?&gt;
+								&lt;option value=&#34;&lt;?php echo $val; ?&gt;&#34;&gt;&lt;?php echo $name; ?&gt;&lt;/option&gt;
+							&lt;?php endforeach; ?&gt;
+						&lt;/select&gt;
+					&lt;/div&gt;
+				&lt;?php endif; ?&gt;
+			&lt;?php endforeach; ?&gt;
+		&lt;/div&gt;
+		&lt;?php
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get the HTML for the entire table
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.17.8
+	 */
+	public function get_table_html() {
+
+		$classes = array(
+			&#39;llms-table&#39;,
+			&#39;llms-gb-table&#39;,
+			&#39;llms-gb-table-&#39; . $this-&gt;id,
+		);
+
+		if ( $this-&gt;is_zebra ) {
+			$classes[] = &#39;zebra&#39;;
+		}
+
+		if ( $this-&gt;is_large ) {
+			$classes[] = &#39;size-large&#39;;
+		}
+
+		ob_start();
+		?&gt;
+		&lt;div class=&#34;llms-table-wrap&#34;&gt;
+			&lt;header class=&#34;llms-table-header&#34;&gt;
+				&lt;?php echo $this-&gt;get_table_title_html(); ?&gt;
+				&lt;?php if ( $this-&gt;is_searchable ) : ?&gt;
+					&lt;?php echo $this-&gt;get_table_search_form_html(); ?&gt;
+				&lt;?php endif; ?&gt;
+				&lt;?php if ( $this-&gt;is_filterable ) : ?&gt;
+					&lt;?php echo $this-&gt;get_table_filters_html(); ?&gt;
+				&lt;?php endif; ?&gt;
+			&lt;/header&gt;
+			&lt;table
+				class=&#34;&lt;?php echo implode( $classes, &#39; &#39; ); ?&gt;&#34;
+				data-args=&#39;&lt;?php echo json_encode( $this-&gt;get_args() ); ?&gt;&#39;
+				data-handler=&#34;&lt;?php echo $this-&gt;get_handler(); ?&gt;&#34;
+				id=&#34;llms-gb-table-&lt;?php echo $this-&gt;id; ?&gt;&#34;
+			&gt;
+				&lt;?php echo $this-&gt;get_thead_html(); ?&gt;
+				&lt;?php echo $this-&gt;get_tbody_html(); ?&gt;
+				&lt;?php echo $this-&gt;get_tfoot_html(); ?&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+		&lt;?php
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get the HTML of the search form for a searchable table
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_table_search_form_html() {
+		ob_start();
+		?&gt;
+		&lt;div class=&#34;llms-table-search&#34;&gt;
+			&lt;input class=&#34;regular-text&#34; id=&#34;&lt;?php echo $this-&gt;id; ?&gt;-search-input&#34; placeholder=&#34;&lt;?php echo $this-&gt;get_table_search_form_placeholder(); ?&gt;&#34; type=&#34;text&#34;&gt;
+		&lt;/div&gt;
+		&lt;?php
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get the Text to be used as the placeholder in a searchable tables search input
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.15.0
+	 */
+	public function get_table_search_form_placeholder() {
+		return apply_filters( &#39;llms_table_get_&#39; . $this-&gt;id . &#39;_search_placeholder&#39;, __( &#39;Search&#39;, &#39;lifterlms&#39; ) );
+	}
+
+	/**
+	 * Get the HTML for the table&#39;s title
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.15.0
+	 */
+	public function get_table_title_html() {
+		$title = $this-&gt;get_title();
+		if ( $title ) {
+			return &#39;&lt;h2 class=&#34;llms-table-title&#34;&gt;&#39; . $title . &#39;&lt;/h2&gt;&#39;;
+		} else {
+			return &#39;&#39;;
+		}
+	}
+
+	/**
+	 * Get $this-&gt;tbody_data array
+	 * @return   array
+	 * @since    3.2.0
+	 * @version  3.15.0
+	 */
+	public function get_tbody_data() {
+		return apply_filters( &#39;llms_table_get_&#39; . $this-&gt;id . &#39;_tbody_data&#39;, $this-&gt;tbody_data );
+	}
+
+	/**
+	 * Get a tbody element for the table
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_tbody_html() {
+		$data = $this-&gt;get_tbody_data();
+		ob_start();
+		?&gt;
+		&lt;tbody&gt;
+			&lt;?php if ( $data ) : ?&gt;
+				&lt;?php foreach ( $data as $row ) : ?&gt;
+					&lt;?php echo $this-&gt;get_tr_html( $row ); ?&gt;
+				&lt;?php endforeach; ?&gt;
+			&lt;?php else : ?&gt;
+				&lt;tr&gt;&lt;td class=&#34;llms-gb-table-empty&#34; colspan=&#34;&lt;?php echo $this-&gt;get_columns_count(); ?&gt;&#34;&gt;&lt;p&gt;&lt;?php echo $this-&gt;get_empty_message(); ?&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+			&lt;?php endif; ?&gt;
+		&lt;/tbody&gt;
+		&lt;?php
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get a tfoot element for the table
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.28.0
+	 */
+	public function get_tfoot_html() {
+		ob_start();
+		?&gt;
+		&lt;tfoot&gt;
+			&lt;tr&gt;
+				&lt;th colspan=&#34;&lt;?php echo $this-&gt;get_columns_count(); ?&gt;&#34;&gt;
+					&lt;?php if ( $this-&gt;is_exportable ) : ?&gt;
+						&lt;div class=&#34;llms-table-export&#34;&gt;
+							&lt;button class=&#34;llms-button-primary small&#34; name=&#34;llms-table-export&#34;&gt;
+								&lt;span class=&#34;dashicons dashicons-download&#34;&gt;&lt;/span&gt; &lt;?php _e( &#39;Export&#39;, &#39;lifterlms&#39; ); ?&gt;
+							&lt;/button&gt;
+							&lt;?php echo $this-&gt;get_progress_bar_html( 0 ); ?&gt;
+							&lt;em&gt;&lt;small class=&#34;llms-table-export-msg&#34;&gt;&lt;/small&gt;&lt;/em&gt;
+						&lt;/div&gt;
+					&lt;?php endif; ?&gt;
+
+					&lt;?php if ( $this-&gt;is_paginated ) : ?&gt;
+						&lt;div class=&#34;llms-table-pagination&#34;&gt;
+						&lt;?php if ( $this-&gt;max_pages ) : ?&gt;
+							&lt;span class=&#34;llms-table-page-count&#34;&gt;&lt;?php printf( _x( &#39;%d of %d&#39;, &#39;pagination&#39;, &#39;lifterlms&#39; ), $this-&gt;current_page, $this-&gt;max_pages ); ?&gt;&lt;/span&gt;
+						&lt;?php endif; ?&gt;
+						&lt;?php if ( 1 !== $this-&gt;get_current_page() ) : ?&gt;
+							&lt;?php if ( $this-&gt;max_pages ) : ?&gt;
+								&lt;button class=&#34;llms-button-primary small&#34; data-page=&#34;1&#34; name=&#34;llms-table-paging&#34;&gt;&lt;span class=&#34;dashicons dashicons-arrow-left-alt&#34;&gt;&lt;/span&gt; &lt;?php _e( &#39;First&#39;, &#39;lifterlms&#39; ); ?&gt;&lt;/button&gt;
+							&lt;?php endif; ?&gt;
+							&lt;button class=&#34;llms-button-primary small&#34; data-page=&#34;&lt;?php echo $this-&gt;current_page - 1; ?&gt;&#34; name=&#34;llms-table-paging&#34;&gt;&lt;span class=&#34;dashicons dashicons-arrow-left-alt2&#34;&gt;&lt;/span&gt; &lt;?php _e( &#39;Back&#39;, &#39;lifterlms&#39; ); ?&gt;&lt;/button&gt;
+						&lt;?php endif; ?&gt;
+						&lt;?php if ( ! $this-&gt;is_last_page ) : ?&gt;
+							&lt;button class=&#34;llms-button-primary small&#34; data-page=&#34;&lt;?php echo $this-&gt;current_page + 1; ?&gt;&#34; name=&#34;llms-table-paging&#34;&gt;&lt;?php _e( &#39;Next&#39;, &#39;lifterlms&#39; ); ?&gt; &lt;span class=&#34;dashicons dashicons-arrow-right-alt2&#34;&gt;&lt;/span&gt;&lt;/button&gt;
+							&lt;?php if ( $this-&gt;max_pages ) : ?&gt;
+								&lt;button class=&#34;llms-button-primary small&#34; data-page=&#34;&lt;?php echo $this-&gt;max_pages; ?&gt;&#34; name=&#34;llms-table-paging&#34;&gt;&lt;?php _e( &#39;Last&#39;, &#39;lifterlms&#39; ); ?&gt; &lt;span class=&#34;dashicons dashicons-arrow-right-alt&#34;&gt;&lt;/span&gt;&lt;/button&gt;
+							&lt;?php endif; ?&gt;
+						&lt;?php endif; ?&gt;
+						&lt;/div&gt;
+					&lt;?php endif; ?&gt;
+				&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/tfoot&gt;
+		&lt;?php
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get a thead element for the table
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_thead_html() {
+		ob_start();
+		?&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+			&lt;?php foreach ( $this-&gt;get_columns() as $id =&gt; $data ) : ?&gt;
+				&lt;th class=&#34;&lt;?php echo $id; ?&gt;&#34;&gt;
+					&lt;?php if ( is_array( $data ) ) : ?&gt;
+						&lt;?php if ( isset( $data[&#39;sortable&#39;] ) &amp;&amp; $data[&#39;sortable&#39;] ) : ?&gt;
+							&lt;a class=&#34;llms-sortable&lt;?php echo ( $this-&gt;get_orderby() === $id ) ? &#39; active&#39; : &#39;&#39;; ?&gt;&#34; data-order=&#34;&lt;?php echo $this-&gt;get_new_order( $id ); ?&gt;&#34; data-orderby=&#34;&lt;?php echo $id; ?&gt;&#34; href=&#34;#llms-gb-table-resort&#34;&gt;
+								&lt;?php echo $data[&#39;title&#39;]; ?&gt;
+								&lt;span class=&#34;dashicons dashicons-arrow-up asc&#34;&gt;&lt;/span&gt;
+								&lt;span class=&#34;dashicons dashicons-arrow-down desc&#34;&gt;&lt;/span&gt;
+							&lt;/a&gt;
+						&lt;?php else : ?&gt;
+							&lt;?php echo $data[&#39;title&#39;]; ?&gt;
+						&lt;?php endif; ?&gt;
+					&lt;?php else : ?&gt;
+						&lt;?php echo $data; ?&gt;
+					&lt;?php endif; ?&gt;
+				&lt;/th&gt;
+			&lt;?php endforeach; ?&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;?php
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get a CSS class list (as a string) for each TR
+	 * @param    mixed      $data  object / array of data that the function can use to extract the data
+	 * @return   string
+	 * @since    3.24.0
+	 * @version  3.24.0
+	 */
+	protected function get_tr_classes( $row ) {
+		return apply_filters( &#39;llms_table_get_&#39; . $this-&gt;id . &#39;_tr_classes&#39;, &#39;llms-table-tr&#39;, $row );
+	}
+
+	/**
+	 * Get the HTML for a single row in the body of the table
+	 * @param    mixed     $row  array/object of data describing a single row in the table
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.21.0
+	 */
+	public function get_tr_html( $row ) {
+		ob_start();
+		do_action( &#39;llms_table_before_tr&#39;, $row, $this );
+		?&gt;
+		&lt;tr class=&#34;&lt;?php echo esc_attr( $this-&gt;get_tr_classes( $row ) ); ?&gt;&#34;&gt;
+		&lt;?php foreach ( $this-&gt;get_columns() as $id =&gt; $title ) : ?&gt;
+			&lt;td class=&#34;&lt;?php echo $id; ?&gt;&#34;&gt;&lt;?php echo $this-&gt;get_data( $id, $row ); ?&gt;&lt;/td&gt;
+		&lt;?php endforeach; ?&gt;
+		&lt;/tr&gt;
+		&lt;?php
+		do_action( &#39;llms_table_after_tr&#39;, $row, $this );
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get the total number of columns in the table
+	 * Useful for creating full with tds via colspan
+	 * @return   int
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_columns_count() {
+		return count( $this-&gt;get_columns() );
+	}
+
+	/**
+	 * Get the HTML to output a progress bar within a td
+	 * Improve ugly tables with a small visual flourish
+	 * Useful when displaying a percentage within a table!
+	 * Bonus if the table sorts by that percentage column
+	 * @param    float      $percentage  the percentage to be displayed
+	 * @param    string     $text        text to display over the progress bar, defaults to $percentage
+	 * @return   string
+	 * @since    3.4.1
+	 * @version  3.4.1
+	 */
+	public function get_progress_bar_html( $percentage, $text = &#39;&#39; ) {
+		$text = $text ? $text : $percentage . &#39;%&#39;;
+		return &#39;&lt;div class=&#34;llms-table-progress&#34;&gt;
+			&lt;span class=&#34;llms-table-progress-text&#34;&gt;&#39; . $text . &#39;&lt;/span&gt;
+			&lt;div class=&#34;llms-table-progress-inner&#34; style=&#34;width:&#39; . $percentage . &#39;%&#34;&gt;&lt;/div&gt;
+		&lt;/div&gt;&#39;;
+	}
+
+	/**
+	 * Get the HTML for a WP Post Link
+	 * @param    int        $post_id  WP Post ID
+	 * @param    string     $text     Optional text to display within the anchor, if none supplied $post_id if used
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	public function get_post_link( $post_id, $text = &#39;&#39; ) {
+		if ( ! $text ) {
+			$text = $post_id;
+		}
+		return &#39;&lt;a href=&#34;&#39; . esc_url( get_edit_post_link( $post_id ) ) . &#39;&#34;&gt;&#39; . $text . &#39;&lt;/a&gt;&#39;;
+	}
+
+	/**
+	 * Get the title of the table
+	 * @return   string
+	 * @since    3.15.0
+	 * @version  3.15.0
+	 */
+	public function get_title() {
+		return apply_filters( &#39;llms_table_get_&#39; . $this-&gt;id . &#39;_table_title&#39;, $this-&gt;title );
+	}
+
+	/**
+	 * Get the HTML for a WP User Link
+	 * @param    int        $post_id  WP User ID
+	 * @param    string     $text     Optional text to display within the anchor, if none supplied $user_id if used
+	 * @return   string
+	 * @since    3.17.2
+	 * @version  3.17.2
+	 */
+	public function get_user_link( $user_id, $text = &#39;&#39; ) {
+		if ( ! $text ) {
+			$text = $user_id;
+		}
+		return &#39;&lt;a href=&#34;&#39; . esc_url( get_edit_user_link( $user_id ) ) . &#39;&#34;&gt;&#39; . $text . &#39;&lt;/a&gt;&#39;;
+	}
+
+	/**
+	 * Determine if a column is visible based on the current context
+	 * @param    [type]     $data     array of a single column&#39;s data from set_columns()
+	 * @param    string     $context  context [display|export]
+	 * @return   bool
+	 * @since    3.15.0
+	 * @version  3.15.0
+	 */
+	private function is_col_visible( $data, $context = &#39;display&#39; ) {
+
+		// display if &#39;export_only&#39; does not exist or it does exist and is false
+		if ( &#39;display&#39; === $context ) {
+			return ( ! isset( $data[&#39;export_only&#39;] ) || ! $data[&#39;export_only&#39;] );
+
+			// display if exportable is set and is true
+		} elseif ( &#39;export&#39; === $context ) {
+			return ( isset( $data[&#39;exportable&#39;] ) &amp;&amp; $data[&#39;exportable&#39;] );
+		}
+
+		return true;
+
+	}
+
+	/**
+	 * Return protected is_last_page var
+	 * @return   bool
+	 * @since    3.15.0
+	 * @version  3.15.0
+	 */
+	public function is_last_page() {
+		return $this-&gt;is_last_page;
+	}
+
+	/**
+	 * Allow custom hooks to be registered for use within the class
+	 * @return   void
+	 * @since    3.2.0
+	 * @version  3.2.0
+	 */
+	protected function register_hooks() {}
+
+	/**
+	 * Setter
+	 * @param    string     $key  variable name
+	 * @param    mixed      $val  variable data
+	 * @since    2.3.0
+	 * @version  2.3.0
+	 */
+	public function set( $key, $val ) {
+		$this-&gt;$key = $val;
+	}
+
+	/**
+	 * Empty message displayed when no results are found
+	 * @return   string
+	 * @since    3.2.0
+	 * @version  3.15.0
+	 */
+	protected function set_empty_message() {
+		return apply_filters( &#39;llms_table_default_empty_message&#39;, __( &#39;No results were found.&#39;, &#39;lifterlms&#39; ) );
+	}
+
+	/**
+	 * Stub used to set the title during table construction.
+	 *
+	 * @return  string
+	 * @since   3.28.0
+	 * @version 3.28.0
+	 */
+	protected function set_title() {
+		return &#39;&#39;;
+	}
+
+}
+</pre>
+			</div>
+			<p class="source-code-links">
+				<span>
+					<a href="#" class="show-complete-source">Expand full source code</a>
+					<a href="#" class="less-complete-source">Collapse full source code</a>
+				</span>
+				<span><a href="https://github.com/gocodebox/lifterlms/blob/3.33.1/includes/abstracts/abstract.llms.admin.table.php#L14">View on GitHub</a></span>
+			</p>
+			</section>
+
+	<hr/>
+	<section class="related">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="related" tabindex="-1">Related <a href="#related" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Related</span></a></h2>
+
+					<article class="uses">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="uses" tabindex="-1">Uses <a href="#uses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Uses</span></a></h3>
+				<table id="uses-table">
+					<caption class="screen-reader-text">Uses</caption>
+					<thead>
+						<tr>
+							<th>Uses</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/abstracts/llms.abstract.exportable.admin.table.php:</span>
+								<a href="https://developer.lifterlms.com/reference/classes/llms_abstract_exportable_admin_table/">LLMS_Abstract_Exportable_Admin_Table</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_admin_table/">LLMS_Admin_Table</a> abstract.</p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+							</article>
+		
+					
+			<article class="used-by">
+				<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h3 class="toc-heading" id="used-by" tabindex="-1">Used By <a href="#used-by" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Used By</span></a></h3>
+				<table id="used-by-table">
+					<caption class="screen-reader-text">Used By</caption>
+					<thead>
+						<tr>
+							<th>Used By</th>
+							<th class="related-desc">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.memberships.php:</span>
+								<a href="../llms_table_memberships/index.html">LLMS_Table_Memberships</a>
+							</td>
+							<td class="related-desc">
+								<p>Memberships Reporting Table class.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.membership.students.php:</span>
+								<a href="../llms_table_membership_students/index.html">LLMS_Table_Membership_Students</a>
+							</td>
+							<td class="related-desc">
+								<p>Display students enrolled in a given membership on the membership students subtab class.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/settings/tables/class.llms.table.notification.settings.php:</span>
+								<a href="../llms_table_notificationsettings/index.html">LLMS_Table_NotificationSettings</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.achievements.php:</span>
+								<a href="../llms_table_achievements/index.html">LLMS_Table_Achievements</a>
+							</td>
+							<td class="related-desc">
+								<p>Admin Achievements Table</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.students.php:</span>
+								<a href="../llms_table_students/index.html">LLMS_Table_Students</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_table_students/">LLMS_Table_Students</a> class.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.certificates.php:</span>
+								<a href="../llms_table_student_certificates/index.html">LLMS_Table_Student_Certificates</a>
+							</td>
+							<td class="related-desc">
+								<p>Admin Achievements Table</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.course.students.php:</span>
+								<a href="../llms_table_course_students/index.html">LLMS_Table_Course_Students</a>
+							</td>
+							<td class="related-desc">
+								<p>Display students enrolled in a given course on the course students subtab</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.courses.php:</span>
+								<a href="../llms_table_courses/index.html">LLMS_Table_Courses</a>
+							</td>
+							<td class="related-desc">
+															</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.quiz.attempts.php:</span>
+								<a href="../llms_table_quiz_attempts/index.html">LLMS_Table_Quiz_Attempts</a>
+							</td>
+							<td class="related-desc">
+								<p><a href="https://developer.lifterlms.com/reference/classes/llms_table_quiz_attempts/">LLMS_Table_Quiz_Attempts</a> class.</p>
+							</td>
+						</tr>
+												<tr>
+							<td>
+								<span>includes/admin/reporting/tables/llms.table.quizzes.php:</span>
+								<a href="../llms_table_quizzes/index.html">LLMS_Table_Quizzes</a>
+							</td>
+							<td class="related-desc">
+								<p>Quizzes Reporting Table</p>
+							</td>
+						</tr>
+											</tbody><tbody>
+				</tbody></table>
+
+								<a href="#" class="show-more">Show 5 more used by</a>
+				<a href="#" class="hide-more">Hide more used by</a>
+							</article>
+			</section>
+			<hr/>
+		<section class="class-methods">
+			<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="methods" tabindex="-1">Methods <a href="#methods" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Methods</span></a></h2>
+			<ul>
+									<li><a href="__construct/index.html">
+							__construct</a>
+						&mdash; Constructor											</li>
+									<li><a href="clean_args/index.html">
+							clean_args</a>
+						&mdash; Ensure that a valid array of data is passed to a query Used by AJAX methods to clean unnecessary parameters before passing the request data to the get_results function											</li>
+									<li><a href="filter_get_data/index.html">
+							filter_get_data</a>
+						&mdash; Ensures that all data requested by $this-&gt;get_data if filterable before being output on screen / in the export file											</li>
+									<li><a href="get_args/index.html">
+							get_args</a>
+						&mdash; Retrieve the arguments defined in `set_args`											</li>
+									<li><a href="get_columns/index.html">
+							get_columns</a>
+						&mdash; Retrieve the array of columns defined by set_columns											</li>
+									<li><a href="get_columns_count/index.html">
+							get_columns_count</a>
+						&mdash; Get the total number of columns in the table Useful for creating full with tds via colspan											</li>
+									<li><a href="get_current_page/index.html">
+							get_current_page</a>
+						&mdash; Get the current page											</li>
+									<li><a href="get_data/index.html">
+							get_data</a>
+						&mdash; Retrieve data for a cell											</li>
+									<li><a href="get_empty_message/index.html">
+							get_empty_message</a>
+						&mdash; Get $this-&gt;empty_msg string											</li>
+									<li><a href="get_filter/index.html">
+							get_filter</a>
+						&mdash; Get the current filter											</li>
+									<li><a href="get_filter_placeholder/index.html">
+							get_filter_placeholder</a>
+						&mdash; Get the text for the default/placeholder for a filterable column											</li>
+									<li><a href="get_filterby/index.html">
+							get_filterby</a>
+						&mdash; Get the current field results are filtered by											</li>
+									<li><a href="get_handler/index.html">
+							get_handler</a>
+						&mdash; Retrieve a modified classname that can be passed via AJAX for new queries											</li>
+									<li><a href="get_max_pages/index.html">
+							get_max_pages</a>
+						&mdash; Retrieve the max number of pages for the table											</li>
+									<li><a href="get_new_order/index.html">
+							get_new_order</a>
+						&mdash; Gets the opposite of the current order Used to determine what order should be displayed when resorting											</li>
+									<li><a href="get_order/index.html">
+							get_order</a>
+						&mdash; Get the current sort order											</li>
+									<li><a href="get_orderby/index.html">
+							get_orderby</a>
+						&mdash; Get the current field results are ordered by											</li>
+									<li><a href="get_per_page/index.html">
+							get_per_page</a>
+						&mdash; Get the current number of results to display per page											</li>
+									<li><a href="get_post_link/index.html">
+							get_post_link</a>
+						&mdash; Get the HTML for a WP Post Link											</li>
+									<li><a href="get_progress_bar_html/index.html">
+							get_progress_bar_html</a>
+						&mdash; Get the HTML to output a progress bar within a td Improve ugly tables with a small visual flourish Useful when displaying a percentage within a table! Bonus if the table sorts by that percentage column											</li>
+									<li><a href="get_results/index.html">
+							get_results</a>
+						&mdash; Execute a query to retrieve results from the table											</li>
+									<li><a href="get_search/index.html">
+							get_search</a>
+						&mdash; Retrieves the current search query											</li>
+									<li><a href="get_table_filters_html/index.html">
+							get_table_filters_html</a>
+						&mdash; Get HTML for the filters displayed in the head of the table											</li>
+									<li><a href="get_table_html/index.html">
+							get_table_html</a>
+						&mdash; Get the HTML for the entire table											</li>
+									<li><a href="get_table_search_form_html/index.html">
+							get_table_search_form_html</a>
+						&mdash; Get the HTML of the search form for a searchable table											</li>
+									<li><a href="get_table_search_form_placeholder/index.html">
+							get_table_search_form_placeholder</a>
+						&mdash; Get the Text to be used as the placeholder in a searchable tables search input											</li>
+									<li><a href="get_table_title_html/index.html">
+							get_table_title_html</a>
+						&mdash; Get the HTML for the table&#39;s title											</li>
+									<li><a href="get_tbody_data/index.html">
+							get_tbody_data</a>
+						&mdash; Get $this-&gt;tbody_data array											</li>
+									<li><a href="get_tbody_html/index.html">
+							get_tbody_html</a>
+						&mdash; Get a tbody element for the table											</li>
+									<li><a href="get_tfoot_html/index.html">
+							get_tfoot_html</a>
+						&mdash; Get a tfoot element for the table											</li>
+									<li><a href="get_thead_html/index.html">
+							get_thead_html</a>
+						&mdash; Get a thead element for the table											</li>
+									<li><a href="get_title/index.html">
+							get_title</a>
+						&mdash; Get the title of the table											</li>
+									<li><a href="get_tr_classes/index.html">
+							get_tr_classes</a>
+						&mdash; Get a CSS class list (as a string) for each TR											</li>
+									<li><a href="get_tr_html/index.html">
+							get_tr_html</a>
+						&mdash; Get the HTML for a single row in the body of the table											</li>
+									<li><a href="get_user_link/index.html">
+							get_user_link</a>
+						&mdash; Get the HTML for a WP User Link											</li>
+									<li><a href="is_col_visible/index.html">
+							is_col_visible</a>
+						&mdash; Determine if a column is visible based on the current context											</li>
+									<li><a href="is_last_page/index.html">
+							is_last_page</a>
+						&mdash; Return protected is_last_page var											</li>
+									<li><a href="register_hooks/index.html">
+							register_hooks</a>
+						&mdash; Allow custom hooks to be registered for use within the class											</li>
+									<li><a href="set/index.html">
+							set</a>
+						&mdash; Setter											</li>
+									<li><a href="set_args/index.html">
+							set_args</a>
+						&mdash; Define the structure of arguments used to pass to the get_results method											</li>
+									<li><a href="set_columns/index.html">
+							set_columns</a>
+						&mdash; Define the structure of the table											</li>
+									<li><a href="set_empty_message/index.html">
+							set_empty_message</a>
+						&mdash; Empty message displayed when no results are found											</li>
+									<li><a href="set_title/index.html">
+							set_title</a>
+						&mdash; Stub used to set the title during table construction.											</li>
+							</ul>
+		</section>
+		<hr/>
+	<section class="user-notes">
+		<p class="toc-jump"><a href="#top">Top &uarr;</a></p><h2 class="toc-heading" id="user-contributed-notes" tabindex="-1">User Contributed Notes <a href="#user-contributed-notes" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">User Contributed Notes</span></a></h2>
+		
+<div id="comments" class="comments-area">
+
+	
+	
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small></small></h3><p>You must <a href="https://developer.lifterlms.com/wp-login.php?redirect_to=https%3A%2F%2Fdeveloper.lifterlms.com%2Freference%2Fclasses%2Fllms_admin_table%2F%23respond">log in</a> before being able to contribute a note or feedback.</p>	</div><!-- #respond -->
+		
+	
+</div><!-- #comments -->
+	</section>
+</div>
+	<br/><br/><br/><hr/>Permalink: <input style="width:60%;" type="text" value="https://developer.lifterlms.com/reference/classes/llms_admin_table/"/>
+
+</article>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div class="main-footer" id="llms-footer">
+		<div class="wrapper">
+			&copy; 2014 - 2019 <a href="https://lifterlms.com">LifterLMS</a> &middot; <a href="https://lifterlms.com/privacy-policy/">Privacy Policy</a> &middot; <a href="https://lifterlms.com/terms-conditions/">Terms and Conditions</a>
+		</div>
+	</div>
+
+	<link rel="stylesheet" id="buttons-css" href="https://s29765.pcdn.co/wp-includes/css/buttons.min.css?ver=5.1.1" type="text/css" media="all"/>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/navigation.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/skip-link-focus-fix.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/search.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/menu.js?ver=20190314"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/awesomplete.min.js?ver=20160322"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"5a985f74d1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/autocomplete.js?ver=20160524"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/function-reference.js?ver=20180724"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/quicktags.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes.js?ver=20181019"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/tabs.js?ver=20160824"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.lifterlms.com\/wp-admin\/admin-ajax.php","nonce":"34505f0fee","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-content/themes/wporg-developer/js/user-notes-preview.js?ver=20181019"></script>
+<script type="text/javascript" src="https://s29765.pcdn.co/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "https://developer.lifterlms.com/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {},
+			qtInit: {'comment':{id:"comment",buttons:"strong,em,ul,ol,li"}},
+			ref: {plugins:"",theme:"modern",language:""},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+				<script type="text/javascript">
+		var ajaxurl = "/wp-admin/admin-ajax.php";
+		( function() {
+			var init, id, $wrap;
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					init = tinyMCEPreInit.mceInit[id];
+					$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+					if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+						tinymce.init( init );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+			
+
+</body></html>
