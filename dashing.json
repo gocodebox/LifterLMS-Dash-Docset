@@ -1,7 +1,7 @@
 {
     "name": "LifterLMS",
     "package": "LifterLMS",
-    "index": "index.html",
+    "index": "developer.lifterlms.com/developer.lifterlms.com/index.html",
     "selectors": {
         "body.single-wp-parser-class #content-area .breadcrumb-trail .trail-end": "Class",
         "body.single-wp-parser-function #content-area .breadcrumb-trail .trail-end": {
