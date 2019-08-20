@@ -22,8 +22,6 @@ A docset of [LifterLMS](https://lifterlms.com) for the Mac OS X app [Dash](https
 
 ### Contribute the Docset to Dash User Contributions
 
-1. Sync the forked user contribution repo: `npm run sync-fork`
-2. Bump the package version (use `npm version`)
-3. Prepare distribution files: `npm run dist`
-4. Commit changes to the fork: `cd Dash-User-Contributions && git add -A && git commit -m "LifterLMS Version 3.33.2" && git push origin master && cd ../`
-5. Open a PR in the primary repo: https://github.com/Kapeli/Dash-User-Contributions/compare/master...gocodebox:master
+1. Bump the package version (use `npm version {version}`), commit and push the changes.
+2. Sync the fork, add new docs to fork, push changes: `./push.sh`
+3. Open a PR in the upstream repo: https://github.com/Kapeli/Dash-User-Contributions/compare/master...gocodebox:master
