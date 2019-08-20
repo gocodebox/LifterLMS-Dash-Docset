@@ -7,7 +7,7 @@
     "scrape": "node src/scrape.js",
     "generate": "dashing build --source ./developer.lifterlms.com/developer.lifterlms.com/",
     "dist": "node src/dist.js",
-    "sync-fork": "cd Dash-User-Contributions && git fetch upstream && git merge upstream/master && git push origin master"
+    "sync-fork": "cd Dash-User-Contributions && git reset --hard upstream/master && git push --force"
   },
   "author": "Team LifterLMS <team@lifterlms.com>",
   "license": "MIT",
