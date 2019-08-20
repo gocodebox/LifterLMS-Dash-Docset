@@ -1,6 +1,6 @@
 {
   "name": "lifterlms-dash-docset",
-  "version": "3.33.2",
+  "version": "3.34.1",
   "description": "Generate a LifterLMS docset suitable for Dash (https://kapeli.com/dash).",
   "main": "index.js",
   "scripts": {
