@@ -27,4 +27,3 @@ A docset of [LifterLMS](https://lifterlms.com) for the Mac OS X app [Dash](https
 3. Prepare distribution files: `npm run dist`
 4. Commit changes to the fork: `cd Dash-User-Contributions && git add -A && git commit -m "LifterLMS Version 3.33.2" && git push origin master && cd ../`
 5. Open a PR in the primary repo: https://github.com/Kapeli/Dash-User-Contributions/compare/master...gocodebox:master
-
